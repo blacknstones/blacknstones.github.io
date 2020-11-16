@@ -7,14 +7,16 @@
     border: 5px solid black;
 }
 
-.home-card-content {
+.home-card .home-card-content {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     padding-top: 20vh;
 }
 
-.button .arrow {
-    width: 50px;
+.home-card .arrow {
+    font-size: 25px;
+    margin-top: 5vh;
+    
 }
 
 
