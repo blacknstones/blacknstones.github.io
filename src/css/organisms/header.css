@@ -1,0 +1,79 @@
+.header {
+    height: 10vh;
+    background-color: #c4c4c4;
+    border-bottom: 5px solid black;
+    display: flex;
+    flex-direction: column; 
+}
+
+.header .logo {
+    max-width: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+.header .logo,
+.navbar .nav-link {
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+}
+
+.header .logo {
+    font-weight: 800;
+    font-size: 25px;
+    display: flex;
+    align-self: flex-start;
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+}
+
+.navbar .menu-icon {
+    display: flex;
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    top: 3vh;
+    right: 3vh; 
+}
+
+.nav-link:hover,
+.logo:hover,
+.menu-icon:hover {
+    color: var(--theme-orange);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 18vh;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    z-index: -99;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2vh;
+    font-size: 15px;
+  }
+
+  .nav-menu.active {
+    background-color: grey;
+    top: 10vh;
+    z-index: 999;
+  }
+
+  .nav-item {
+      margin-bottom: 3vh;
+  }
