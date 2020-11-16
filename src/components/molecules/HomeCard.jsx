@@ -9,11 +9,13 @@ export default function HomeCard() {
             <div className="home-card-content">
                 <p>Hi, I'm Yanwei</p>
                 <br />
-                <button className="button arrow">
-                     <i class="fas fa-arrow-right"></i>
-                </button>
-               
-                
+                <div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+
+
+
             </div>
 
         </div>

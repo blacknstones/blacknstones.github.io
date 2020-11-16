@@ -1,0 +1,27 @@
+.home-card {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 50vh;
+    box-shadow: 12px 12px 0px 0px black;
+    border: 5px solid black;
+}
+
+.home-card-content {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.button .arrow {
+    width: 50px;
+}
+
+
+@media (min-width: 750px) {
+    .home-card {
+        max-width: 600px;
+        margin: 2vh auto;
+        margin-top: 15vh;
+    }
+}

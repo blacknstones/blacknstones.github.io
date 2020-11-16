@@ -1,6 +1,8 @@
 @import url('./_base/_reset.css');
 @import url('./organisms/header.css');
 
+@import url('./molecules/home-card.css');
+
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -13,19 +15,3 @@
 }
 
 
-.home-card {
-    margin: 15vh 10vw auto 10vw;
-    height: 50vh;
-    box-shadow: 12px 12px 0px 0px black;
-    border: 5px solid black;
-}
-
-.home-card-content {
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    padding-top: 20vh;
-}
-
-.button .arrow {
-    width: 50px;
-}
