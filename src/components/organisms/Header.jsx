@@ -9,9 +9,9 @@ import NavBar from '../molecules/NavBar';
 export default function Header() {
     return (
         <header className="header">
-           {/*  <Link className="link" to="/">
+            <Link className="link" to="/">
                 <img className="logo" src={logo}/>
-            </Link> */}
+            </Link> 
             <NavBar />
         </header>
     );
