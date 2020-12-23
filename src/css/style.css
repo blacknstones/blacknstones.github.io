@@ -1,7 +1,7 @@
-@import url('./_base/_reset.css');
-@import url('./organisms/header.css');
+@import url('./_reset.css');
+@import url('./header.css');
 
-@import url('./molecules/home-card.css');
+@import url('./home-card.css');
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
