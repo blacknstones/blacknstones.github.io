@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 import logo from '../../assets/favicon.png';
-
-import NavBar from '../molecules/NavBar';
+import NavBar from './NavBar';
 
 export default function Header() {
     return (

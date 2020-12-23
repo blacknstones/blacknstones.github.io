@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../organisms/Header';
-import HomeCard from '../molecules/HomeCard';
+import Header from '../layout/Header';
+import HomeCard from '../home/HomeCard';
 
 export default function HomePage() {
     return (

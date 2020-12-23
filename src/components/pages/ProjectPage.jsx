@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../organisms/Header';
+import Header from '../layout/Header';
 
 export default function ProjectPage() {
     return (
