@@ -10,22 +10,23 @@ import './css/style.css';
 
 export default function App() {
   return (
-    <Router>
-      <div className="App">
+
+    <div className="App">
+      <Router>
         <Switch>
           <Route exact path="/">
             <HomePage />
           </Route>
           <Route path="/projects">
-            <ProjectPage/>
+            <ProjectPage />
           </Route>
           <Route path="/about">
             <AboutPage />
           </Route>
         </Switch>
+      </Router>
+    </div>
 
-      </div>
-    </Router>
   );
 }
 
