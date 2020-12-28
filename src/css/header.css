@@ -43,7 +43,7 @@
 .nav-link:hover,
 .logo:hover,
 .menu-icon:hover {
-    color: var(--theme-orange);
+    color: rgb(60, 98, 224);
 }
 
 .nav-menu {
