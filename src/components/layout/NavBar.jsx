@@ -1,6 +1,8 @@
 // React core
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import GreyTriangle from '../../assets/GreyTriangle.png';
+import BlueTriangle from '../../assets/BlueTriangle.png';
 
 export default function NavBar() {
     const [click, setClick] = useState(false);
@@ -13,8 +15,11 @@ export default function NavBar() {
         <nav className="navbar">
             
             <div className=" link menu-icon" onClick={handleClick}>
-                {/* FontAwesome Icon */}
-                <i className={click ? "fas fa-times" : "fas fa-bars"} />
+               
+                {click ? 
+                <img src={BlueTriangle}/>
+                     : 
+                     <img src={GreyTriangle}/>}
             </div>
 
             <ul className={click ? "nav-menu active" : "nav-menu"}>

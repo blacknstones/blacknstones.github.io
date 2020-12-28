@@ -32,7 +32,7 @@
     display: flex;
     cursor: pointer;
     color: black;
-    font-size: 25px;
+    width: 30px;
     position: absolute;
     top: 3vh;
     right: 3vh; 
@@ -41,7 +41,7 @@
 .nav-link:hover,
 .logo:hover,
 .menu-icon:hover {
-    color: rgb(60, 98, 224);
+    color: #0589C1;
 }
 
 .nav-menu {
