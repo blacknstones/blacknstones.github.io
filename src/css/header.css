@@ -1,7 +1,5 @@
 .header {
     height: 10vh;
-    background-color: #c4c4c4;
-    border-bottom: 5px solid black;
     display: flex;
     flex-direction: column; 
 }
@@ -65,7 +63,7 @@
   }
 
   .nav-menu.active {
-    background-color: grey;
+    background-color: white;
     top: 10vh;
     z-index: 999;
   }
