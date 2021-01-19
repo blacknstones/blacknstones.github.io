@@ -1,0 +1,60 @@
+.game {
+    display: flex;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 3vh;
+}
+
+.cell:hover {
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.grid-wrapper {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.cols-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    position: absolute;
+    left: 5vw;
+    bottom: 5vh;
+    display: flex;
+}
+
+.menu-button {
+    color: lightgrey;
+    font-size: 40px;
+    height: 62px;
+
+}
+
+
+.intro {
+    color: grey;
+    font-family: 'VT323', monospace; 
+    font-size: 30px;
+    padding-left: 6px;
+
+}
+
+.actions button {
+    color: lightgray;
+    font-family: 'VT323', monospace; 
+    font-size: 30px;
+    margin-right: 1vw;
+}
+
+.menu-button:hover,
+.actions button:hover,
+.intro:hover {
+    color: white;
+    cursor: pointer;
+    
+}
