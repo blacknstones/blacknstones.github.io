@@ -2,7 +2,7 @@
   "name": "mysite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://blacknstones.github.io/personal-website-v2",
+  "homepage": "https://blacknstones.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
@@ -25,7 +25,7 @@
     "test": "env DISABLE_NEW_JSX_TRANSFORM=true react-scripts test",
     "eject": "env DISABLE_NEW_JSX_TRANSFORM=true react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
     "extends": [
