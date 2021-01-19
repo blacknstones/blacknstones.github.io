@@ -1,7 +1,9 @@
+/* eslint-disable prefer-const */
 import React, { useCallback, useRef, useState } from "react";
 import styled from "styled-components";
 import produce from "immer";
 import preset from "../../assets/preset.json";
+import useOnClickOutside from "../reusables/useOnClickOurside";
 
 // type ruleOptions = "life" | "brain";
 interface ICellStyled {
@@ -51,6 +53,14 @@ const Game: React.FC = () => {
   //const [rule, setRule] = useState<ruleOptions>("life");
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const clickRef = React.useRef(null);
+
+  const handleClickOutside = () => {
+    setMenuIsOpen(false);
+    console.log("clicked outside");
+  };
+
+  useOnClickOutside(clickRef, handleClickOutside);
 
   // use immer to mutate grid state
   const handleCellClick = (x: number, y: number) => {
@@ -139,12 +149,13 @@ const Game: React.FC = () => {
         })}
       </div>
 
-      <div className="game-menu">
+      <div className="game-menu" ref={clickRef}>
         <button
           className="menu-button"
           onClick={() => {
             setMenuIsOpen(!menuIsOpen);
-          }}
+          }} 
+          onMouseEnter={() => setMenuIsOpen(true)}
         >
           <i className="far fa-circle"></i>
         </button>
@@ -188,22 +199,25 @@ const Game: React.FC = () => {
               </button>
 
               <button
+                className="speed-button"
                 onClick={() => {
-                  setInterval(interval + 50);
+                  setInterval((interval) => interval + 50);
                   console.log(interval);
                 }}
               >
-                -
+                −
               </button>
 
-              <button>Speed</button>
+              <p className="speed-button">Speed</p>
               <button
+                className="speed-button"
                 onClick={() => {
                   interval >= 100
-                    ? setInterval(interval - 50)
+                    ? setInterval((interval) => interval - 50)
                     : interval >= 20
-                    ? setInterval(interval - 10)
-                    : setInterval(10);
+                    ? setInterval((interval) => interval - 10)
+                    : // eslint-disable-next-line @typescript-eslint/no-implied-eval
+                      setInterval(10);
                   console.log(interval);
                 }}
               >

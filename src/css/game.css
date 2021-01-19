@@ -36,24 +36,31 @@
 
 }
 
-
 .intro {
     color: grey;
     font-family: 'VT323', monospace; 
     font-size: 30px;
-    padding-left: 1vw;
+    padding-left: 2vw;
 
 }
 
 .actions {
-    padding-left: 1vw;
+    padding-left: 2vw;
+    display: flex;
 }
 
-.actions button {
+.actions button,
+.actions p {
     color: lightgray;
     font-family: 'VT323', monospace; 
     font-size: 30px;
     margin-right: 2vw;
+}
+
+.actions .speed-button {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 0;
 }
 
 .menu-button:hover,

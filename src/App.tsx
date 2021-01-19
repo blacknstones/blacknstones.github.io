@@ -8,7 +8,7 @@ import AboutPage from './components/pages/AboutPage';
 
 import './css/style.css';
 
-export default function App() {
+const App: React.FC = () => {
   return (
 
     <div className="App">
@@ -29,4 +29,6 @@ export default function App() {
 
   );
 }
+
+export default App;
 
