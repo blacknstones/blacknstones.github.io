@@ -1,7 +1,5 @@
 @import url('./_reset.css');
 @import url('./header.css');
-
-@import url('./home-card.css');
 @import url('./game.css');
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
@@ -10,9 +8,11 @@
 /* font-family: 'VT323', monospace; */
 /* font-family: 'Press Start 2P', cursive; */
 
-
 .home-content {
     height: 90vh;
+    width: 100vw;
+    background-color: black;
 }
+
 
 

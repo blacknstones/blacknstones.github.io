@@ -4,7 +4,7 @@
     "module": "esnext",
     "outDir": "dist",
     "rootDir": "src",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
     "sourceMap": true,
@@ -24,7 +24,7 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*.ts"
+    "src"
   ],
   "exclude": [
     "src/types/*.ts",

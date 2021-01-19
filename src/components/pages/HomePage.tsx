@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../layout/Header';
-import HomeCard from '../home/HomeCard';
 import Game from '../home/Game';
 
 export default function HomePage() {

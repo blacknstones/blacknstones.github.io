@@ -1,73 +1,26 @@
 .header {
     height: 10vh;
     display: flex;
-    flex-direction: column; 
-}
-
-.navbar {
-    display: flex;
+    background-color: black;
     justify-content: flex-end;
 }
-.header .logo,
-.navbar .nav-link {
-    font-family: 'Press Start 2P', cursive;
-    color: black;
-}
 
-.navbar .nav-link {
-    font-weight: 600;
-}
-
-.header .logo {
-    height: 10vh;
-    font-weight: 800;
-    font-size: 25px;
-    display: flex;
-    align-self: flex-start;
-    position: absolute;
-
-}
-
-.navbar .menu-icon {
-    display: flex;
-    cursor: pointer;
-    color: black;
-    width: 30px;
-    position: absolute;
-    top: 3vh;
-    right: 3vh; 
-}
-
-.nav-link:hover,
-.logo:hover,
-.menu-icon:hover {
-    color: #0589C1;
-}
-
-.nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 18vh;
-    position: absolute;
-    left: 0;
-    top: -100%;
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-    z-index: -99;
-    text-align: center;
-    justify-content: space-around;
-    align-items: center;
+.header .toggle {
     padding-top: 2vh;
-    font-size: 15px;
-  }
+}
 
-  .nav-menu.active {
-    background-color: white;
-    top: 10vh;
-    z-index: 999;
-  }
+.header .menu-button {
+    font-size: 45px;
+    margin-right: 3vw;
+}
+.header .nav-link {
+    color: lightgray;
+    font-family: 'VT323', monospace; 
+    font-size: 30px;
+    margin-right: 4vw;
+}
 
-  .nav-item {
-      margin-bottom: 3vh;
-  }
+.nav-link:hover {
+    color: white;
+    cursor: pointer;
+}

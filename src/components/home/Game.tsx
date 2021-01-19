@@ -1,14 +1,17 @@
 import React, { useCallback, useRef, useState } from "react";
 import styled from "styled-components";
 import produce from "immer";
-import preset from "./preset.json";
+import preset from "../../assets/preset.json";
 
 // type ruleOptions = "life" | "brain";
+interface ICellStyled {
+  isAlive: boolean;
+}
 
 const rowsLength = 40;
 const colsLength = 20;
 
-const Cell = styled.div`
+const Cell = styled.div<ICellStyled>`
   width: calc(90vw / 40);
   height: calc(90vw / 40);
   max-width: calc(1024px / 40);
@@ -18,7 +21,7 @@ const Cell = styled.div`
 `;
 
 const generateGrid = (option: "empty" | "random"): number[][] => {
-  let emptyGrid = [];
+  let emptyGrid: number[][] = [];
   for (let x = 0; x < rowsLength; x++) {
     emptyGrid[x] = [];
     for (let y = 0; y < colsLength; y++) {
@@ -120,7 +123,7 @@ const Game: React.FC = () => {
       <div className="grid-wrapper">
         {grid.map((rows, x) => {
           return (
-            <div className="cols-wrapper">
+            <div className="cols-wrapper" key={x}>
               {rows.map((cols, y) => (
                 <Cell
                   className="cell"
@@ -136,7 +139,7 @@ const Game: React.FC = () => {
         })}
       </div>
 
-      <div className="menu">
+      <div className="game-menu">
         <button
           className="menu-button"
           onClick={() => {

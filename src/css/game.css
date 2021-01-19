@@ -4,6 +4,7 @@
     max-width: 1024px;
     margin: auto;
     padding-top: 3vh;
+
 }
 
 .cell:hover {
@@ -21,7 +22,7 @@
     flex-direction: column;
 }
 
-.menu {
+.game-menu {
     position: absolute;
     left: 5vw;
     bottom: 5vh;
@@ -40,15 +41,19 @@
     color: grey;
     font-family: 'VT323', monospace; 
     font-size: 30px;
-    padding-left: 6px;
+    padding-left: 1vw;
 
+}
+
+.actions {
+    padding-left: 1vw;
 }
 
 .actions button {
     color: lightgray;
     font-family: 'VT323', monospace; 
     font-size: 30px;
-    margin-right: 1vw;
+    margin-right: 2vw;
 }
 
 .menu-button:hover,
