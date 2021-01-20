@@ -2,6 +2,7 @@
 @import url('./header.css');
 @import url('./game.css');
 @import url('./projects.css');
+@import url('./about.css');
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -10,6 +11,7 @@
 /* font-family: 'Press Start 2P', cursive; */
 html {
     background-color: black;
+    color: white;
 
 }
 .home-content {
@@ -24,11 +26,6 @@ html {
     overflow-y: hidden;
 }
 
-.project-content, .about-content {
-    background-color: black;
-    min-height: 90vh;
-    color: white;
-}
 
 
 
