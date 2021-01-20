@@ -8,9 +8,12 @@
 
 /* font-family: 'VT323', monospace; */
 /* font-family: 'Press Start 2P', cursive; */
+html {
+    background-color: black;
 
+}
 .home-content {
-    max-height: 90vh;
+    height: 90vh;
     width: 100vw;
     background-color: black;
 }

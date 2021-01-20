@@ -35,3 +35,9 @@
     color: white;
     cursor: pointer;
 }
+
+@media (max-width: 400px) {
+    .header {
+        padding-bottom: 7px;
+    }
+}
