@@ -3,7 +3,6 @@
     justify-content: center;
     max-width: 1024px;
     margin: auto;
-    padding-top: 3vh;
 
 }
 
@@ -23,20 +22,24 @@
 }
 
 .game-menu {
-    position: absolute;
+    position: fixed;
     left: 5vw;
     bottom: 5vh;
     display: flex;
 }
 
-.menu-button {
+.game .menu-button {
     color: lightgrey;
     font-size: 40px;
     height: 62px;
-
 }
 
-.intro {
+.game .toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.game .intro {
     color: grey;
     font-family: 'VT323', monospace; 
     font-size: 30px;
@@ -44,7 +47,7 @@
 
 }
 
-.actions {
+.game .actions {
     padding-left: 2vw;
     display: flex;
 }
@@ -58,8 +61,8 @@
 }
 
 .actions .speed-button {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
     margin-right: 0;
 }
 
@@ -69,4 +72,11 @@
     color: white;
     cursor: pointer;
     
+}
+
+/* mobile */
+@media (max-width: 400px) {
+    .actions button, .actions p, .game .intro {
+        font-size: 20px;
+    }
 }

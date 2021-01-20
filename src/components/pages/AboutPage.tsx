@@ -2,17 +2,18 @@ import React from 'react';
 
 import Header from '../layout/Header';
 
-export default function AboutPage() {
+const AboutPage: React.FC = () => {
     return (
         <div className="about-page">
             <Header/>
-            <div className="home-content">
-                <div className="about-card">
-                    <p>About page: ALL ABOUT ME</p>
+            <div className="about-content">
+                <p>This page is under construction. Coming soon!</p>
 
-                </div>
+               
 
             </div>
         </div>
     );
 }
+
+export default AboutPage;

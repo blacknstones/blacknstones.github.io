@@ -1,17 +1,16 @@
 import React from 'react';
 import Header from '../layout/Header';
 
-export default function ProjectPage() {
+const ProjectPage: React.FC = () => {
     return (
-        <div className="home-page">
+        <div className="project-page">
             <Header/>
-            <div className="project-content">
-                <div className="project-card">
-                    <h1>Project cards</h1>
+            <main className="project-content">
+                <p>Coming soon!</p>
 
-                </div>
-
-            </div>
+            </main>
         </div>
     );
 }
+
+export default ProjectPage;
