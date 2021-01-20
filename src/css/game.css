@@ -13,7 +13,6 @@
 .grid-wrapper {
     display: flex;
     flex-direction: row;
-    
 }
 
 .cols-wrapper {
@@ -79,4 +78,6 @@
     .actions button, .actions p, .game .intro {
         font-size: 20px;
     }
+
+
 }
