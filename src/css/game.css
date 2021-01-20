@@ -65,6 +65,10 @@
     margin-right: 0;
 }
 
+.actions #run-button {
+    width: 48px;
+}
+
 .menu-button:hover,
 .actions button:hover,
 .intro:hover {
@@ -77,6 +81,10 @@
 @media (max-width: 400px) {
     .actions button, .actions p, .game .intro {
         font-size: 20px;
+    }
+
+    .actions #run-button {
+        width: 32px;
     }
 
 

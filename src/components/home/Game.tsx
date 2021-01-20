@@ -165,6 +165,7 @@ const Game: React.FC = () => {
             <p className="intro">Game of Life</p>
             <div className="actions">
               <button
+              id="run-button"
                 onClick={() => {
                   setIsRunning(!isRunning);
                   if (!isRunning) {
