@@ -90,5 +90,8 @@
         width: 32px;
     }
 
+    .menu-button img {
+        height: 30px;
+    }
 
 }
