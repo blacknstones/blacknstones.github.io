@@ -37,7 +37,7 @@ const AboutPage: React.FC = () => {
         <h2 className="name">Hi, I'm Yanwei Zhu.</h2>
 
         <p className="background">
-          I'm a MSc graduate in Sociology and Gender Studies, and a
+          I'm a MSc graduate in Sociology &amp; Gender Studies, and a
           self-motivated programmer.
         </p>
         <Box className="create" color={color} onClick={changeColor}>
