@@ -3,6 +3,7 @@
     background-color: black;
     justify-content: flex-end;
     padding-right: 3vw;
+    padding-bottom: 3px;
     display: flex;
 }
 
@@ -18,9 +19,7 @@
 }
 
 .header .menu-button {
-    font-size: 50px;
-    height: 50px;
-    width: 50px;
+    height: 40px;
     color: lightgrey;
 
 }

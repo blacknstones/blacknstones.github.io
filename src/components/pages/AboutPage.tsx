@@ -38,7 +38,7 @@ const AboutPage: React.FC = () => {
 
         <p className="background">
           I'm a MSc graduate in Sociology &amp; Gender Studies, and a
-          self-motivated programmer.
+          self-motivated web developer.
         </p>
         <Box className="create" color={color} onClick={changeColor}>
           I love thinking outside the box and creating out of the ordinary.

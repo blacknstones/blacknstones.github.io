@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnClickOutside from "../reusables/useOnClickOurside";
+import triangle from "../../assets/triangle.png";
 
 const Header: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header: React.FC = () => {
         }} 
         onMouseEnter={() => setMenuIsOpen(true)}
       >
-        ꕔ
+        <img src={triangle}/>
       </div>
       </div>
     </header>

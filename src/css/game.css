@@ -29,8 +29,11 @@
 
 .game .menu-button {
     color: lightgrey;
-    font-size: 40px;
     height: 62px;
+}
+
+.menu-button img {
+    height: 40px;
 }
 
 .game .toggle {
@@ -42,12 +45,12 @@
     color: grey;
     font-family: 'VT323', monospace; 
     font-size: 30px;
-    padding-left: 2vw;
+    padding-left: 1vw;
 
 }
 
 .game .actions {
-    padding-left: 2vw;
+    padding-left: 1vw;
     display: flex;
 }
 

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import produce from "immer";
 import preset from "../../assets/preset.json";
 import useOnClickOutside from "../reusables/useOnClickOurside";
+import controlButton from "../../assets/mobius.png";
 
 // type ruleOptions = "life" | "brain";
 interface ICellStyled {
@@ -157,7 +158,8 @@ const Game: React.FC = () => {
           }} 
           onMouseEnter={() => setMenuIsOpen(true)}
         >
-          <i className="far fa-circle"></i>
+          <img src={controlButton}/>
+        
         </button>
 
         {menuIsOpen && (
