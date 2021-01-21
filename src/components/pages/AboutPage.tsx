@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import randomColor from "randomcolor";
 import styled from "styled-components";
 import Header from "../layout/Header";
+import pointer from "../../assets/cursor1.png";
 
 interface IBoxStyled {
   color: string;
@@ -14,7 +15,7 @@ const Box = styled.div<IBoxStyled>`
     transition: ease-in-out 0.2s;
     border: 4px solid transparent;
     box-shadow: none;
-    cursor: pointer;
+    cursor: url(${pointer}), auto;
     background-color: ${(props) => props.color};
   }
 `;

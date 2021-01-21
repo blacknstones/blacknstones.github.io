@@ -34,7 +34,7 @@
 
 .nav-link:hover {
     color: white;
-    cursor: pointer;
+    cursor: url('../assets/cursor1.png'), auto;
 }
 
 @media (max-width: 400px) {
