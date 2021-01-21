@@ -14,8 +14,7 @@
 }
 
 .header .toggle {
-
-    
+    margin-bottom: 4px;
 }
 
 .header .menu-button {
@@ -39,5 +38,13 @@
 @media (max-width: 400px) {
     .header {
         padding-bottom: 7px;
+    }
+
+    .header .toggle {
+        margin-bottom: 12px;
+    }
+
+    .header .nav-link {
+        font-size: 25px;
     }
 }
