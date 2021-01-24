@@ -11,9 +11,8 @@
 /* font-family: 'Press Start 2P', cursive; */
 html {
     background-color: black;
-    color: white;
-
 }
+
 .home-content {
     height: 90vh;
     width: 100vw;
@@ -24,6 +23,11 @@ html {
     max-height: 100vh;
     max-width: 100vw;
     overflow-y: hidden;
+}
+
+p, button {
+    color: white;
+    font-family: 'VT323', monospace;
 }
 
 

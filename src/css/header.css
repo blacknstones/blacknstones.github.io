@@ -20,8 +20,12 @@
 .header .menu-button {
     height: 40px;
     color: lightgrey;
-
 }
+
+.menu-button:hover {
+    cursor: url('../assets/cursor1.png'), auto; 
+}
+
 .header .nav-link {
     color: lightgray;
     font-family: 'VT323', monospace; 
@@ -32,12 +36,13 @@
 
 .nav-link:hover {
     color: white;
-    cursor: url('../assets/cursor1.png'), auto;
+    /* cursor: url('../assets/cursor1.png'), auto; */
 }
 
 @media (max-width: 400px) {
     .header {
         padding-bottom: 7px;
+        padding-right: 20px;
     }
 
     .header .toggle {

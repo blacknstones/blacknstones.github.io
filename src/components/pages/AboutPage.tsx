@@ -4,10 +4,10 @@ import styled from "styled-components";
 import Header from "../layout/Header";
 import pointer from "../../assets/cursor1.png";
 
-interface IBoxStyled {
+interface IStyled {
   color: string;
 }
-const Box = styled.div<IBoxStyled>`
+const Box = styled.p<IStyled>`
   border: 4px solid white;
   box-shadow: 10px 10px 0px 0px ${(props) => props.color};
 
@@ -20,30 +20,39 @@ const Box = styled.div<IBoxStyled>`
   }
 `;
 
+const StartButton = styled.button<IStyled>`
+color: ${(props) => props.color}
+`;
+
 const AboutPage: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const [color, setColor] = useState<string>(randomColor());
 
   const changeColor: () => void = () => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-      setColor(randomColor());
-  }
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    setColor(randomColor());
+  };
 
   return (
     <div className="about-page">
       <Header />
 
-      <main className="about">
-        <h2 className="name">Hi, I'm Yanwei Zhu.</h2>
+      <section className="start">
+        <div className="intro">
+          <p>Hi, I'm Yanwei Zhu.</p>
 
-        <p className="background">
-          I'm a MSc graduate in Sociology &amp; Gender Studies, and a
-          self-motivated web developer.
-        </p>
-        <Box className="create" color={color} onClick={changeColor}>
-          I love thinking outside the box and creating out of the ordinary.
-        </Box>
-      </main>
+          <p>
+            I'm a self-motivated web developer with a background in Sociology
+            &amp; Gender Studies.
+          </p>
+          <Box color={color} onClick={changeColor}>
+            I love thinking outside the box and creating out of the ordinary.
+          </Box>
+
+          <p>Now let's play a game and get to know each other.</p>
+        </div>
+        <StartButton className="start-button" color={color}>start &rarr;</StartButton>
+      </section>
     </div>
   );
 };
