@@ -36,6 +36,15 @@
     align-items: center;
 }
 
+.about-page .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.about-page .card {
+    background-color: white;
+    height: 100px;
+}
+
 
 
 @media (max-width: 480px) {

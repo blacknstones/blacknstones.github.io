@@ -24,7 +24,7 @@ const Strength: React.FC = () => {
         <div className="cards">
            <Card title="Inqusitive"/>
            <Card title="Creative" />
-           <Card title=""/>
+           <Card title="Love"/>
         </div>
       </div>
     </section>

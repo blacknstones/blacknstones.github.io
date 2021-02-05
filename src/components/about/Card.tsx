@@ -7,7 +7,9 @@ type props = {
 
 const Card: React.FC<props> = ({title}) => {
     return (
-    <div style={{color: randomColor()}}>
+    <div className="card" 
+    style={{color: randomColor()}} 
+    onClick={}>
         {title}
     </div>);
 }
