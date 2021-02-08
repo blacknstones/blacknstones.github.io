@@ -8,30 +8,41 @@ const Strength: React.FC = () => {
   return (
     <section className="about-game">
       <div className="text">
-        <p>It's 3021. A time when AI has taken control. </p>
+        <p>It's 3021, a time when AI has taken control. </p>
         <p>
-          Human can no longer live or make decisions independently without
-          machines.
+          From life to death, every human being's consciousness is uploaded to
+          the cloud for AI to consume.
         </p>
         <p>
-          From life to death, every human's consciousness is uploaded to the
-          cloud in real-time for AI to consume.
+          Human can no longer make indenpendent decisions, or even survive
+          without machines.
         </p>
-        <p>You, an awakening mind, will start the resistance with the help of your AI friend Zhu.</p>
-        <p>&rarr;</p>
+        <p>
+          You, an awakening mind, with the help of your AI program Zhu, will
+          find the core of being human again.
+        </p>
       </div>
 
-      
+      {opened ? (
+        <div className="choices">
+          <p className="prompt">Zhu has some settings. Choose one:</p>
 
-      <div className="choices">
-        <p className="prompt">Zhu has some pre-defined setting. Choose one:</p>
-
-        <div className="cards">
-           <Card title="Inqusitive"/>
-           <Card title="Creative" />
-           <Card title="Proactive"/>
+          <div className="cards">
+            <Card title="Inqusitive" />
+            <Card title="Creative" />
+            <Card title="Proactive" />
+          </div>
         </div>
-      </div>
+      ) : (
+        <button
+        className="continue-button"
+          onClick={() => {
+            setOpened(true);
+          }}
+        >
+          &rarr;
+        </button>
+      )}
     </section>
   );
 };

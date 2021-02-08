@@ -1,5 +1,5 @@
 .about-page  {
-    font-size: 36px; 
+    font-size: 34px; 
 }
 
 .about-page .content .text {
@@ -8,7 +8,6 @@
     margin-left: 3vw;
     padding: 5px 15px;
     text-align: justify;
-    
 }
 
 .about-page .content p {
@@ -22,6 +21,10 @@
 .about-game, .start {
     display: flex;
     align-items: center;
+}
+
+.about-game .text {
+    max-width: 60vw;
 }
 
 .about-game .choices {
@@ -38,14 +41,19 @@
 
 .about-game .cards {
     display: grid;
-    column-gap: 20px;
+    column-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 
 }
+
 .about-game .card {
     height: 190px;
     text-align: center;
     padding: 60px 0;
+    border: 3px solid pink;
+}
+
+.about-game .card .back {
+    cursor: url('../assets/cursor1.png'), auto;
 }
 
 
