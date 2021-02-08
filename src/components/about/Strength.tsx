@@ -7,7 +7,7 @@ const Strength: React.FC = () => {
 
   return (
     <section className="about-game">
-      <div className="text">
+      <div className="story">
         <p>It's 3021, a time when AI has taken control. </p>
         <p>
           From life to death, every human being's consciousness is uploaded to
@@ -40,7 +40,7 @@ const Strength: React.FC = () => {
             setOpened(true);
           }}
         >
-          &rarr;
+          {'>>'}
         </button>
       )}
     </section>

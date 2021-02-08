@@ -23,13 +23,32 @@
     align-items: center;
 }
 
-.about-game .text {
-    max-width: 60vw;
+.about-game .story {
+    max-width: 55vw;
+    margin-top: 5vh;
+    margin-left: 3vw;
+    padding: 5px 15px;
+    text-align: justify;
+}
+
+.about-game .continue-button {
+    font-size: 50px;
+    cursor: url('../assets/cursor1.png'), auto;
+    margin-left: 5vw;
+    color: #6f8fc3;
+}
+
+.about-game .continue-button:hover {
+    color: white;
 }
 
 .about-game .choices {
-    margin:auto 3vw;
+    padding:10px;
     min-width: 40vw;
+}
+
+.about-game .choices .prompt {
+    color: #6f8fc3;
 }
 
 .start .button {
@@ -41,7 +60,7 @@
 
 .about-game .cards {
     display: grid;
-    column-gap: 40px;
+    column-gap: 3vw;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -49,7 +68,6 @@
     height: 190px;
     text-align: center;
     padding: 60px 0;
-    border: 3px solid pink;
 }
 
 .about-game .card .back {

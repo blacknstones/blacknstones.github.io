@@ -5,10 +5,6 @@ type props = {
   title: string;
 };
 
-const style = {
-  color: randomColor(),
-};
-
 const Card: React.FC<props> = ({ title }) => {
   const [fliped, setFliped] = React.useState(false);
   const [showContent, setShowContent] = React.useState(false);
@@ -22,7 +18,6 @@ const Card: React.FC<props> = ({ title }) => {
       {fliped ? (
         <div>
           <p
-            style={style}
             className="front"
             onMouseEnter={() => setShowContent(true)}
             onMouseLeave={() => setShowContent(false)}
