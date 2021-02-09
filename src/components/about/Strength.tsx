@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import pointer from "../../assets/cursor1.png";
+import React, { useContext, useState } from "react";
 import Card from "./Card";
 
 const Strength: React.FC = () => {
+  const color = useContext(ColorContext);
   const [opened, setOpened] = useState(false);
+  const [chosen, setChosen] = useState(false);
 
   return (
     <section className="about-game">

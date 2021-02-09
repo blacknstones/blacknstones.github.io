@@ -61,7 +61,7 @@ const Start: React.FC<StartProps> = ({
           setShowGame(true);
         }}
       >
-        start &rarr;
+        start{'>>'}
       </StartButton>
     </section>
   );

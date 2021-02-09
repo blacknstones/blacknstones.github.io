@@ -1,0 +1,7 @@
+.card p{
+    color: lightgrey;
+}
+
+.card p:hover {
+    color: white;
+}

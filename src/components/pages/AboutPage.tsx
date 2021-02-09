@@ -4,11 +4,16 @@ import Header from "../layout/Header";
 import Start from "../about/Start";
 import Strength from "../about/Strength";
 
+//export const ColorContext = React.createContext();
+
 const AboutPage: React.FC = () => {
-  const [color, setColor] = useState<string>(randomColor());
+
+  const initialColor = randomColor();
+  const [color, setColor] = useState<string>(initialColor);
 
   const changeColor: () => void = () => {
-    setColor(randomColor());
+    const newColor = randomColor();
+    setColor(newColor);
   };
 
   const [showStart, setShowStart] = useState(true);
@@ -16,21 +21,21 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="about-page">
-      <Header />
-      <div className="content">
-        {showStart && (
-          <Start
-            color={color}
-            changeColor={changeColor}
-            setShowStart={setShowStart}
-            setShowGame={setShowGame}
-          />
-        )}
+      {/* <ColorContext.Provider value={color}> */}
+        <Header />
+        <div className="content">
+          {showStart && (
+            <Start
+              color={color}
+              changeColor={changeColor}
+              setShowStart={setShowStart}
+              setShowGame={setShowGame}
+            />
+          )}
 
-        {showGame && (
-         <Strength />
-        )}
-      </div>
+          {showGame && <Strength />}
+        </div>
+      {/* </ColorContext.Provider> */}
     </div>
   );
 };
