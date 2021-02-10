@@ -4,4 +4,5 @@
 
 .card p:hover {
     color: white;
+    cursor: url('../assets/cursor1.png'), auto;
 }

@@ -4,7 +4,7 @@ import Header from "../layout/Header";
 import Start from "../about/Start";
 import Strength from "../about/Strength";
 
-//export const ColorContext = React.createContext();
+export const ColorContext = React.createContext(null);
 
 const AboutPage: React.FC = () => {
 

@@ -2,12 +2,17 @@ import * as React from "react";
 import randomColor from "randomcolor";
 
 type props = {
-  title: string;
+  item : {
+    title: string,
+    desc: string
+  }; 
+  chosen: boolean;
 };
 
-const Card: React.FC<props> = ({ title }) => {
+const Card: React.FC<props> = ({ item, chosen }) => {
   const [fliped, setFliped] = React.useState(false);
   const [showContent, setShowContent] = React.useState(false);
+  const [active, setActive] = React.useState(false);
 
   const handleFlip = () => {
     setFliped(true);
@@ -20,11 +25,11 @@ const Card: React.FC<props> = ({ title }) => {
           <p
             className="front"
             onMouseEnter={() => setShowContent(true)}
-            onMouseLeave={() => setShowContent(false)}
+            onMouseLeave={() => setShowContent(false)} 
           >
-            {title}
+            {item.title}
           </p>
-          {showContent && <div></div>}
+          {showContent && <div className="tooltip">{item.desc}</div>}
         </div>
       ) : (
         <p className="back">?</p>

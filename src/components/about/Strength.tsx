@@ -1,10 +1,26 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Card from "./Card";
+// import ColorContext from "../../App";
 
 const Strength: React.FC = () => {
-  const color = useContext(ColorContext);
+  //  const color = useContext(ColorContext);
   const [opened, setOpened] = useState(false);
   const [chosen, setChosen] = useState(false);
+
+  const choices = [
+    {
+      title: "inquisitive",
+      desc: "always curious in searching for an answer",
+    },
+    {
+      title: "creative",
+      desc: "",
+    },
+    {
+      title: "proactive",
+      desc: "",
+    }
+  ];
 
   return (
     <section className="about-game">
@@ -26,22 +42,22 @@ const Strength: React.FC = () => {
 
       {opened ? (
         <div className="choices">
-          <p className="prompt">Zhu has some settings. Choose one:</p>
+          <p className="prompt">Zhu has some default settings:</p>
 
           <div className="cards">
-            <Card title="Inqusitive" />
-            <Card title="Creative" />
-            <Card title="Proactive" />
+            {choices.map((item) => (
+              <Card item={item} chosen={chosen} />
+            ))}
           </div>
         </div>
       ) : (
         <button
-        className="continue-button"
+          className="continue-button"
           onClick={() => {
             setOpened(true);
           }}
         >
-          {'>>'}
+          {">>"}
         </button>
       )}
     </section>
