@@ -2,75 +2,82 @@
     font-size: 34px; 
 }
 
-.about-page .content .text {
-    max-width: 800px;
-    margin-top: 5vh;
-    margin-left: 3vw;
-    padding: 5px 15px;
-    text-align: justify;
-}
-
 .about-page .content p {
     margin-bottom: 15px;
 }
 
-.start {
+.about-page .start {
     line-height: 1.3;
 }
 
-.about-game, .start {
-    display: flex;
-    align-items: center;
-}
-
-.about-game .story {
-    max-width: 50vw;
+.about-page .start .text,
+.about-page .strength .story {
     margin-top: 5vh;
     margin-left: 3vw;
     padding: 5px 15px;
     text-align: justify;
 }
 
-.about-game .continue-button {
+.start .text {
+    max-width: 800px;
+}
+
+
+
+
+
+
+.start, .strength{
+    display: flex;
+    align-items: center;
+}
+
+.strength .story {
+    max-width: 50vw;
+}
+
+.strengh .play {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strength .continue-button {
     font-size: 50px;
     cursor: url('../assets/cursor1.png'), auto;
     margin-left: 5vw;
     color: #6f8fc3;
 }
 
-.about-game .continue-button:hover {
+.strength .continue-button:hover {
     color: white;
 }
 
-.about-game .choices {
+.strength .choices {
     padding:10px;
     min-width: 40vw;
 }
 
-.about-game .choices .prompt {
+.strength .choices .prompt p {
     color: #6f8fc3;
 }
 
-.start .button {
+.start .button,
+.strength .confirm-button {
     font-size: 40px;
     margin-left: 3vw;
     padding: 5px 10px;
     height: 60px;
 }
 
-.about-game .cards {
-    display: grid;
-    column-gap: 3vw;
-    grid-template-columns: 1fr 1fr 1fr;
+.strength .cards {
+    display: flex;
+    justify-content: space-between;
 }
 
-.about-game .card {
-    height: 190px;
-    text-align: center;
-    padding: 60px 0;
-}
 
-.about-game .card .back {
+.strength .card .back {
     cursor: url('../assets/cursor1.png'), auto;
 }
 
@@ -92,7 +99,7 @@
 }
 
 @media (min-width: 481px) and (max-width: 870px) {
-    .start, .about-game {
+    .start, .strength {
         flex-direction: column;
     }
 

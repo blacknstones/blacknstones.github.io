@@ -49,7 +49,7 @@ const Start: React.FC<StartProps> = ({
         </p>
         <p>I love thinking outside the box and creating out of the ordinary.</p>
         <Box color={color} onClick={changeColor}>
-          Now let's play a game and get to know each other.
+          Let's play a game and get to know each other?
         </Box>
       </div>
 
@@ -61,7 +61,7 @@ const Start: React.FC<StartProps> = ({
           setShowGame(true);
         }}
       >
-        start{'>>'}
+        start{">>"}
       </StartButton>
     </section>
   );

@@ -1,8 +1,25 @@
-.card p{
-    color: lightgrey;
+.card {
+    position: relative;
+    height: 190px;
+    text-align: center;
+    padding: 60px 0;
+    margin-right: 20px;
 }
 
-.card p:hover {
+.card .front{
+    color: lightgrey;
+    padding: 3px 5px;
+}
+
+.card .front:hover {
     color: white;
     cursor: url('../assets/cursor1.png'), auto;
+}
+
+.card .tooltip {
+    border: 2px dashed pink;
+    padding: 3px;
+    position: absolute;
+    color: pink;
+    font-size: 25px;
 }

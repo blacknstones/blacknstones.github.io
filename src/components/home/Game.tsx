@@ -155,11 +155,10 @@ const Game: React.FC = () => {
           className="menu-button"
           onClick={() => {
             setMenuIsOpen(!menuIsOpen);
-          }} 
+          }}
           onMouseEnter={() => setMenuIsOpen(true)}
         >
-          <img src={controlButton}/>
-        
+          <img src={controlButton} />
         </button>
 
         {menuIsOpen && (
@@ -167,7 +166,7 @@ const Game: React.FC = () => {
             <p className="intro">Game of Life</p>
             <div className="actions">
               <button
-              id="run-button"
+                id="run-button"
                 onClick={() => {
                   setIsRunning(!isRunning);
                   if (!isRunning) {

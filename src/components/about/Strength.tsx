@@ -10,20 +10,24 @@ const Strength: React.FC = () => {
   const choices = [
     {
       title: "inquisitive",
-      desc: "always curious in searching for an answer",
+      desc: "always ask questions and look for answers",
     },
     {
       title: "creative",
-      desc: "",
+      desc: "solve problem in a different way",
     },
     {
       title: "proactive",
-      desc: "",
-    }
+      desc: "put thoughts into action",
+    },
   ];
 
+  const showConfirm = () => {
+    setChosen(true);
+  };
+
   return (
-    <section className="about-game">
+    <section className="strength">
       <div className="story">
         <p>It's 3021, a time when AI has taken control. </p>
         <p>
@@ -40,26 +44,33 @@ const Strength: React.FC = () => {
         </p>
       </div>
 
-      {opened ? (
-        <div className="choices">
-          <p className="prompt">Zhu has some default settings:</p>
+      <div className="play">
+        {opened ? (
+          <div className="choices">
+            <div className="prompt">
+              <p>Zhu has some default settings.</p>
+              <p>Choose the ones you want: </p>
+            </div>
 
-          <div className="cards">
-            {choices.map((item) => (
-              <Card item={item} chosen={chosen} />
-            ))}
+            <div className="cards">
+              {choices.map((item) => (
+                <Card item={item} showConfirm={showConfirm} />
+              ))}
+            </div>
           </div>
-        </div>
-      ) : (
-        <button
-          className="continue-button"
-          onClick={() => {
-            setOpened(true);
-          }}
-        >
-          {">>"}
-        </button>
-      )}
+        ) : (
+          <button
+            className="continue-button"
+            onClick={() => {
+              setOpened(true);
+            }}
+          >
+            {">>"}
+          </button>
+        )}
+
+        <div>{chosen ? <button className="confirm-button">Confirm</button> : null}</div>
+      </div>
     </section>
   );
 };
