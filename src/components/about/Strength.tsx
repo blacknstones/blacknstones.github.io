@@ -9,15 +9,15 @@ const Strength: React.FC = () => {
 
   const choices = [
     {
-      title: "inquisitive",
+      title: ">> inquisitive",
       desc: "always ask questions and look for answers",
     },
     {
-      title: "creative",
+      title: ">> creative",
       desc: "solve problem in a different way",
     },
     {
-      title: "proactive",
+      title: ">> proactive",
       desc: "put thoughts into action",
     },
   ];
@@ -48,15 +48,14 @@ const Strength: React.FC = () => {
         {opened ? (
           <div className="choices">
             <div className="prompt">
-              <p>Zhu has some default settings.</p>
-              <p>Choose the ones you want: </p>
+              <p>Zhu has some default settings. Choose the ones you want: </p>
             </div>
 
-            <div className="cards">
+            <ul className="cards">
               {choices.map((item) => (
                 <Card item={item} showConfirm={showConfirm} />
               ))}
-            </div>
+            </ul>
           </div>
         ) : (
           <button
@@ -68,8 +67,7 @@ const Strength: React.FC = () => {
             {">>"}
           </button>
         )}
-
-        <div>{chosen ? <button className="confirm-button">Confirm</button> : null}</div>
+        {chosen ? <button className="confirm-button">Confirm</button> : null}
       </div>
     </section>
   );

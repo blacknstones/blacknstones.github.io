@@ -19,9 +19,8 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
   };
 
   return (
-    <div className="card" onClick={handleFlip}>
-      {fliped ? 
-      (
+    <li className="card" onClick={handleFlip}>
+      {fliped ? (
         <div>
           <p
             className="front"
@@ -31,25 +30,17 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
               showConfirm();
               setActive(!active);
             }}
-            style={
-              active
-                ? { color: "pink", border: "2px solid pink" }
-                : {
-                    color: "white",
-                    border: "2px solid transparent",
-                  }
-            }
+            style={active ? { color: "pink" } : null}
           >
             {item.title}
           </p>
+
           {showContent && <div className="tooltip">{item.desc}</div>}
         </div>
-      ) 
-      : 
-      (
+      ) : (
         <p className="back">?</p>
       )}
-    </div>
+    </li>
   );
 };
 

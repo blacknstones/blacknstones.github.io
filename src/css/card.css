@@ -1,25 +1,26 @@
 .card {
     position: relative;
-    height: 190px;
-    text-align: center;
-    padding: 60px 0;
     margin-right: 20px;
 }
 
-.card .front{
+.card .front,
+.card .back{
     color: lightgrey;
     padding: 3px 5px;
 }
 
-.card .front:hover {
+.card .front:hover,
+.card .back:hover {
     color: white;
     cursor: url('../assets/cursor1.png'), auto;
 }
 
 .card .tooltip {
+    background-color: black;
     border: 2px dashed pink;
     padding: 3px;
     position: absolute;
     color: pink;
     font-size: 25px;
+    z-index: 2;
 }
