@@ -11,15 +11,15 @@
 }
 
 .about-page .start,
-.about-page .strength {
+.about-page .setting {
   margin: 5vh 3vw;
   text-align: justify;
   display: flex;
 }
 
 .start .text,
-.strength .story,
-.strength .play {
+.setting .story,
+.setting .play {
     padding: 1vh 2vw;
 }
 
@@ -27,40 +27,41 @@
   max-width: 800px;
 }
 
-.strength .story {
+.setting .story {
   width: 50vw;
 }
 
-.strength .play {
+.setting .play {
   width: 40vw;
   /* text-align: center; */
 }
 
-.strength .continue-button {
+.setting .continue-button {
     padding: 20vh 15vw;
   font-size: 50px;
   cursor: url("../assets/cursor1.png"), auto;
   color: #6f8fc3;
 }
 
-.strength .continue-button:hover {
+.setting .continue-button:hover {
   color: white;
 }
 
-.strength .choices {
+.setting .choices {
   text-align: left;
 }
 
-.strength .choices .prompt p {
+.setting .choices .prompt p {
   color: #6f8fc3;
 }
 
 .start .button,
-.strength .confirm-button {
+.setting .confirm-button {
   font-size: 40px;
   margin-left: 3vw;
   padding: 5px 10px;
   height: 60px;
+  cursor: url("../assets/cursor1.png"), auto;
 }
 
 /* mobile */
@@ -70,7 +71,7 @@
     font-size: 24px;
   }
   .start,
-  .strength {
+  .setting {
     line-height: 1;
     flex-direction: column;
   }
@@ -80,11 +81,11 @@
     margin-right: 1vw;
   }
 
-  .strength .story {
+  .setting .story {
     width: 94vw;
   }
 
-  .strength .play {
+  .setting .play {
       width: 94vw;
   }
 }
@@ -92,15 +93,15 @@
 /* tablet */
 @media (min-width: 481px) and (max-width: 870px) {
   .start,
-  .strength {
+  .setting {
     flex-direction: column;
   }
 
-  .strength .story {
+  .setting .story {
     width: 94vw;
   }
 
-  .strength .play {
+  .setting .play {
     width: 94vw;
 }
 

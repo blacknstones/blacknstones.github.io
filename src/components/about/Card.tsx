@@ -1,5 +1,4 @@
 import * as React from "react";
-import randomColor from "randomcolor";
 
 type props = {
   item: {
@@ -30,7 +29,7 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
               showConfirm();
               setActive(!active);
             }}
-            style={active ? { color: "pink" } : null}
+            style={active ? { color: "pink", textDecoration: "underline" } : undefined }
           >
             {item.title}
           </p>

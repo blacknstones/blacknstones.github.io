@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Card from "./Card";
 // import ColorContext from "../../App";
 
-const Strength: React.FC = () => {
+const Setting: React.FC = () => {
   //  const color = useContext(ColorContext);
   const [opened, setOpened] = useState(false);
   const [chosen, setChosen] = useState(false);
+  const [showNext, setShowNext] = useState(false);
 
   const choices = [
     {
@@ -14,11 +15,11 @@ const Strength: React.FC = () => {
     },
     {
       title: ">> creative",
-      desc: "solve problem in a different way",
+      desc: "find new ways to solve problem",
     },
     {
       title: ">> proactive",
-      desc: "put thoughts into action",
+      desc: "take initiative to put idea into action",
     },
   ];
 
@@ -27,7 +28,9 @@ const Strength: React.FC = () => {
   };
 
   return (
-    <section className="strength">
+    <div>
+      { showNext ? <div>This is next page</div> : 
+      <section className="setting">
       <div className="story">
         <p>It's 3021, a time when AI has taken control. </p>
         <p>
@@ -35,7 +38,7 @@ const Strength: React.FC = () => {
           the cloud for AI to consume.
         </p>
         <p>
-          Human can no longer make indenpendent decisions, or even survive
+          Human can no longer make indenpendent decisions or survive
           without machines.
         </p>
         <p>
@@ -67,10 +70,16 @@ const Strength: React.FC = () => {
             {">>"}
           </button>
         )}
-        {chosen ? <button className="confirm-button">Confirm</button> : null}
+        {chosen ? <button className="confirm-button" 
+        onClick={() => setShowNext(true)}>Confirm</button> : null}
       </div>
-    </section>
+    </section>}
+    </div>
+
+
+    
+    
   );
 };
 
-export default Strength;
+export default Setting;
