@@ -17,7 +17,16 @@
   display: flex;
 }
 
+.about-page .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
 .start .text,
+.start .buttons,
 .setting .story,
 .setting .play {
     padding: 1vh 2vw;
@@ -37,7 +46,7 @@
 }
 
 .setting .continue-button {
-    padding: 20vh 15vw;
+  padding: 20vh 15vw;
   font-size: 50px;
   cursor: url("../assets/cursor1.png"), auto;
   color: #6f8fc3;
@@ -57,8 +66,7 @@
 
 .start .button,
 .setting .confirm-button {
-  font-size: 40px;
-  margin-left: 3vw;
+  font-size: 34px;
   padding: 5px 10px;
   height: 60px;
   cursor: url("../assets/cursor1.png"), auto;
