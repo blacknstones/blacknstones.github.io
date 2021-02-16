@@ -29,7 +29,7 @@ const Box = styled.p<IStyled>`
 
 const StartButton = styled.button<IStyled>`
   color: ${(props) => props.color};
-  border: 4px solid transparent;
+  border: 4px solid transparent; 
   &:hover {
      border: 4px solid ${(props) => props.color};
      cursor: url(${pointer}), auto;
