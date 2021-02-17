@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import Card from "./Card";
 import { ColorContext }  from "../reusables/ColorContext";
+// inline style tool
+import Radium from 'radium';
 
 const Setting: React.FC = () => {
   //  const color = useContext(ColorContext);
@@ -9,6 +11,13 @@ const Setting: React.FC = () => {
   const [showNext, setShowNext] = useState(false);
   const color = useContext(ColorContext);
   console.log(color);
+
+  const style = {
+    color : color,
+    ':hover': {
+      color: "white"
+    }
+  }
 
   const choices = [
     {
@@ -67,8 +76,9 @@ const Setting: React.FC = () => {
             className="continue-button"
             onClick={() => {
               setOpened(true);
-            }}
-            style={{color: color}}
+            }} 
+            onMouseEnter={}
+            style={style}
           >
             {">>"}
           </button>
