@@ -3,6 +3,10 @@
     margin-right: 20px;
 }
 
+.card .card-name p {
+    display: inline-block;
+}
+
 .card .front,
 .card .back{
     color: lightgrey;
@@ -17,10 +21,9 @@
 
 .card .tooltip {
     background-color: black;
-    border: 2px dashed pink;
+    border: 2px dashed white;
     padding: 3px;
     position: absolute;
-    color: pink;
     font-size: 25px;
     z-index: 2;
 }

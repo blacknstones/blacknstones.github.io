@@ -10,7 +10,6 @@ const Setting: React.FC = () => {
   const [chosen, setChosen] = useState(false);
   const [showNext, setShowNext] = useState(false);
   const color = useContext(ColorContext);
-  console.log(color);
 
   const style = {
     color : color,
@@ -21,15 +20,15 @@ const Setting: React.FC = () => {
 
   const choices = [
     {
-      title: ">> inquisitive",
+      title: "inquisitive",
       desc: "always ask questions and look for answers",
     },
     {
-      title: ">> creative",
+      title: "creative",
       desc: "find new ways to solve problem",
     },
     {
-      title: ">> proactive",
+      title: "proactive",
       desc: "take initiative and make action happen",
     },
   ];
@@ -77,7 +76,6 @@ const Setting: React.FC = () => {
             onClick={() => {
               setOpened(true);
             }} 
-            onMouseEnter={}
             style={style}
           >
             {">>"}

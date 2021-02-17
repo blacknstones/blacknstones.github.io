@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ColorContext } from "../reusables/ColorContext";
 
 type props = {
   item: {
@@ -12,6 +13,7 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
   const [fliped, setFliped] = React.useState(false);
   const [showContent, setShowContent] = React.useState(false);
   const [active, setActive] = React.useState(false);
+  const color = React.useContext(ColorContext);
 
   const handleFlip = () => {
     setFliped(true);
@@ -20,7 +22,8 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
   return (
     <li className="card" onClick={handleFlip}>
       {fliped ? (
-        <div>
+        <div className="card-name">
+            <p>{">>"}</p>
           <p
             className="front"
             onMouseEnter={() => setShowContent(true)}
@@ -29,7 +32,9 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
               showConfirm();
               setActive(!active);
             }}
-            style={active ? { color: "pink", textDecoration: "underline" } : undefined }
+            style={
+              active ? { color: color, textDecoration: "underline" } : undefined
+            }
           >
             {item.title}
           </p>

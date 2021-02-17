@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/radium": "^0.24.3",
     "@types/randomcolor": "^0.5.5",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.7",
