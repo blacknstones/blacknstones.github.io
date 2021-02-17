@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import randomColor from "randomcolor";
 import Header from "../layout/Header";
-import setting from "../about/Setting";
 import styled from "styled-components";
 import pointer from "../../assets/cursor1.png";
 import Profile from "../about/Profile";
 import Setting from "../about/Setting";
+import { ColorContext } from "../reusables/ColorContext";
 
-export const ColorContext = React.createContext(null);
 
 interface IStyled {
   color: string;
@@ -40,6 +39,8 @@ const StartButton = styled.button<IStyled>`
 const AboutPage: React.FC = () => {
   const initialColor = randomColor();
   const [color, setColor] = useState<string>(initialColor);
+  const colorRef = useRef(color);
+  colorRef.current = color; 
 
   const changeColor: () => void = () => {
     const newColor = randomColor();
@@ -50,12 +51,14 @@ const AboutPage: React.FC = () => {
   const [showGame, setShowGame] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
-  // const [showStart, setShowStart] = useState(true);
-  // const [showGame, setShowGame] = useState(false);
+
+useEffect(() => {
+  console.log(colorRef);
+},[color]);
 
   return (
     <div className="about-page">
-      {/* <ColorContext.Provider value={color}> */}
+      <ColorContext.Provider value={colorRef.current}>
       <Header />
       <div className="content">
         {showStart && (
@@ -105,7 +108,7 @@ const AboutPage: React.FC = () => {
         {showGame && <Setting />}
         {showProfile && <Profile />}
       </div>
-      {/* </ColorContext.Provider> */}
+      </ColorContext.Provider>
     </div>
   );
 };

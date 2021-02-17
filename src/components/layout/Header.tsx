@@ -9,7 +9,6 @@ const Header: React.FC = () => {
 
   const handleClickOutside = () => {
     setMenuIsOpen(false);
-    console.log("clicked outside");
   };
 
   useOnClickOutside(clickRef, handleClickOutside);

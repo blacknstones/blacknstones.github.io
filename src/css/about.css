@@ -42,11 +42,11 @@
 
 .setting .play {
   width: 40vw;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .setting .continue-button {
-  padding: 20vh 15vw;
+  margin: auto;
   font-size: 50px;
   cursor: url("../assets/cursor1.png"), auto;
   color: #6f8fc3;

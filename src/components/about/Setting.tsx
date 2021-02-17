@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Card from "./Card";
-// import ColorContext from "../../App";
+import { ColorContext }  from "../reusables/ColorContext";
 
 const Setting: React.FC = () => {
   //  const color = useContext(ColorContext);
   const [opened, setOpened] = useState(false);
   const [chosen, setChosen] = useState(false);
   const [showNext, setShowNext] = useState(false);
+  const color = useContext(ColorContext);
+  console.log(color);
 
   const choices = [
     {
@@ -19,7 +21,7 @@ const Setting: React.FC = () => {
     },
     {
       title: ">> proactive",
-      desc: "take initiative to put idea into action",
+      desc: "take initiative and make action happen",
     },
   ];
 
@@ -51,7 +53,7 @@ const Setting: React.FC = () => {
         {opened ? (
           <div className="choices">
             <div className="prompt">
-              <p>Zhu has some default settings. Choose the ones you want: </p>
+              <p style={{color: color}}>Zhu has some default settings. Choose yours: </p>
             </div>
 
             <ul className="cards">
@@ -66,6 +68,7 @@ const Setting: React.FC = () => {
             onClick={() => {
               setOpened(true);
             }}
+            style={{color: color}}
           >
             {">>"}
           </button>
