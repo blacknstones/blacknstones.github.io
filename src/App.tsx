@@ -22,8 +22,8 @@ const App: React.FC = () => {
             <ProjectPage />
           </Route>
           <Route path="/about">
-            {/* <AboutPage /> */}
-            < TempAbout/>
+            <AboutPage />
+            {/* < TempAbout/> */}
           </Route>
         </Switch>
       </Router>
