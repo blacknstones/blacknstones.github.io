@@ -7,6 +7,7 @@ import ProjectPage from './components/pages/ProjectPage';
 import AboutPage from './components/pages/AboutPage';
 
 import './css/style.css';
+import TempAbout from './components/pages/TempAbout';
 
 const App: React.FC = () => {
   return (
@@ -21,7 +22,8 @@ const App: React.FC = () => {
             <ProjectPage />
           </Route>
           <Route path="/about">
-            <AboutPage />
+            {/* <AboutPage /> */}
+            < TempAbout/>
           </Route>
         </Switch>
       </Router>
