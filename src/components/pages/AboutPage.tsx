@@ -7,7 +7,6 @@ import Profile from "../about/Profile";
 import Setting from "../about/Setting";
 import { ColorContext } from "../reusables/ColorContext";
 
-
 interface IStyled {
   color: string;
 }
@@ -51,7 +50,7 @@ const AboutPage: React.FC = () => {
   const [showGame, setShowGame] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
-
+// for testing if color is logged to console
 useEffect(() => {
   console.log(colorRef);
 },[color]);
@@ -62,8 +61,8 @@ useEffect(() => {
       <Header />
       <div className="content">
         {showStart && (
-          <section className="start">
-            <div className="text">
+          <section className="content-container" id="start">
+            <div className="layout-container text">
               <p>Hi, I'm Yanwei Zhu.</p>
 
               <p>
@@ -79,7 +78,7 @@ useEffect(() => {
               </Box>
             </div>
 
-            <div className="buttons">
+            <div className="layout-container buttons">
               <StartButton
                 className="button"
                 color={color}

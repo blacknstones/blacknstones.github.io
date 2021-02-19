@@ -1,17 +1,21 @@
 .about-page {
+  
+}
+
+.about-page .content {
   font-size: 34px;
+
 }
 
 .about-page .content p {
   margin-bottom: 15px;
 }
 
-.about-page .start {
+.about-page #start {
   line-height: 1.2;
 }
 
-.about-page .start,
-.about-page .setting {
+.about-page .content-container {
   margin: 5vh 3vw;
   text-align: justify;
   display: flex;
@@ -25,95 +29,80 @@
 
 }
 
-.start .text,
-.start .buttons,
-.setting .story,
-.setting .play {
+.layout-container {
     padding: 1vh 2vw;
 }
 
-.start .text {
+#start .text {
   max-width: 800px;
 }
 
-.setting .story {
+#setting .story {
   width: 50vw;
 }
 
-.setting .play {
+#setting .play {
   width: 40vw;
   text-align: center;
 }
 
-.setting .continue-button {
+#setting .continue-button {
   margin: auto;
   font-size: 50px;
-  cursor: url("../assets/cursor1.png"), auto;
 }
 
-.setting .continue-button:hover {
+#setting .continue-button:hover {
   color: white; 
 }
 
-.setting .choices {
+#setting .choices {
   text-align: left;
 }
 
-.setting .choices .prompt p {
+#setting .choices .prompt p {
   color: #6f8fc3;
 }
 
-.start .button,
-.setting .confirm-button {
+.content-container .button,
+.content-container .confirm-button {
   font-size: 34px;
   padding: 5px 10px;
-  height: 60px;
-  cursor: url("../assets/cursor1.png"), auto;
-  border: 4px solid transparent; 
+  /* height: 60px; */
 }
 
 
 /* mobile */
 @media (max-width: 480px) {
-  .about-page,
-  .about-page button {
+  .about-page .content,
+  .about-page .button {
     font-size: 24px;
   }
-  .start,
-  .setting {
+  
+  .content-container {
     line-height: 1;
     flex-direction: column;
   }
 
-  .start .text {
+  #start .text {
     margin-left: 1vw;
     margin-right: 1vw;
   }
 
-  .setting .story {
+  /* #setting is needed here, otherwise it will be overriden */
+  #setting .layout-container{
     width: 94vw;
-  }
-
-  .setting .play {
-      width: 94vw;
   }
 }
 
 /* tablet */
 @media (min-width: 481px) and (max-width: 870px) {
-  .start,
-  .setting {
+  .content-container {
     flex-direction: column;
   }
 
-  .setting .story {
+  #setting .layout-container {
     width: 94vw;
   }
-
-  .setting .play {
-    width: 94vw;
-}
-
 
   /* .content .text {
     margin-right: 3vw;

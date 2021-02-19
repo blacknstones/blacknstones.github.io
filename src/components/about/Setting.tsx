@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import Card from "./Card";
+import Input from "./Input";
 import { ColorContext }  from "../reusables/ColorContext";
-// inline style tool
-import Radium from 'radium';
+
 
 const Setting: React.FC = () => {
-  //  const color = useContext(ColorContext);
   const [opened, setOpened] = useState(false);
   const [chosen, setChosen] = useState(false);
   const [showNext, setShowNext] = useState(false);
@@ -29,7 +28,7 @@ const Setting: React.FC = () => {
     },
     {
       title: "proactive",
-      desc: "take initiative and make action happen",
+      desc: "transform thoughts into action",
     },
   ];
 
@@ -39,9 +38,9 @@ const Setting: React.FC = () => {
 
   return (
     <div>
-      { showNext ? <div>This is next page</div> : 
-      <section className="setting">
-      <div className="story">
+      { showNext ? <Input /> : 
+      <section className="content-container" id="setting">
+      <div className="layout-container story">
         <p>It's 3021, a time when AI has taken control. </p>
         <p>
           From life to death, every human being's consciousness is uploaded to
@@ -57,7 +56,7 @@ const Setting: React.FC = () => {
         </p>
       </div>
 
-      <div className="play">
+      <div className="layout-container play">
         {opened ? (
           <div className="choices">
             <div className="prompt">
@@ -72,7 +71,7 @@ const Setting: React.FC = () => {
           </div>
         ) : (
           <button
-            className="continue-button"
+            className="button continue-button"
             onClick={() => {
               setOpened(true);
             }} 
@@ -81,7 +80,7 @@ const Setting: React.FC = () => {
             {">>"}
           </button>
         )}
-        {chosen ? <button className="confirm-button" 
+        {chosen ? <button className="button confirm-button" 
         onClick={() => setShowNext(true)}>Confirm</button> : null}
       </div>
     </section>}

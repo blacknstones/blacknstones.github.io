@@ -1,0 +1,27 @@
+html {
+    background-color: black;
+    font-family: 'VT323', monospace;
+    color: white;
+}
+
+.home-content {
+    height: 90vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.home-page {
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-y: hidden;
+}
+
+p, button {
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+.button {
+    cursor: url("../assets/cursor1.png"), auto;
+
+}
