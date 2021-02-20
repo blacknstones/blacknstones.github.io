@@ -28,7 +28,7 @@ const Setting: React.FC = () => {
     },
     {
       title: "proactive",
-      desc: "transform thoughts into action",
+      desc: "transform idea into action",
     },
   ];
 

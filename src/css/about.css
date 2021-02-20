@@ -1,6 +1,3 @@
-.about-page {
-  
-}
 
 .about-page .content {
   font-size: 34px;
@@ -11,14 +8,8 @@
   margin-bottom: 15px;
 }
 
-.about-page #start {
+.content-container .text {
   line-height: 1.2;
-}
-
-.about-page .content-container {
-  margin: 5vh 3vw;
-  text-align: justify;
-  display: flex;
 }
 
 .about-page .buttons {
@@ -29,11 +20,7 @@
 
 }
 
-.layout-container {
-    padding: 1vh 2vw;
-}
-
-#start .text {
+.layout-container .text {
   max-width: 800px;
 }
 
@@ -103,8 +90,4 @@
   #setting .layout-container {
     width: 94vw;
   }
-
-  /* .content .text {
-    margin-right: 3vw;
-  } */
 }

@@ -63,16 +63,7 @@ useEffect(() => {
         {showStart && (
           <section className="content-container" id="start">
             <div className="layout-container text">
-              <p>Hi, I'm Yanwei Zhu.</p>
-
-              <p>
-                I'm a self-motivated web developer with a background in
-                Sociology &amp; Gender Studies.
-              </p>
-              <p>
-                I love thinking outside the box and creating out of the
-                ordinary.
-              </p>
+              <p>Hi, this is Zhu.</p>
               <Box color={color} onClick={changeColor}>
                 Let's play a game and get to know each other?
               </Box>
