@@ -1,0 +1,40 @@
+.tabs {
+    display: flex;
+
+}
+
+.tabs .tab-titles {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+.tabs .tab-title {
+    width: 50px;
+}
+
+.tabs .tab-content {
+    font-size: 24px;
+    padding: 5px 10px;
+
+}
+
+.tabs .tab-content .title {
+    color: grey;
+}
+
+.tabs .inline-link {
+    text-decoration: underline;
+}
+
+.tabs .inline-link:hover {
+    background-color: lightskyblue;
+}
+
+
+/* mobile */
+@media (max-width: 480px) {
+    .tabs .tab-content {
+        font-size: 20px;
+    }
+}

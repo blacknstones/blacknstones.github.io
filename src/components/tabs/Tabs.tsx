@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from 'react';
 import TabTitle from './TabTitle';
 
 interface TabProps {
-    title: string;
+    title: string
 }
 
 interface ITabs {
@@ -10,10 +10,10 @@ interface ITabs {
 }
 
 const Tabs: React.FC<ITabs> = ({children}) => {
-    const [selectedTab, setSelectedTab] = useState(0);
+    const [selectedTab, setSelectedTab] = useState(-1);
     return (
-    <div>
-        <ul>
+    <div className="tabs">
+        <ul className="tab-titles">
             {children.map((item, index) => (
                 <TabTitle 
                 key={index} 

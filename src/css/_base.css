@@ -43,6 +43,11 @@ button {
   cursor: url("../assets/cursor1.png"), auto;
 }
 
+.link, a {
+  text-decoration: none;
+  color: white;
+}
+
 
 /* mobile */
 @media (max-width: 480px) {
