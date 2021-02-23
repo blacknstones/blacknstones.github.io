@@ -1,11 +1,15 @@
 import React, { ReactElement, useState } from 'react';
 import TabTitle from './TabTitle';
 
-type Props = {
-    children: ReactElement[]
+interface TabProps {
+    title: string;
 }
 
-const Tabs: React.FC<Props> = ({children}) => {
+interface ITabs {
+    children: ReactElement<TabProps>[];
+}
+
+const Tabs: React.FC<ITabs> = ({children}) => {
     const [selectedTab, setSelectedTab] = useState(0);
     return (
     <div>
