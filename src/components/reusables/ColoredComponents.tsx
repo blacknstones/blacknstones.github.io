@@ -14,7 +14,6 @@ export const ColorBox = styled.div<IStyled>`
       transition: ease-in-out 0.2s;
       border: 4px solid transparent;
       box-shadow: none;
-      cursor: url(${pointer}), auto;
       background-color: ${(props) => props.color};
     }
   `;
@@ -25,7 +24,6 @@ export const ColorBox = styled.div<IStyled>`
   border: 4px solid transparent; 
   &:hover {
      border: 4px solid ${(props) => props.color};
-     cursor: url(${pointer}), auto;
      transition: ease-in-out;
   }
 `;

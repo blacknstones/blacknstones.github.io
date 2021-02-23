@@ -2,10 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import randomColor from "randomcolor";
 import Header from "../layout/Header";
 import Profile from "../about/Profile";
-import Setting from "../about/Setting";
+import Setting from "../game/Setting";
 import { ColorContext } from "../reusables/ColorContext";
-import { ColorBox, ColorButton } from "../reusables/ColoredComponents";
-import { Link, useRouteMatch } from "react-router-dom";
+import Start from "../about/Start";
 
 const AboutPage: React.FC = () => {
   const initialColor = randomColor();
@@ -17,8 +16,6 @@ const AboutPage: React.FC = () => {
     const newColor = randomColor();
     setColor(newColor);
   };
-
-  const { url } = useRouteMatch();
 
   const [showStart, setShowStart] = useState(true);
   const [showGame, setShowGame] = useState(false);
@@ -34,44 +31,19 @@ const AboutPage: React.FC = () => {
       <ColorContext.Provider value={colorRef.current}>
         <Header />
         <div className="content">
+
           {showStart && (
-            <section className="content-container" id="start">
-              <div className="layout-container text">
-                <p>Hi, this is Zhu.</p>
-                <ColorBox color={color} onClick={changeColor}>
-                  Let's play a game and get to know each other?
-                </ColorBox>
-              </div>
-
-              <div className="layout-container buttons">
-                <ColorButton
-                  className="button"
-                  color={color}
-                  onClick={() => {
-                    setShowStart(false);
-                    setShowGame(true);
-                  }}
-                >
-                  start{">>"}
-                </ColorButton>
-
-                <ColorButton
-                  className="button"
-                  color={color}
-                  onClick={() => {
-                    setShowStart(false);
-                    setShowProfile(true);
-                  }}
-                >
-                  skip{">>"}
-                </ColorButton>
-              </div>
-            </section>
+           <Start changeColor={changeColor} 
+           setShowStart={setShowStart} 
+           setShowGame={setShowGame} 
+           setShowProfile={setShowProfile}/>
           )}
 
           {showGame && <Setting />}
+
           {showProfile && <Profile />}
         </div>
+        
       </ColorContext.Provider>
     </div>
   );

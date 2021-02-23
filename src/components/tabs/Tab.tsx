@@ -1,7 +1,10 @@
 import React from 'react'
 
-type Props = {
-  title: string
+interface Props {
+  title: string; 
+  newTitle?: string;
+  icon?: string;
+  newIcon?: string; 
 }
 
 // A placeholder for rendering the children

@@ -4,7 +4,7 @@ import Header from "../layout/Header";
 import styled from "styled-components";
 import pointer from "../../assets/cursor1.png";
 import Profile from "../about/Profile";
-import Setting from "../about/Setting";
+import Setting from "../game/Setting";
 import { ColorContext } from "../reusables/ColorContext";
 
 

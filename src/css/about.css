@@ -24,6 +24,11 @@
   max-width: 800px;
 }
 
+#start #color-switcher:hover {
+  cursor: url("../assets/cursor1.png"), auto;
+
+}
+
 #setting .story {
   width: 50vw;
 }
@@ -54,7 +59,6 @@
 .content-container .confirm-button {
   font-size: 34px;
   padding: 5px 10px;
-  /* height: 60px; */
 }
 
 
