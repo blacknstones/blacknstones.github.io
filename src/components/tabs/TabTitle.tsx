@@ -19,10 +19,10 @@ type Props = {
   
     return (
       <li className="tab-title">
-        <button className="button" onClick={handleClick}>
-          <img src={clicked && newIcon ? newIcon : icon}/>
-          <p>{clicked && newTitle ? newTitle : title}</p>
-          </button>
+        <div className="tab-button" onClick={handleClick}>
+          <img className="tab-img" src={clicked && newIcon ? newIcon : icon}/>
+          <p className="tab-text">{clicked && newTitle ? newTitle : title}</p>
+          </div>
       </li>
     )
   }

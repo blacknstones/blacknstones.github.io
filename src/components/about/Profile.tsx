@@ -10,7 +10,7 @@ const Profile: React.FC = () => {
   // const [showSecond, setShowSecond] = React.useState(true);
 
   return (
-    <div className="content-container" id="profile">
+    <div className="content-container profile">
       <Tabs showDefault={true}>
         <Tab title="Who am I?">
           <div className="layout-container text">

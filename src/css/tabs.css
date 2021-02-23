@@ -1,22 +1,36 @@
+.tabs .tab-button {
+    display: flex;
+}
+
+.tabs .tab-button:hover {
+    cursor: url("../assets/cursor1.png"), auto;
+}
 #journey .tabs {
     display: flex;
 }
 
-#journey .tabs .tab-titles {
+.profile .tabs .tab-titles {
     display: flex;
+    padding: 1vh 2vw;
+}
+
+#journey .tabs .tab-titles {
     flex-direction: column;
     margin-top: 3px;
 }
 
-.profile .tabs .tab-titles {
-    display: flex;
-    margin-left: 5px;
-    padding: 0;
+.profile .tab-title {
+    margin-right: 15px;
 }
+
+
 
 #journey .tabs .tab-title {
     width: 50px;
+    margin: 0;
 }
+
+
 
 #journey .tabs .tab-content {
     font-size: 24px;
