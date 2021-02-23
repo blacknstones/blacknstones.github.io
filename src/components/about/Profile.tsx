@@ -1,5 +1,7 @@
 import * as React from "react";
 import { ColorContext } from "../reusables/ColorContext";
+import Tab from "../tabs/Tab";
+import Tabs from "../tabs/Tabs";
 
 const Profile: React.FC = () => {
   const color = React.useContext(ColorContext);
@@ -50,15 +52,16 @@ const Profile: React.FC = () => {
             </p>
             <div>
               <span>My journey</span>
-              <button>heart</button>
-              <button>heart</button>
-              <button>heart</button>
+              <Tabs>
+                <Tab title="heart">
+                  <span>2017-2019 | Lund University | Master of Science in Social Studies of Gender</span>
+               <span>I published my master's thesis focuing on the gender and ethnic diversity of Swedish IT sector</span>
+                </Tab>
+                <Tab title="heart">second</Tab>
+                <Tab title="heart">third</Tab>
+              </Tabs>
             </div>
             
-            <div>
-               <span>2017-2019 | Lund University | Master of Science in Social Studies of Gender</span>
-               <span>I published my master's thesis focuing on the gender and ethnic diversity of Swedish IT sector</span>
-            </div>
            
           </div>
           <div className="layout-container buttons">
