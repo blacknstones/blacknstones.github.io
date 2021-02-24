@@ -6,13 +6,11 @@ import Tab from "../tabs/Tab";
 import Journey from "../profile/Journey";
 
 const Profile: React.FC = () => {
-  // const [showFirst, setShowFirst] = React.useState(false);
-  // const [showSecond, setShowSecond] = React.useState(true);
 
   return (
     <div className="content-container profile">
-      <Tabs showDefault={true} transform="clicked">
-        <Tab title="Who am I?">
+      <Tabs showDefault={true} transform="active">
+        <Tab title="1" newTitle="Who am I?">
           <div className="layout-container text">
              <p>My name is Yanwei Zhu.</p>
           <p>
@@ -21,9 +19,9 @@ const Profile: React.FC = () => {
             medium.
           </p>
           </div>
-         
         </Tab>
-        <Tab title="How did I get here?">
+
+        <Tab title="2" newTitle="How did I get here?">
           <div className="layout-container text">
              <p>
               By experimenting, self-motivating and constant learning, I
@@ -32,17 +30,17 @@ const Profile: React.FC = () => {
             </p>
             <Journey />
           </div>
-       
         </Tab>
+
+        <Tab title="3" newTitle="What's next?">
+          <div className="layout-container text">
+             <p>Interesting projects</p>
+             <p>Collaboration with motivated developers</p>
+          </div>
+        </Tab>
+
       </Tabs>
 
-      {/* {showFirst && (
-        <Intro setShowFirst={setShowFirst} setShowSecond={setShowSecond} />
-      )}
-
-      {showSecond && (
-        <Background setShowFirst={setShowFirst} setShowSecond={setShowSecond} />
-      )} */}
     </div>
   );
 };

@@ -2,30 +2,41 @@
     display: flex;
 }
 
+.tabs .tab-text{
+    margin-bottom: 0 !important;
+}
+
 .tabs .tab-button:hover {
     cursor: url("../assets/cursor1.png"), auto;
 }
-#journey .tabs {
+#journey > .tabs {
     display: flex;
 }
 
-.profile .tabs .tab-titles {
+.profile > .tabs > .tab-titles {
     display: flex;
     padding: 1vh 2vw;
 }
 
-#journey .tabs .tab-titles {
+#journey > .tabs > .tab-titles {
     flex-direction: column;
     margin-top: 3px;
 }
 
-.profile .tab-title {
+.profile>.tabs>.tab-titles>.tab-title {
     margin-right: 15px;
+    background-color: pink;
+    padding: 5px 10px;
+}
+
+.profile>.tabs>.tab-titles>.active {
+    background-color: transparent;
+    border: 3px solid white;
 }
 
 
 
-#journey .tabs .tab-title {
+#journey > .tabs .tab-title {
     width: 50px;
     margin: 0;
 }
