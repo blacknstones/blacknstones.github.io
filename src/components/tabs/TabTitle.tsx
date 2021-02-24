@@ -1,27 +1,45 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { ColorContext } from '../reusables/ColorContext';
 
 type Props = {
     title: string,
     newTitle?: string,
     icon?: string,
     newIcon?: string,
+    transformType: "clicked" | "active",
+    active: boolean,
     index: number,
     setSelectedTab: (index: number) => void
   }
   
-  const TabTitle: React.FC<Props> = ({ title, newTitle, icon, newIcon, index, setSelectedTab}) => {
+  const TabTitle: React.FC<Props> = ({ title, newTitle, icon, newIcon, index, setSelectedTab, transformType, active }) => {
+    const color = React.useContext(ColorContext);
+    const ColorStyle = {
+      color: color,
+    };
+
     const [clicked, setClicked] = useState(false);
+
+    // check the transform condition 
+    const transformed: boolean = (transformType === "clicked") ? clicked : active;
 
     const handleClick = useCallback( () => {
       setSelectedTab(index);
       setClicked(true);
-    }, [setSelectedTab, index])
-  
+    }, [setSelectedTab, index]);
+
+    // useEffect(() => {
+    //   console.log("inside TabTitle:", title);
+    //   console.log("transform type: ", transformType);
+    //   console.log("active:", active);
+    //   console.log("clicked:", clicked);
+    // }, []);
+
     return (
       <li className="tab-title">
         <div className="tab-button" onClick={handleClick}>
-          <img className="tab-img" src={clicked && newIcon ? newIcon : icon}/>
-          <p className="tab-text">{clicked && newTitle ? newTitle : title}</p>
+          <img className="tab-img" src={transformed && newIcon ? newIcon : icon}/>
+          <p className="tab-text">{transformed && newTitle ? newTitle : title}</p>
           </div>
       </li>
     )

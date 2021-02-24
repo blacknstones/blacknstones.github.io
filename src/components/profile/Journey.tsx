@@ -16,7 +16,7 @@ const Journey: React.FC = () => {
         <div id="journey">
         <p style={ColorStyle}>My journey</p>
 
-        <Tabs showDefault={false}>
+        <Tabs showDefault={false} transform="clicked">
           <Tab title="" icon={Heart} newIcon={FullHeart}>
             <ColorBox color={color} className="tab-content">
               <p className="title">

@@ -11,7 +11,7 @@ const Profile: React.FC = () => {
 
   return (
     <div className="content-container profile">
-      <Tabs showDefault={true}>
+      <Tabs showDefault={true} transform="clicked">
         <Tab title="Who am I?">
           <div className="layout-container text">
              <p>My name is Yanwei Zhu.</p>
