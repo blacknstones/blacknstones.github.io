@@ -30,7 +30,7 @@ const AboutPage: React.FC = () => {
     <div className="about-page">
       <ColorContext.Provider value={colorRef.current}>
         <Header />
-        <div className="content">
+        <main className="content">
 
           {showStart && (
            <Start changeColor={changeColor} 
@@ -42,7 +42,7 @@ const AboutPage: React.FC = () => {
           {showGame && <Setting />}
 
           {showProfile && <Profile />}
-        </div>
+        </main>
         
       </ColorContext.Provider>
     </div>

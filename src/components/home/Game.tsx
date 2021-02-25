@@ -2,7 +2,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import styled from "styled-components";
 import produce from "immer";
-import preset from "../../assets/preset.json";
+import preset from "../../data/preset.json";
 import useOnClickOutside from "../reusables/useOnClickOurside";
 import controlButton from "../../assets/mobius.png";
 

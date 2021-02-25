@@ -12,7 +12,7 @@ import CoffeeIcon from "../../assets/coffee.png";
 
 const Profile: React.FC = () => {
   return (
-    <div className="content-container profile">
+    <section className="content-container profile">
       <Tabs showDefault={true} transform="active" useColorTab={true}>
         <Tab title="" icon={RobotIcon} newTitle="Who am I?">
           <div className="layout-container text">
@@ -46,7 +46,7 @@ const Profile: React.FC = () => {
             <SocialLinks/>
         </Tab>
       </Tabs>
-    </div>
+    </section>
   );
 };
 

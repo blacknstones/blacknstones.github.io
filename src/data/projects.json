@@ -1,0 +1,155 @@
+[
+    {
+        "title": "zhuyanwei.com",
+        "desc": "Personal website",
+        "flag": "TypeScript",
+        "source": "https://github.com/blacknstones/blacknstones.github.io",
+        "categories": [
+            "frontend",
+            "design"
+        ],
+        "languages": [
+            "JavaScript",
+            "TypeScript"
+        ],
+        "tools": [
+            "React.js",
+            "Styled-component",
+            "Figma"
+        ]
+    },
+    {
+        "title": "Well-Bean",
+        "desc": "A project organizing and collaboration tool that cares about your well-being",
+        "flag": "JavaScript",
+        "source": "https://github.com/blacknstones/well-bean",
+        "categories": [
+            "frontend",
+            "backend",
+            "design"
+        ],
+        "languages": [
+            "Java",
+            "JavaScript"
+        ],
+        "tools": [
+            "React.js",
+            "WebSocket",
+            "PostgreSQL",
+            "Docker",
+            "Spring Boot",
+            "Figma"
+        ]
+    },
+    {
+        "title": "Game of Life",
+        "desc": "A simulator of the classic mathematical game","flag": "TypeScript",
+        "source": "https://github.com/blacknstones/game-of-life",
+        "categories": [
+            "frontend",
+            "design"
+        ],
+        
+        "languages": [
+            "JavaScript",
+            "TypeScript"
+        ],
+        "tools": [
+            "React.js",
+            "Styled-component"
+        ]
+    },
+    {
+        "title": "TsDnd",
+        "desc": "A full-stack task board app",
+        "flag": "TypeScript",
+        "source": "https://github.com/blacknstones/TsDnd",
+        "categories": [
+            "frontend",
+            "backend"
+        ],
+        "languages": [
+            "JavaScript",
+            "TypeScript"
+        ],
+        "tools": [
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB"
+        ]
+    },
+    {
+        "title": "ReacTrack",
+        "desc": " A parcel tracking app",
+        "flag": "JavaScript",
+        "source": "https://github.com/blacknstones/ReacTrack",
+        "categories": [
+            "frontend",
+            "design"
+        ],
+        "languages": [
+            "JavaScript"
+        ],
+        "tools": [
+            "React.js",
+            "Figma"
+        ]
+    },
+    {
+        "title": "Munamii Cakery",
+        "desc": " A website design for the client",
+        "flag": "CSS",
+        "source": "https://github.com/blacknstones/cupcake-webiste",
+        "categories": [
+            "frontend",
+            "design"
+        ],
+        "languages": [
+            "HTML",
+            "CSS"
+        ],
+        "tools": [
+            "Firebase"
+        ]
+    },
+    {
+        "title": "ATodolist",
+        "desc": "A comman-line based todolist",
+        "flag": "Java",
+        "source": "https://github.com/blacknstones/Atodolist",
+        "categories": [
+            "backend"
+        ],
+        "languages": [
+            "Java"
+        ],
+        "tools": []
+    },
+    {
+        "title": "Whodunit",
+        "desc": "An image prcessing program to reveal the hidden clue",
+        "flag": "C",
+        "source": "https://github.com/blacknstones/CS50/tree/master/pset3/whodunit",
+        "categories": [
+            "backend"
+        ],
+        "languages": [
+            "C"
+        ],
+        "tools": []
+    },
+    {
+        "title": "Recover",
+        "desc": " A program to recover JPEGs from a memory card",
+        "flag": "C",
+        "source": "https://github.com/blacknstones/CS50/tree/master/pset3/recover",
+        "categories": [
+            "backend"
+        ],
+        "languages": [
+            "C"
+        ],
+        "tools": []
+    }
+]
