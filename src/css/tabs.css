@@ -1,14 +1,20 @@
-.tabs .tab-button {
+.tabs .tab-title {
     display: flex;
+    align-items: center;
+}
+
+.tabs .tab-title .tab-icon {
+    margin-right: 4px;
+}
+
+.tabs .tab-title:hover {
+    cursor: url("../assets/cursor1.png"), auto;
 }
 
 .tabs .tab-text{
     margin-bottom: 0 !important;
 }
 
-.tabs .tab-button:hover {
-    cursor: url("../assets/cursor1.png"), auto;
-}
 #journey > .tabs {
     display: flex;
 }
@@ -19,28 +25,28 @@
 }
 
 #journey > .tabs > .tab-titles {
+    display: flex;
     flex-direction: column;
     margin-top: 3px;
 }
 
-.profile>.tabs>.tab-titles>.tab-title {
+.profile>.tabs>.tab-titles .tab-title {
     margin-right: 15px;
-    background-color: pink;
     padding: 5px 10px;
 }
 
-.profile>.tabs>.tab-titles>.active {
-    background-color: transparent;
-    border: 3px solid white;
+.profile>.tabs>.tab-titles .tab-icon img{
+    width: 25px;
 }
 
-
+#journey > .tabs .tab-titles {
+    margin-right: 10px;
+}
 
 #journey > .tabs .tab-title {
-    width: 50px;
-    margin: 0;
+    width: 34px;
+    margin-bottom: 12px;
 }
-
 
 
 #journey .tabs .tab-content {
@@ -67,4 +73,31 @@
     #journey .tabs .tab-content {
         font-size: 20px;
     }
+
+    #journey > .tabs {
+        flex-direction: column;
+    }
+
+    #journey > .tabs > .tab-titles {
+        flex-direction: row;
+    }
+
+    #journey > .tabs .tab-title {
+        margin-right: 12px;
+    }
+
+    .profile>.tabs>.tab-titles .tab-icon{
+        max-height: 24px;
+    }
+
+    .profile>.tabs>.tab-titles .tab-text {
+        font-size: 20px;
+    }
+
+    .profile>.tabs>.tab-titles .tab-title {
+        margin-right: 5px;
+    }
+
+
+
 }

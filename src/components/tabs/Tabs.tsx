@@ -13,9 +13,10 @@ interface ITabs {
     children: ReactElement<TabProps>[];
     showDefault: boolean; // when tabs are not clicked, show the first option 
     transform: "clicked" | "active"; // transform the TabTitle: only when it's active; or after clicked (change will persist) 
+    useColorTab?: boolean; // use default colorTab theme
 }
 
-const Tabs: React.FC<ITabs> = ({children, showDefault, transform}) => {
+const Tabs: React.FC<ITabs> = ({children, showDefault, transform, useColorTab}) => {
     const initialSelected = showDefault ? 0 : -1;
     const [selectedTab, setSelectedTab] = useState(initialSelected);
 
@@ -26,7 +27,7 @@ const Tabs: React.FC<ITabs> = ({children, showDefault, transform}) => {
 
     return (
     <div className="tabs">
-        <ul className="tab-titles">
+        <div className="tab-titles">
             {children.map((item, index) => (
                 <TabTitle 
                 key={index} 
@@ -37,10 +38,11 @@ const Tabs: React.FC<ITabs> = ({children, showDefault, transform}) => {
                 index={index} 
                 setSelectedTab={setSelectedTab} 
                 transformType={transform}    
-                active={selectedTab === index ? true : false}            
+                active={selectedTab === index ? true : false}  
+                useColor={useColorTab}          
                 />
             ))}
-        </ul>
+        </div>
         {children[selectedTab]}
 
     </div>);

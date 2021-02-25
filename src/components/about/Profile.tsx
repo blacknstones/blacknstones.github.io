@@ -4,13 +4,14 @@ import Background from "../profile/Background";
 import Tabs from "../tabs/Tabs";
 import Tab from "../tabs/Tab";
 import Journey from "../profile/Journey";
+import Robot from "../../assets/robot.png";
 
 const Profile: React.FC = () => {
 
   return (
     <div className="content-container profile">
-      <Tabs showDefault={true} transform="active">
-        <Tab title="1" newTitle="Who am I?">
+      <Tabs showDefault={true} transform="active" useColorTab={true}>
+        <Tab title="" icon={Robot} newTitle="Who am I?">
           <div className="layout-container text">
              <p>My name is Yanwei Zhu.</p>
           <p>

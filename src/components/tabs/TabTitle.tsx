@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ColorContext } from "../reusables/ColorContext";
+import { ColorTab } from "../reusables/ColoredComponents";
 
 type Props = {
   title: string;
@@ -8,6 +9,7 @@ type Props = {
   newIcon?: string;
   transformType: "clicked" | "active";
   active: boolean;
+  useColor: boolean | undefined;
   index: number;
   setSelectedTab: (index: number) => void;
 };
@@ -21,10 +23,12 @@ const TabTitle: React.FC<Props> = ({
   setSelectedTab,
   transformType,
   active,
+  useColor,
 }) => {
   const color = React.useContext(ColorContext);
-  const ColorStyle = {
-    color: color,
+  const ActiveStyle = {
+    backgroundColor: color,
+    borderColor: color,
   };
 
   const [clicked, setClicked] = useState(false);
@@ -37,25 +41,39 @@ const TabTitle: React.FC<Props> = ({
     setClicked(true);
   }, [setSelectedTab, index]);
 
-  // useEffect(() => {
-  //   console.log("inside TabTitle:", title);
-  //   console.log("transform type: ", transformType);
-  //   console.log("active:", active);
-  //   console.log("clicked:", clicked);
-  // }, []);
-
   return (
-    <li className={"tab-title " + (active ? "active" : "")}>
-      <div className="tab-button" onClick={handleClick}>
-        <img
-          className="tab-icon"
-          src={transformed && newIcon ? newIcon : icon}
-        />
-        <p className="tab-text" style={active ? ColorStyle : undefined}>
-          {transformed && newTitle ? newTitle : title}
-        </p>
-      </div>
-    </li>
+    <div>
+      {useColor ? (
+        <ColorTab
+          color={color}
+          className={"tab-title " + (active ? "active" : "")}
+          style={active ? ActiveStyle : undefined} 
+          onClick={handleClick}
+        >
+          
+            <img
+              className="tab-icon"
+              src={transformed && newIcon ? newIcon : icon}
+            />
+            <p className="tab-text">
+              {transformed && newTitle ? newTitle : title}
+            </p>
+         
+        </ColorTab>
+      ) : (
+        <div color={color} className={"tab-title " + (active ? "active" : "")} onClick={handleClick}>
+         
+            <img
+              className="tab-icon"
+              src={transformed && newIcon ? newIcon : icon}
+            />
+            <p className="tab-text">
+              {transformed && newTitle ? newTitle : title}
+            </p>
+     
+        </div>
+      )}
+    </div>
   );
 };
 
