@@ -3,7 +3,7 @@ import { ColorContext } from '../reusables/ColorContext';
 import Tab from '../tabs/Tab';
 import Tabs from '../tabs/Tabs';
 import Heart from "../../assets/heart1.png";
-import FullHeart from '../../assets/heart5.png';
+import FullHeart from '../../assets/heart2.png';
 import { ColorBox } from '../reusables/ColoredComponents';
 
 const Journey: React.FC = () => {
@@ -42,19 +42,31 @@ const Journey: React.FC = () => {
               <p className="title">
                 2019 | Harvard University &amp; EdX |{" "}
                 <a
-                  className="inline-link"
+                  className="inline-link" 
+                  id="cs50"
                   target="_blank"
                   href="https://www.edx.org/course/cs50s-introduction-to-computer-science?hs-referral=course-listing"
                 >
                   CS50's Introduction of Computer Science
                 </a>
               </p>
-              <p className="detail"></p>
+              <p className="detail">Established my fundamental understanding of programming and how to solve problem . </p>
             </ColorBox>
           </Tab>
           <Tab title="" icon={Heart} newIcon={FullHeart}>
             <ColorBox color={color} className="tab-content">
-              Third
+            <p className="title">
+                2019 | Harvard University &amp; EdX |{" "}
+                <a
+                  className="inline-link" 
+                  id="cs50"
+                  target="_blank"
+                  href="https://www.edx.org/course/cs50s-introduction-to-computer-science?hs-referral=course-listing"
+                >
+                  CS50's Introduction of Computer Science
+                </a>
+              </p>
+              <p className="detail">Established my fundamental understanding of programming. </p>
             </ColorBox>
           </Tab>
         </Tabs>

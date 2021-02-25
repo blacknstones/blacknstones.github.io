@@ -38,7 +38,6 @@ export const ColorTab = styled.div<IStyled>`
   &:active {
     border: 4px solid ${(props) => props.color};
     background-color: ${(props) => props.color};
-    color: white;
     transition: ease-in-out 0.2s;
   }
 `;

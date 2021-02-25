@@ -6,7 +6,10 @@
 @import url('./about.css');
 @import url('./card.css');
 @import url('./tabs.css');
+@import url('./profile.css');
 
+
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 

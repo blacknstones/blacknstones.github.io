@@ -36,6 +36,7 @@
 
 .nav-link:hover {
     color: white;
+    transition: ease-in-out 0.2s;
     /* cursor: url('../assets/cursor1.png'), auto; */
 }
 
