@@ -5,6 +5,7 @@ import Tabs from '../tabs/Tabs';
 import Heart from "../../assets/heart1.png";
 import FullHeart from '../../assets/heart2.png';
 import { ColorBox } from '../reusables/ColoredComponents';
+import { Link } from 'react-router-dom';
 
 const Journey: React.FC = () => {
     const color = React.useContext(ColorContext);
@@ -50,23 +51,24 @@ const Journey: React.FC = () => {
                   CS50's Introduction of Computer Science
                 </a>
               </p>
-              <p className="detail">Established my fundamental understanding of programming and how to solve problem . </p>
+              <p className="detail">Established my fundamental understanding of programming and how to solve problem algorithmically. </p>
             </ColorBox>
           </Tab>
           <Tab title="" icon={Heart} newIcon={FullHeart}>
             <ColorBox color={color} className="tab-content">
             <p className="title">
-                2019 | Harvard University &amp; EdX |{" "}
-                <a
-                  className="inline-link" 
-                  id="cs50"
-                  target="_blank"
-                  href="https://www.edx.org/course/cs50s-introduction-to-computer-science?hs-referral=course-listing"
-                >
-                  CS50's Introduction of Computer Science
-                </a>
+                2020 | KTH Royal Institute of Technology | Software Development Academy
               </p>
-              <p className="detail">Established my fundamental understanding of programming. </p>
+              <p className="detail">I've gained in-depth knowledge of Java, JavaScript and industrial standard coding practice. </p>
+            </ColorBox>
+          </Tab>
+          <Tab title="" icon={Heart} newIcon={FullHeart}>
+            <ColorBox color={color} className="tab-content">
+            <p className="title">
+                Current
+              </p>
+              <p className="detail">I'm learning new technologies everyday, building projects on my own, and developing professionally.</p>
+              <p>Check out my projects <Link to="/projects" className="inline-link">here</Link></p>
             </ColorBox>
           </Tab>
         </Tabs>
