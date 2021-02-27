@@ -20,8 +20,9 @@ const Intro: React.FC = () => {
         <p>My name is Yanwei Zhu.</p>
         <p>
           I'm a self-motivated web developer who love thinking outside the box,
-          and creating visual &amp; functionality with code and other medium.
+          using code and other medium to create visual &amp; functionality.
         </p>
+
       </div>
       {/* <div className="layout-container buttons">
         <button

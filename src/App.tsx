@@ -8,6 +8,7 @@ import AboutPage from './components/pages/AboutPage';
 
 import './css/style.css';
 import TempAbout from './components/pages/TempAbout';
+import TempProject from './components/pages/TempProject';
 
 const App: React.FC = () => {
   return (
@@ -19,7 +20,8 @@ const App: React.FC = () => {
             <HomePage />
           </Route>
           <Route path="/projects">
-            <ProjectPage />
+            {/* <ProjectPage /> */}
+                < TempProject />
           </Route>
           <Route path="/about">
             <AboutPage />

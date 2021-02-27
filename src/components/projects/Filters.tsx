@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 type Project = {
@@ -12,31 +12,29 @@ type Project = {
 };
 
 interface IProjects {
-  projects: Project[]
+  projects: Project[];
 }
 
 const Filters: React.FC<IProjects> = ({ projects }) => {
-  const [items, setItems] = useState(projects);
+  //find initial categories, languages and tools
 
-  useEffect(() => {
-    console.log(items);
-  }, []);
+
+  const [items, setItems] = useState(projects); // rendered items
+  const [activeCategories, setActiveCategories] = useState();
 
   return (
     <div>
-      <p>display by:</p>
-
-      <div>
+      <div className="layout-container">
+        <p>display by:</p>
         <button>All</button>
         <button>Categories</button>
         <button>Languages</button>
         <button>Tools</button>
       </div>
 
-      <div>
+      <div className="layout-container projects">
         {items.map((item) => (
-            <ProjectCard project={item}/>
-    
+          <ProjectCard project={item} />
         ))}
       </div>
     </div>

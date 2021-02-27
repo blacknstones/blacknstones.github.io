@@ -5,6 +5,7 @@ import Profile from "../about/Profile";
 import Setting from "../game/Setting";
 import { ColorContext } from "../reusables/ColorContext";
 import Start from "../about/Start";
+import TempGame from "../game/TempGame";
 
 const AboutPage: React.FC = () => {
   const initialColor = randomColor();
@@ -39,7 +40,8 @@ const AboutPage: React.FC = () => {
            setShowProfile={setShowProfile}/>
           )}
 
-          {showGame && <Setting />}
+          {/* {showGame && <Setting />} */}
+          {showGame && <TempGame />}
 
           {showProfile && <Profile />}
         </main>

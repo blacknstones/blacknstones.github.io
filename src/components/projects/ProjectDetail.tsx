@@ -17,7 +17,8 @@ interface IProject {
 const ProjectDetail: React.FC<IProject> = ({project, setIsOpen}) => {
     return (
     <div>
-        <p></p>
+        <button onClick={()=>{setIsOpen(false)}}>close</button>
+        <p>{project.tools}</p>
         
     </div>
     );
