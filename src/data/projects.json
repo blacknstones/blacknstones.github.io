@@ -43,7 +43,8 @@
     },
     {
         "title": "Game of Life",
-        "desc": "A simulator of the classic mathematical game","flag": "TypeScript",
+        "desc": "A simulator of the classic mathematical game",
+        "flag": "TypeScript",
         "source": "https://github.com/blacknstones/game-of-life",
         "categories": [
             "frontend",
@@ -99,7 +100,7 @@
     {
         "title": "Munamii Cakery",
         "desc": " A website design for the client",
-        "flag": "CSS",
+        "flag": "HTML & CSS",
         "source": "https://github.com/blacknstones/cupcake-webiste",
         "categories": [
             "frontend",
@@ -115,7 +116,7 @@
     },
     {
         "title": "ATodolist",
-        "desc": "A comman-line based todolist",
+        "desc": "A command-line based todolist",
         "flag": "Java",
         "source": "https://github.com/blacknstones/Atodolist",
         "categories": [
