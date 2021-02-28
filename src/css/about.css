@@ -24,9 +24,8 @@
   max-width: 800px;
 }
 
-#start #color-switcher:hover {
+#start .color-switcher:hover {
   cursor: url("../assets/cursor1.png"), auto;
-
 }
 
 #setting .story {

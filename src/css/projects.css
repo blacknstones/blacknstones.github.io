@@ -1,2 +1,15 @@
+.project-page .projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+.projects .project-card {
+    width: 160px;
+    height: 160px;
+    border: 1px solid white;
+    margin: 15px;
+}
 
+.projects .project-card:hover {
+    cursor: url("../assets/cursor1.png"), auto;
+}
 

@@ -13,10 +13,10 @@ const Start: React.FC<Props> = ({changeColor, setShowStart, setShowGame, setShow
   const color = React.useContext(ColorContext);
 
   return (
-    <section className="content-container" id="start">
+    <section className="content-container flex" id="start">
       <div className="layout-container text">
         <p>Hi, this is Zhu.</p>
-        <ColorBox id="color-switcher" color={color} onClick={changeColor}>
+        <ColorBox className="color-switcher" color={color} onClick={changeColor}>
           Let's play a game and get to know each other?
         </ColorBox>
       </div>

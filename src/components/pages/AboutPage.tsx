@@ -29,8 +29,9 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="about-page">
+      <Header />
       <ColorContext.Provider value={colorRef.current}>
-        <Header />
+        
         <main className="content">
 
           {showStart && (

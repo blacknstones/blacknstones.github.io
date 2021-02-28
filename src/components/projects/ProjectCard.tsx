@@ -18,15 +18,14 @@ const ProjectCard: React.FC<IProject> = ({ project }) => {
 
   return (
     <div>
-      <div className="project-card">
+      <div className="project-card" onClick={()=>{setIsOpen(true)}}>
         <p>{project.title}</p>
         <p>{project.desc}</p>
-        <p>{project.flag}</p>
+        <p>{project.flag}</p> 
+        
       </div>
-      <button onClick={()=>{setIsOpen(true)}}>
-          see detail
-      </button>
-      {isOpen ? <ProjectDetail project={project} setIsOpen={setIsOpen}/> : null}
+     
+      {isOpen && <ProjectDetail project={project} setIsOpen={setIsOpen}/>}
     </div>
   );
 };

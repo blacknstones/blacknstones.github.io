@@ -22,6 +22,9 @@ html {
 .content-container {
   margin: 5vh 3vw;
   text-align: justify;
+}
+
+.flex {
   display: flex;
 }
 
@@ -29,8 +32,12 @@ html {
   line-height: 1.2;
 }
 
-.layout-container {
+.layout-container,
+.full-layout-container {
   padding: 1vh 2vw;
+}
+
+.layout-container {
   max-width: 800px;
 }
 
