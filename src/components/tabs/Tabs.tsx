@@ -3,9 +3,9 @@ import TabTitle from './TabTitle';
 
 interface TabProps {
     title: string; 
-    newTitle?: string;
+    newTitle?: string; // transform after click
     icon?: string;
-    newIcon?: string; 
+    newIcon?: string; // transform after click
     
 }
 
@@ -19,11 +19,6 @@ interface ITabs {
 const Tabs: React.FC<ITabs> = ({children, showDefault, transform, useColorTab}) => {
     const initialSelected = showDefault ? 0 : -1;
     const [selectedTab, setSelectedTab] = useState(initialSelected);
-
-    // useEffect(() => {
-    //     console.log("inside Tabs, selectedTab: ", selectedTab);
-    //     console.log("transform type:", transform);
-    //   }, [selectedTab]);
 
     return (
     <div className="tabs">

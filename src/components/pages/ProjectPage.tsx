@@ -23,7 +23,7 @@ const ProjectPage: React.FC = () => {
   const colorRef = useRef(color);
   colorRef.current = color;
 
-  const [items, setItems] = useState<Project[]>(projectsData);
+
 
   const changeColor: () => void = () => {
     const newColor = randomColor();
@@ -36,7 +36,7 @@ const ProjectPage: React.FC = () => {
         <main className="content">
           <section className="content-container flex">
             <div className="full-layout-container control">
-              <Filters items={items} setItems={setItems} />
+              <Filters data={projectsData} />
 
               <ColorButton
                 className="color-switcher"
@@ -47,11 +47,6 @@ const ProjectPage: React.FC = () => {
               </ColorButton>
             </div>
 
-            <div className="full-layout-container projects">
-              {items.map((item) => (
-                <ProjectCard project={item} />
-              ))}
-            </div>
           </section>
         </main>
       </ColorContext.Provider>
