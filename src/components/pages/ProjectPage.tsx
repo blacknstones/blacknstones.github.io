@@ -5,12 +5,12 @@ import Filters from "../projects/Filters";
 import randomColor from "randomcolor";
 import { ColorContext } from "../reusables/ColorContext";
 import { ColorButton } from "../reusables/ColoredComponents";
-import ProjectCard from "../projects/ProjectCard";
 
 type Project = {
     title: string;
     desc: string;
     flag: string;
+    detail: string;
     source: string;
     categories: string[];
     languages: string[];

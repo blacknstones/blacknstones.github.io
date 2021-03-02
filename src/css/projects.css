@@ -3,13 +3,67 @@
     flex-wrap: wrap;
 }
 .projects .project-card {
-    width: 160px;
-    height: 160px;
-    border: 1px solid white;
+    font-size: 25px;
+    padding: 15px 10px;
+    width: 180px;
+    height: 180px;
     margin: 15px;
+    position: relative;
+}
+
+.projects .project-card .desc {
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.projects .project-card .flag {
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+
 }
 
 .projects .project-card:hover {
     cursor: url("../assets/cursor1.png"), auto;
+}
+
+.projects .project-detail {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 20vh;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.projects .project-detail .detail-content {
+    font-size: 23px;
+    margin: auto;
+    padding: 25px;
+    width: 400px;
+    height: 400px;
+    line-height: 1.1;
+}
+
+.projects .project-detail .detail-content p{
+margin-bottom: 15px;
+}
+
+.projects .detail-content .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+
 }
 

@@ -9,6 +9,8 @@
 
 .filters .filter-control .prompt {
     font-size: 20px;
+    padding: 0 5px;
+    margin-right: 5px;
 }
 
 .filters .projects {
@@ -20,6 +22,7 @@
     flex-wrap: wrap;
 }
 .filters .filter-button {
+    color: lightgray;
     font-size: 22px;
 }
 

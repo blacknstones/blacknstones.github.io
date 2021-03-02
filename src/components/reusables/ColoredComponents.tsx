@@ -43,8 +43,36 @@ export const ColorTab = styled.div<IStyled>`
 `;
 
 export const ColorFilterButton = styled.button<IStyled>`
+  border: 2px solid transparent;
+  &:hover {
+    color: ${(props) => props.color};
+    border: 2px solid ${(props) => props.color};
+    transition: ease-in-out 0.2s;
+  }
+
+  &:active {
+    color: white;
+    border-color: white;
+  }
+`;
+ 
+export const ColorPrompt = styled.p<IStyled>`
+  background-color: ${(props) => props.color};
+`;
+
+export const ColorCard = styled.div<IStyled>`
+border: 3px solid ${(props) => props.color};
+
 &:hover {
-  color: ${(props) => props.color};
-  transition: ease-in-out 0.2s;
+    background-color: ${(props) => props.color};
+    transition: ease-in-out 0.2s;
 }
+`;
+
+export const ColorText = styled.p<IStyled>`
+color: ${(props) => props.color};
+`;
+
+export const ColorPopup = styled.div<IStyled>`
+background-color: ${(props) => props.color};
 `;

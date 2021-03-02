@@ -2,7 +2,8 @@
     {
         "title": "zhuyanwei.com",
         "desc": "Personal website",
-        "flag": "TypeScript",
+        "detail": "This is a space where I explore my potential creativity. Built with TypeScript and React.",
+        "flag": "TypeScript & React",
         "source": "https://github.com/blacknstones/blacknstones.github.io",
         "categories": [
             "frontend",
@@ -20,8 +21,8 @@
     },
     {
         "title": "Well-Bean",
-        "desc": "A project organizing and collaboration tool that cares about your well-being",
-        "flag": "JavaScript",
+        "desc": "Task managing and collaboration tool that cares about your well-being",
+        "flag": "Java & JavaScript",
         "source": "https://github.com/blacknstones/well-bean",
         "categories": [
             "frontend",
@@ -43,8 +44,8 @@
     },
     {
         "title": "Game of Life",
-        "desc": "A simulator of the classic mathematical game",
-        "flag": "TypeScript",
+        "desc": "Simulator of the classic mathematical game",
+        "flag": "TypeScript & React",
         "source": "https://github.com/blacknstones/game-of-life",
         "categories": [
             "frontend",
@@ -62,8 +63,8 @@
     },
     {
         "title": "TsDnd",
-        "desc": "A full-stack task board app",
-        "flag": "TypeScript",
+        "desc": "Full-stack task board app",
+        "flag": "TypeScript & Node.js",
         "source": "https://github.com/blacknstones/TsDnd",
         "categories": [
             "frontend",
@@ -82,8 +83,8 @@
     },
     {
         "title": "ReacTrack",
-        "desc": " A parcel tracking app",
-        "flag": "JavaScript",
+        "desc": " Parcel tracking app",
+        "flag": "React",
         "source": "https://github.com/blacknstones/ReacTrack",
         "categories": [
             "frontend",
@@ -99,7 +100,7 @@
     },
     {
         "title": "Munamii Cakery",
-        "desc": " A website design for the client",
+        "desc": " Website design for the client",
         "flag": "HTML & CSS",
         "source": "https://github.com/blacknstones/cupcake-webiste",
         "categories": [
@@ -114,7 +115,7 @@
     },
     {
         "title": "ATodolist",
-        "desc": "A command-line based todolist",
+        "desc": "command-line based todolist",
         "flag": "Java",
         "source": "https://github.com/blacknstones/Atodolist",
         "categories": [
@@ -127,7 +128,7 @@
     },
     {
         "title": "Whodunit",
-        "desc": "An image prcessing program to reveal the hidden clue",
+        "desc": "Image prcessing program to reveal the hidden clue",
         "flag": "C",
         "source": "https://github.com/blacknstones/CS50/tree/master/pset3/whodunit",
         "categories": [
@@ -140,7 +141,7 @@
     },
     {
         "title": "Recover",
-        "desc": " A program to recover JPEGs from a memory card",
+        "desc": " Recover JPEGs from a memory card",
         "flag": "C",
         "source": "https://github.com/blacknstones/CS50/tree/master/pset3/recover",
         "categories": [

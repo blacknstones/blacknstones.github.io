@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ColorContext } from "../reusables/ColorContext";
-import { ColorFilterButton } from "../reusables/ColoredComponents";
+import { ColorFilterButton, ColorPrompt } from "../reusables/ColoredComponents";
 import FilterButton from "./FilterButton";
 import ProjectCard from "./ProjectCard";
 
@@ -8,6 +8,7 @@ type Project = {
   title: string;
   desc: string;
   flag: string;
+  detail: string;
   source: string;
   categories: string[];
   languages: string[];
@@ -212,9 +213,9 @@ const Filters: React.FC<IProjects> = ({ data }) => {
     <div className="filters">
       <div className="filter-control full-layout-container">
           <div className="button-group">
-               <p className="prompt">display by:</p>
+          <ColorPrompt color={color} className="prompt">Display by</ColorPrompt>
         <ColorFilterButton
-          className="filter-button"
+          className="button filter-button"
           color={color}
           onClick={() => {
             setItems(data);
@@ -228,7 +229,7 @@ const Filters: React.FC<IProjects> = ({ data }) => {
           </div>
        
         <div className="button-group">
-          <p className="prompt">Categories</p>
+        <ColorPrompt color={color} className="prompt">Categories</ColorPrompt>
           {filters.categories.options.map((option) => (
             <FilterButton
               key={option}
@@ -244,7 +245,7 @@ const Filters: React.FC<IProjects> = ({ data }) => {
         </div>
 
         <div className="button-group">
-          <p className="prompt">Languages</p>
+        <ColorPrompt color={color} className="prompt">Languages</ColorPrompt>
           {filters.languages.options.map((option) => (
             <FilterButton
               key={option}
@@ -259,7 +260,7 @@ const Filters: React.FC<IProjects> = ({ data }) => {
           ))}
         </div>
         <div className="button-group">
-          <p className="prompt">Tools</p>
+          <ColorPrompt color={color} className="prompt">Tools</ColorPrompt>
           {filters.tools.options.sort().map((option) => (
             <FilterButton
               key={option}
