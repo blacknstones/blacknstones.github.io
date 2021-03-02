@@ -41,3 +41,10 @@ export const ColorTab = styled.div<IStyled>`
     transition: ease-in-out 0.2s;
   }
 `;
+
+export const ColorFilterButton = styled.button<IStyled>`
+&:hover {
+  color: ${(props) => props.color};
+  transition: ease-in-out 0.2s;
+}
+`;

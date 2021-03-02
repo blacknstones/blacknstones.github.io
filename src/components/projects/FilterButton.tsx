@@ -1,24 +1,45 @@
-import * as React from 'react';
+import * as React from "react";
+import { ColorContext } from "../reusables/ColorContext";
+import { ColorFilterButton } from "../reusables/ColoredComponents";
 
+type Level = "category" | "language" | "tool";
 
-  type Props = {
-    onAddFilter: (level: string, option: string) => void;
-    onRemoveFilter: (level: string, option: string) => void;
-    level: "category" | "language" | "tool";
-    option: string;
-}
+type Props = {
+  onAddFilter: (level: Level, option: string) => void;
+  onRemoveFilter: (level: Level, option: string) => void;
+  level: Level;
+  option: string;
+  selected: string[] | undefined;
+};
 
-const FilterButton: React.FC<Props> = ({ onAddFilter, onRemoveFilter, level, option, children}) => {
-    const [active, setActive] = React.useState(false);
+const FilterButton: React.FC<Props> = ({
+  onAddFilter,
+  onRemoveFilter,
+  level,
+  option,
+  selected,
+  children,
+}) => {
+  const color = React.useContext(ColorContext);
+  const [active, setActive] = React.useState(false);
 
-    return(
-    <button onClick={()=> {
+  const isSelected: boolean = selected ? selected.includes(option) : false;
+
+  console.log(option, selected);
+
+  return (
+    <ColorFilterButton
+      color={color}
+      className="button filter-button"
+      style={{ color: active ? color : undefined }}
+      onClick={() => {
+        active ? onRemoveFilter(level, option) : onAddFilter(level, option);
         setActive(!active);
-        active ? onAddFilter(level, option) : onRemoveFilter(level, option);
-    }} >
-        {children}
-    </button>
-        );
-}
+      }}
+    >
+      {children}
+    </ColorFilterButton>
+  );
+};
 
 export default FilterButton;

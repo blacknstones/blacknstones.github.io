@@ -34,10 +34,8 @@ const ProjectPage: React.FC = () => {
       <Header />
       <ColorContext.Provider value={colorRef.current}>
         <main className="content">
-          <section className="content-container flex">
+          <section className="content-container">
             <div className="full-layout-container control">
-              <Filters data={projectsData} />
-
               <ColorButton
                 className="color-switcher"
                 color={color}
@@ -45,6 +43,9 @@ const ProjectPage: React.FC = () => {
               >
                 Color
               </ColorButton>
+              <Filters data={projectsData} />
+
+              
             </div>
 
           </section>

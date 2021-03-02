@@ -22,6 +22,9 @@ const ProjectCard: React.FC<IProject> = ({ project }) => {
         <p>{project.title}</p>
         <p>{project.desc}</p>
         <p>{project.flag}</p> 
+        <p>{project.categories}</p>
+        <p>{project.languages}</p>
+        <p>{project.tools}</p>
         
       </div>
      

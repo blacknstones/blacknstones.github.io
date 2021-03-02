@@ -1,0 +1,37 @@
+.filters {
+    display: flex;
+}
+
+.filters .filter-control {
+    width: 35vw;
+
+}
+
+.filters .filter-control .prompt {
+    font-size: 20px;
+}
+
+.filters .projects {
+    width: 60vw;
+}
+.filters .button-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.filters .filter-button {
+    font-size: 22px;
+}
+
+/* breakpoint */
+@media (max-width: 720px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters .filter-control,
+    .filters .projects {
+        width: 90vw;
+    }
+
+}
