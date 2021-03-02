@@ -67,7 +67,7 @@ const Journey: React.FC = () => {
             <p className="title">
                 Current
               </p>
-              <p className="detail">I'm learning new technologies everyday, building projects on my own, and developing professionally.</p>
+              <p className="detail">I'm learning new technologies everydayand building projects on my own.</p>
               <p>Check out my projects <Link to="/projects" className="inline-link">here</Link></p>
             </ColorBox>
           </Tab>

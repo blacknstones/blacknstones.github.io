@@ -22,7 +22,7 @@
 .card .tooltip {
     background-color: black;
     border: 2px dashed white;
-    padding: 3px;
+    padding: 3px 10px;
     position: absolute;
     font-size: 25px;
     z-index: 2;

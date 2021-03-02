@@ -1,14 +1,34 @@
 import * as React from "react";
-
 import Tabs from "../tabs/Tabs";
 import Tab from "../tabs/Tab";
 import Journey from "../profile/Journey";
-import RobotIcon from "../../assets/robot.png";
 import SocialLinks from "./SocialLinks";
+import Card from "../game/Card";
+
+import RobotIcon from "../../assets/robot.png";
 import PigIcon from "../../assets/pig.png";
 import SunflowerIcon from "../../assets/sunflower.png";
 import StarIcon from "../../assets/star.png";
 import CoffeeIcon from "../../assets/coffee.png";
+
+const next = [
+    {
+      title: "Learning",
+      desc: "Keep on learning new technologies and developing professionally",
+    },
+    {
+      title: "Creating",
+      desc: "Build interesting user interface and games",
+    },
+    {
+      title: "Collaboration",
+      desc: "Work with and be inspired by other motivated developers",
+    },
+    {
+        title: "Value",
+        desc:"Solve inequality issues",
+    }
+  ];
 
 const Profile: React.FC = () => {
   return (
@@ -37,8 +57,11 @@ const Profile: React.FC = () => {
 
         <Tab title="" icon={StarIcon} newTitle="What's next?">
           <div className="layout-container text">
-            <p>Interesting projects</p>
-            <p>Collaboration with motivated developers</p>
+          <ul className="cards">
+              {next.map((item) => (
+                <Card item={item} />
+              ))}
+            </ul>
           </div>
         </Tab>
 

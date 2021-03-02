@@ -6,7 +6,7 @@ type props = {
     title: string;
     desc: string;
   };
-  showConfirm: () => void;
+  showConfirm?: () => void;
 };
 
 const Card: React.FC<props> = ({ item, showConfirm }) => {
@@ -19,6 +19,12 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
     setFliped(true);
   };
 
+  // add folllowing to "front"
+  // onClick={() => {
+  //   showConfirm();
+  //   setActive(!active);
+  // }}
+
   return (
     <li className="card" onClick={handleFlip}>
       {fliped ? (
@@ -28,10 +34,7 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
             className="front"
             onMouseEnter={() => setShowContent(true)}
             onMouseLeave={() => setShowContent(false)}
-            onClick={() => {
-              showConfirm();
-              setActive(!active);
-            }}
+           
             style={
               active ? { color: color, textDecoration: "underline" } : undefined
             }
@@ -39,7 +42,7 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
             {item.title}
           </p>
 
-          {showContent && <div className="tooltip">{item.desc}</div>}
+          {showContent && <div className="tooltip" style={{borderColor: color, color: color}}>{item.desc}</div>}
         </div>
       ) : (
         <p className="back">?</p>
