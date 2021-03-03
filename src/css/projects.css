@@ -47,7 +47,9 @@
   cursor: url("../assets/cursor1.png"), auto;
 }
 
-.projects .detail-content #tool:hover {
+.projects .detail-content #tool:hover,
+.projects .detail-content #title:hover,
+.projects .detail-content #detail:hover {
   cursor: default;
 }
 
@@ -92,7 +94,9 @@
 }
 
 .projects .detail-content .close-button:hover,
-.projects .detail-content #tool:hover {
+.projects .detail-content #tool:hover,
+.projects .detail-content #title:hover,
+.projects .detail-content #detail:hover {
   color: black;
   transition: ease-in-out 0.2s;
 }
