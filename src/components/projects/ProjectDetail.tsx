@@ -37,7 +37,7 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
           {project.detail}
         </p>
 
-        {(project.tools != []) && (
+        {(project.tools.length !== 0) && (
           <div className="part" id="tools">
             <p>Tools used: </p>
             <div className="tool-items">
