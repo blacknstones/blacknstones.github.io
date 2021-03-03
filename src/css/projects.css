@@ -2,6 +2,21 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.project-page .color-switcher {
+    font-size: 15px;
+    border: none;
+}
+
+.project-page .color-switcher .color-name{
+    margin-left: 5px;
+}
+
+.project-page .color-switcher:hover {
+    border: none;
+    cursor: url("../assets/cursor1.png"), auto;
+}
+
 .projects .project-card {
   font-size: 25px;
   padding: 15px 10px;

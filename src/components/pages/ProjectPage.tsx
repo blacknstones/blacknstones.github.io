@@ -6,24 +6,22 @@ import randomColor from "randomcolor";
 import { ColorContext } from "../reusables/ColorContext";
 import { ColorButton } from "../reusables/ColoredComponents";
 
-type Project = {
-    title: string;
-    desc: string;
-    flag: string;
-    detail: string;
-    source: string;
-    categories: string[];
-    languages: string[];
-    tools: string[];
-  };
+// type Project = {
+//   title: string;
+//   desc: string;
+//   flag: string;
+//   detail: string;
+//   source: string;
+//   categories: string[];
+//   languages: string[];
+//   tools: string[];
+// };
 
 const ProjectPage: React.FC = () => {
   const initialColor = randomColor();
   const [color, setColor] = useState<string>(initialColor);
   const colorRef = useRef(color);
   colorRef.current = color;
-
-
 
   const changeColor: () => void = () => {
     const newColor = randomColor();
@@ -41,13 +39,13 @@ const ProjectPage: React.FC = () => {
                 color={color}
                 onClick={changeColor}
               >
-                Color
+                <div className="flex">
+                  <i className="fas fa-circle"></i>
+                  <p className="color-name">{color}</p>
+                </div>
               </ColorButton>
-              <Filters data={projectsData} />
-
-              
             </div>
-
+            <Filters data={projectsData} />
           </section>
         </main>
       </ColorContext.Provider>
