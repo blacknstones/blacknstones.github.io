@@ -27,7 +27,7 @@
 }
 
 /* breakpoint */
-@media (max-width: 720px) {
+@media (max-width: 770px) {
     .filters {
         flex-direction: column;
     }
