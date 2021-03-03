@@ -3,6 +3,7 @@
   flex-wrap: wrap;
 }
 
+
 .project-page .color-switcher {
     font-size: 15px;
     border: none;
@@ -14,7 +15,7 @@
 
 .project-page .color-switcher:hover {
     border: none;
-    cursor: url("../assets/cursor1.png"), auto;
+
 }
 
 .projects .project-card {
@@ -38,8 +39,16 @@
   bottom: 10px;
 }
 
-.projects .project-card:hover {
+.project-page .color-switcher:hover,
+.projects .project-card:hover,
+.projects .detail-content .close-button,
+.projects .detail-content #source a:hover
+ {
   cursor: url("../assets/cursor1.png"), auto;
+}
+
+.projects .detail-content #tool:hover {
+  cursor: default;
 }
 
 .projects .project-detail {
@@ -75,11 +84,15 @@
   text-decoration: underline;
   font-size: 22px;
   margin-left: 300px;
-  cursor: url("../assets/cursor1.png"), auto;
+}
+
+.projects .detail-content #source a:hover {
+  color: white;
+  transition: ease-in-out 0.2s;
 }
 
 .projects .detail-content .close-button:hover,
-.projects .detail-content #source a:hover {
+.projects .detail-content #tool:hover {
   color: black;
   transition: ease-in-out 0.2s;
 }
@@ -102,11 +115,11 @@
 .projects .detail-content #tools > p,
 .projects .detail-content #source,
 .projects .detail-content #source a {
-  color: lightgray;
+  color: black;
 }
 
 .projects .detail-content #tool {
-  color: grey;
+  color: white;
   margin-right: 10px;
 }
 
