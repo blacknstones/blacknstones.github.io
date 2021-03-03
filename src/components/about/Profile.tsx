@@ -9,6 +9,7 @@ import RobotIcon from "../../assets/robot.png";
 import PigIcon from "../../assets/pig.png";
 import SunflowerIcon from "../../assets/sunflower.png";
 import StarIcon from "../../assets/star.png";
+import MonsteraIcon from "../../assets/monstera.png";
 import CoffeeIcon from "../../assets/coffee.png";
 
 const next = [
@@ -55,7 +56,7 @@ const Profile: React.FC = () => {
           </div>
         </Tab>
 
-        <Tab title="" icon={StarIcon} newTitle="What's next?">
+        <Tab title="" icon={MonsteraIcon} newTitle="What's next?">
           <div className="layout-container text">
           <ul className="cards">
               {next.map((item) => (
