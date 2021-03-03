@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import { ColorContext } from "../reusables/ColorContext";
 import { ColorFilterButton, ColorPrompt } from "../reusables/ColoredComponents";
 import FilterButton from "./FilterButton";
-import ProjectCard from "./ProjectCard";
 import ProjectCards from "./ProjectCards";
 
 type Project = {
