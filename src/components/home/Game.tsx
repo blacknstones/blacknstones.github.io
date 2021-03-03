@@ -163,7 +163,7 @@ const Game: React.FC = () => {
 
         {menuIsOpen && (
           <div className="toggle">
-            <p className="intro">Game of Life</p>
+            <a className="intro" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Game of Life</a>
             <div className="actions">
               <button
                 id="run-button"
