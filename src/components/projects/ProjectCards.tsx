@@ -17,10 +17,12 @@ items: Project[]
 }
 
 const ProjectCards: React.FC<Props> = ({items}) => {
+    const [itemMap, setItemMap] = React.useState(items);
 return(
     <div className="full-layout-container projects">
-    {items.map((item) => (
-      <ProjectCard project={item} />
+
+    {items.map((item, index) => (
+      <ProjectCard project={item} key={index}/>
     ))}
   </div>
 );

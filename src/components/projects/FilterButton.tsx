@@ -25,13 +25,13 @@ const FilterButton: React.FC<Props> = ({
 
   const isSelected: boolean = selected ? selected.includes(option) : false;
 
-  console.log(option, selected);
+  console.log(option, isSelected);
 
   return (
     <ColorFilterButton
       color={color}
       className="button filter-button"
-      style={{ color: active ? color : undefined }}
+      style={{ color: (active && isSelected) ? color : undefined }}
       onClick={() => {
         active ? onRemoveFilter(level, option) : onAddFilter(level, option);
         setActive(!active);
