@@ -28,7 +28,7 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
             setIsOpen(false);
           }}
         >
-          close
+          Close
         </button>
         <p className="part" id="title">
           {project.title}
@@ -40,9 +40,12 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
         {(project.tools != []) && (
           <div className="part" id="tools">
             <p>Tools used: </p>
-            {project.tools.map((tool) => (
-              <span className="tool">{tool}</span>
+            <div className="tool-items">
+                 {project.tools.map((tool) => (
+              <p id="tool">{tool}</p>
             ))}
+            </div>
+         
           </div>
         )}
 
