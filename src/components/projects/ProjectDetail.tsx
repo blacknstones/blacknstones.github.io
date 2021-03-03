@@ -23,24 +23,35 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
     <div className="project-detail">
       <ColorPopup color={color} className="detail-content">
         <button
+          className="close-button"
           onClick={() => {
             setIsOpen(false);
           }}
         >
           close
         </button>
-        <p className="title">{project.title}</p>
-        <p className="detail">{project.detail}</p>
-        <div className="">
-          <p>Tools used: </p>
-          {project.tools.map((tool) => (
-            <button className="lang">{tool}</button>
-          ))}
+        <p className="part" id="title">
+          {project.title}
+        </p>
+        <p className="part" id="detail">
+          {project.detail}
+        </p>
+
+        {(project.tools != []) && (
+          <div className="part" id="tools">
+            <p>Tools used: </p>
+            {project.tools.map((tool) => (
+              <span className="tool">{tool}</span>
+            ))}
+          </div>
+        )}
+
+        <div className="part" id="source">
+          Check the
+          <a href={project.source} target="_blank">
+            source code
+          </a>
         </div>
-       
-        <a href={project.source} target="_blank">
-          source
-        </a>
       </ColorPopup>
     </div>
   );

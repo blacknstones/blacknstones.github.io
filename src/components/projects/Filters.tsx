@@ -3,6 +3,7 @@ import { ColorContext } from "../reusables/ColorContext";
 import { ColorFilterButton, ColorPrompt } from "../reusables/ColoredComponents";
 import FilterButton from "./FilterButton";
 import ProjectCard from "./ProjectCard";
+import ProjectCards from "./ProjectCards";
 
 type Project = {
   title: string;
@@ -276,11 +277,8 @@ const Filters: React.FC<IProjects> = ({ data }) => {
         </div>
       </div>
 
-      <div className="full-layout-container projects">
-        {items.map((item) => (
-          <ProjectCard project={item} />
-        ))}
-      </div>
+     <ProjectCards items={items}/>
+     
     </div>
   );
 };

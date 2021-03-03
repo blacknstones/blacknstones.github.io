@@ -51,19 +51,59 @@
 .projects .project-detail .detail-content {
     font-size: 23px;
     margin: auto;
-    padding: 25px;
+    padding: 30px;
     width: 400px;
     height: 400px;
     line-height: 1.1;
 }
 
-.projects .project-detail .detail-content p{
-margin-bottom: 15px;
+
+.projects .detail-content .close-button {
+    margin-left: 300px;
+    cursor: url("../assets/cursor1.png"), auto;
 }
 
-.projects .detail-content .title {
+.projects .detail-content .close-button:hover,
+.projects .detail-content #source a:hover {
+    color: black;
+    transition: ease-in-out 0.2s;
+}
+
+.projects .detail-content .part {
+    margin-bottom: 15px;
+}
+
+
+.projects .detail-content #title {
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.projects .detail-content #tools p,
+.projects .detail-content .tool,
+.projects .detail-content #source {
+    font-size: 20px;
+}
+
+
+.projects .detail-content #tools p,
+.projects .detail-content #source,
+.projects .detail-content #source a {
+    color: lightgray;   
+}
+
+
+.projects .detail-content .tool {
+    color: grey;
+    margin-right: 10px;
+}
+
+.projects .detail-content #source a {
+    margin-left: 8px;
+    text-decoration: underline;
 
 }
+
+
+
 
