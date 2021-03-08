@@ -1,3 +1,3 @@
-# personal-website-v2
+# blacknstones.github.io
 
-Work in progress for zhuyanwei.com
+Personal website [zhuyanwei.com](https://zhuyanwei.com/)
