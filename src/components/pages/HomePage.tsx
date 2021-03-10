@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../layout/Header';
-import Game from '../home/Game';
+import GameOfLife from '../home/GameOfLife';
 
 const HomePage: React.FC = () => {
     return (
         <div className="home-page">
             <Header/>
             <main className="home-content">
-                    <Game />
+                    <GameOfLife />
             </main>
         </div>
     );
