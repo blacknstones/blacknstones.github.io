@@ -34,7 +34,7 @@ const generateGrid = (option: "empty" | "random"): number[][] => {
   return emptyGrid;
 };
 
-const Game: React.FC = () => {
+const GameOfLife: React.FC = () => {
   const [grid, setGrid] = useState(
     preset
     // Uncomment below to set initial grid to empty
@@ -233,4 +233,4 @@ const Game: React.FC = () => {
   );
 };
 
-export default Game;
+export default GameOfLife;
