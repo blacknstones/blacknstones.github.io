@@ -43,17 +43,19 @@ const GameOfLife: React.FC = () => {
     // }
   );
 
-  const [isRunning, setIsRunning] = useState(false);
+  const [isRunning, setIsRunning] = useState<boolean>(false);
   const runningRef = useRef(isRunning);
   runningRef.current = isRunning;
 
-  const [interval, setInterval] = useState(50);
+
+  const initialInteral = 50;
+  const [interval, setInterval] = useState<number>(initialInteral);
   const intervalRef = useRef(interval);
   intervalRef.current = interval;
 
   //const [rule, setRule] = useState<ruleOptions>("life");
 
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const clickRef = React.useRef(null);
 
   const handleClickOutside = () => {
@@ -182,6 +184,8 @@ const GameOfLife: React.FC = () => {
                 onClick={() => {
                   setIsRunning(false);
                   setGrid(preset);
+                  // eslint-disable-next-line @typescript-eslint/no-implied-eval
+                  setInterval(initialInteral);
                 }}
               >
                 Reset
