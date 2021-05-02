@@ -41,7 +41,7 @@ const Setting: React.FC = () => {
       { showNext ? <Input /> : 
       <section className="content-container" id="setting">
       <div className="layout-container story">
-        <p>It's 3021, a time when AI has taken control. </p>
+        <p>You wake up in 3021, a time when AI has taken control. </p>
         <p>
           From life to death, every human being's consciousness is uploaded to
           the cloud for AI to consume.

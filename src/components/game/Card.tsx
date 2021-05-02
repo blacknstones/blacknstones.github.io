@@ -34,6 +34,11 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
             className="front"
             onMouseEnter={() => setShowContent(true)}
             onMouseLeave={() => setShowContent(false)}
+            onClick={() => {
+         
+              setActive(!active);
+            }}
+          
            
             style={
               active ? { color: color, textDecoration: "underline" } : undefined
