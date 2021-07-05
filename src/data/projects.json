@@ -33,7 +33,8 @@
             "JavaScript"
         ],
         "tools": [
-            "React.js"
+            "React.js",
+            "Firebase"
         ]
     },
     {
@@ -117,22 +118,6 @@
         "tools": [
             "React.js",
             "Figma"
-        ]
-    },
-    {
-        "title": "Munamii Cakery",
-        "desc": " Website design for the client",
-        "flag": "HTML & CSS",
-        "detail": "A CSS-only website design for a cakery shop.",
-        "source": "https://github.com/blacknstones/cupcake-webiste",
-        "categories": [
-            "frontend",
-            "design"
-        ],
-        "languages": [
-        ],
-        "tools": [
-            "Firebase"
         ]
     },
     {
