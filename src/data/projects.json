@@ -20,6 +20,27 @@
         ]
     },
     {
+        "title": "Reacipe",
+        "desc": "Find healthy and easy-to-cook recipes",
+        "detail": "A recipe search app focusing on healthy cooking. Built with Node.js and React.",
+        "flag": "Node.js & React",
+        "source": "https://github.com/blacknstones/reacipe",
+        "categories": [
+            "frontend",
+            "backend",
+            "design"
+        ],
+        "languages": [
+            "JavaScript"
+        ],
+        "tools": [
+            "Node.js",
+            "React.js",
+            "Express.js",
+            "Firebase"
+        ]
+    },
+    {
         "title": "reacTodo",
         "desc": "To-do list",
         "detail": "React implementation of to-do list.",
