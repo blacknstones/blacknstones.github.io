@@ -124,24 +124,6 @@
         ]
     },
     {
-        "title": "ReacTrack",
-        "desc": " Parcel tracking app",
-        "flag": "React",
-        "detail": "A parcel tracking app with mocking data. ",
-        "source": "https://github.com/blacknstones/ReacTrack",
-        "categories": [
-            "frontend",
-            "design"
-        ],
-        "languages": [
-            "JavaScript"
-        ],
-        "tools": [
-            "React.js",
-            "Figma"
-        ]
-    },
-    {
         "title": "ATodolist",
         "desc": "command-line based todolist",
         "flag": "Java",
