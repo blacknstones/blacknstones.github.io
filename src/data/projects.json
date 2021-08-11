@@ -20,11 +20,11 @@
         ]
     },
     {
-        "title": "Reacipe",
-        "desc": "Find healthy and easy-to-cook recipes",
-        "detail": "A recipe search app focusing on healthy cooking. Built with Node.js and React.",
-        "flag": "Node.js & React",
-        "source": "https://github.com/blacknstones/reacipe",
+        "title": "Mealo",
+        "desc": "Personalized meal planner",
+        "detail": "A native mobile app that generates personalized meal plans based on user preferences, dietary needs and profile.",
+        "flag": "React Native & GraphQL",
+        "source": "https://github.com/Imaginaryverse/mealo",
         "categories": [
             "frontend",
             "backend",
@@ -34,10 +34,13 @@
             "JavaScript"
         ],
         "tools": [
+            "React Native",
+            "GraphQL",
             "Node.js",
-            "React.js",
             "Express.js",
-            "Firebase"
+            "MongoDB",
+            "Docker",
+            "Heroku"
         ]
     },
     {

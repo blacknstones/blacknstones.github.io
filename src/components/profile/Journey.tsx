@@ -27,7 +27,7 @@ const Journey: React.FC = () => {
               <p className="detail">
                 I published my{" "}
                 <a
-                  className="inline-link"
+                  className="inline-link content-link"
                   target="_blank"
                   href="https://lup.lub.lu.se/student-papers/search/publication/8993439"
                 >
@@ -43,8 +43,7 @@ const Journey: React.FC = () => {
               <p className="title">
                 2019 | Harvard University &amp; EdX |{" "}
                 <a
-                  className="inline-link" 
-                  id="cs50"
+                  className="inline-link"
                   target="_blank"
                   href="https://www.edx.org/course/cs50s-introduction-to-computer-science?hs-referral=course-listing"
                 >
@@ -57,9 +56,23 @@ const Journey: React.FC = () => {
           <Tab title="" icon={Heart} newIcon={FullHeart}>
             <ColorBox color={color} className="tab-content">
             <p className="title">
-                2020 | KTH Royal Institute of Technology | Software Development Academy
+                2020 | KTH Royal Institute of Technology | <a
+                  className="inline-link" 
+                  target="_blank"
+                  href="https://www.kth.se/en/itm/sda/software-development-academy-1.841849"
+                >
+                  Software Development Academy
+                </a>
               </p>
-              <p className="detail">I've gained in-depth knowledge of Java, JavaScript and industrial standard coding practice. </p>
+              <p className="detail">I gained in-depth knowledge of Java, JavaScript and industrial standard coding practice. </p>
+            </ColorBox>
+          </Tab>
+          <Tab title="" icon={Heart} newIcon={FullHeart}>
+            <ColorBox color={color} className="tab-content">
+            <p className="title">
+                2021 | School of Applied Technology &lt;/Salt&gt;
+              </p>
+              <p className="detail">I work as a full-stack JavaScript developer after three months of intensive training.</p>
             </ColorBox>
           </Tab>
           <Tab title="" icon={Heart} newIcon={FullHeart}>
@@ -67,8 +80,8 @@ const Journey: React.FC = () => {
             <p className="title">
                 Current
               </p>
-              <p className="detail">I'm learning new technologies everyday and building projects on my own.</p>
-              <p>Check out my projects <Link to="/projects" className="inline-link">here</Link></p>
+              <p className="detail">I'm learning new technologies everyday and building interesting projects.</p>
+              <p>Check out my projects <Link to="/projects" className="inline-link content-link">here</Link></p>
             </ColorBox>
           </Tab>
         </Tabs>

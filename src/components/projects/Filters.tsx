@@ -204,10 +204,10 @@ const Filters: React.FC<IProjects> = ({ data }) => {
     [items, filters]
   );
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log("items:", items);
     console.log("filters:", filters);
-  }, [items, filters]);
+  }, [items, filters]); */
 
   return (
     <div className="filters">

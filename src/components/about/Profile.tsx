@@ -19,7 +19,7 @@ const next = [
     },
     {
       title: "Creating",
-      desc: "Build interesting user interface and games",
+      desc: "Build interesting full-stack projects",
     },
     {
       title: "Collaboration",
@@ -27,7 +27,7 @@ const next = [
     },
     {
         title: "Value",
-        desc:"Solve inequality issues",
+        desc:"Solve inequality issues with technology",
     }
   ];
 
@@ -39,8 +39,7 @@ const Profile: React.FC = () => {
           <div className="layout-container text">
             <p>My name is Yanwei Zhu.</p>
             <p>
-              I'm a self-motivated web developer who love thinking outside the
-              box, creating visual &amp; functionality with code and other media.
+              I'm a full-stack developer who loves thinking outside the box, who creates with code and other media.
             </p>
           </div>
         </Tab>

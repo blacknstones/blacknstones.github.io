@@ -71,10 +71,11 @@
 
 #journey .tabs .inline-link {
     text-decoration: underline;
+    color: grey;
 }
 
-#journey #cs50{
-    color: grey;
+#journey .tabs .content-link {
+    color: white;
 }
 
 #journey .tabs .inline-link:hover {

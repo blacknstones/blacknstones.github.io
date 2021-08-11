@@ -19,7 +19,7 @@ const Intro: React.FC = () => {
 
         <p>My name is Yanwei Zhu.</p>
         <p>
-          I'm a self-motivated web developer who love thinking outside the box,
+          I'm a web developer who love thinking outside the box,
           using code and other medium to create visual &amp; functionality.
         </p>
 
