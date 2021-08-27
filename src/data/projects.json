@@ -2,7 +2,7 @@
     {
         "title": "zhuyanwei.com",
         "desc": "Personal website",
-        "detail": "This is the space where I explore my potential creativity. Built with TypeScript and React.",
+        "detail": "This is the space where I explore my potential creativity with code. Built with TypeScript and React.",
         "flag": "TypeScript & React",
         "source": "https://github.com/blacknstones/blacknstones.github.io",
         "demo": "https://zhuyanwei.com",
@@ -67,7 +67,7 @@
         "title": "Well-Bean",
         "desc": "Project organizing and collaboration tool that cares about your well-being.",
         "flag": "Java & JavaScript",
-        "detail": "A full-stack project organizing and collaboration tool that helps individuals and teams to work effectively while improve personal well-being.",
+        "detail": "A project organizing and collaboration tool that helps individuals and teams to work effectively while improve personal well-being.",
         "source": "https://github.com/blacknstones/well-bean",
         "categories": [
             "frontend",
