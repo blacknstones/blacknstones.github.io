@@ -6,22 +6,13 @@ import randomColor from "randomcolor";
 import { ColorContext } from "../reusables/ColorContext";
 import { ColorButton } from "../reusables/ColoredComponents";
 
-// type Project = {
-//   title: string;
-//   desc: string;
-//   flag: string;
-//   detail: string;
-//   source: string;
-//   categories: string[];
-//   languages: string[];
-//   tools: string[];
-// };
-
 const ProjectPage: React.FC = () => {
   const initialColor = randomColor();
   const [color, setColor] = useState<string>(initialColor);
   const colorRef = useRef(color);
   colorRef.current = color;
+
+  const [hover, setHover] = useState(false);
 
   const changeColor: () => void = () => {
     const newColor = randomColor();
@@ -38,10 +29,12 @@ const ProjectPage: React.FC = () => {
                 className="color-switcher"
                 color={color}
                 onClick={changeColor}
+                onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
               >
                 <div className="flex">
                   <i className="fas fa-circle"></i>
-                  <p className="color-name">{color}</p>
+                  <p className="color-name">{hover ? color : "Switch color"}</p>
                 </div>
               </ColorButton>
             </div>

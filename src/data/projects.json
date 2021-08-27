@@ -5,6 +5,7 @@
         "detail": "This is the space where I explore my potential creativity. Built with TypeScript and React.",
         "flag": "TypeScript & React",
         "source": "https://github.com/blacknstones/blacknstones.github.io",
+        "demo": "https://zhuyanwei.com",
         "categories": [
             "frontend",
             "design"
@@ -15,7 +16,6 @@
         ],
         "tools": [
             "React.js",
-            "Styled-component",
             "Figma"
         ]
     },
@@ -25,6 +25,7 @@
         "detail": "A native mobile app that generates personalized meal plans based on user preferences, dietary needs and profile.",
         "flag": "React Native & GraphQL",
         "source": "https://github.com/Imaginaryverse/mealo",
+        "demo": "https://www.youtube.com/watch?v=WR3piINpspk&list=PLDqoWWdtjihDcSCZpYQxAQSIKMyf661no&index=6",
         "categories": [
             "frontend",
             "backend",
@@ -49,6 +50,7 @@
         "detail": "React implementation of to-do list.",
         "flag": "React",
         "source": "https://github.com/blacknstones/reacTodo",
+        "demo": "https://reactodo-2ba96.web.app/",
         "categories": [
             "frontend",
             "design"
@@ -91,6 +93,7 @@
         "flag": "TypeScript & React",
         "detail": "An interactive simulator of the classic cellular automaton Game of Life. Built with TypeScript and React.",
         "source": "https://github.com/blacknstones/game-of-life",
+        "demo": "https://zhuyanwei.com",
         "categories": [
             "frontend",
             "design"
@@ -101,8 +104,7 @@
             "TypeScript"
         ],
         "tools": [
-            "React.js",
-            "Styled-component"
+            "React.js"
         ]
     },
     {
