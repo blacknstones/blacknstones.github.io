@@ -9,6 +9,7 @@ interface IProject {
     flag: string;
     detail: string;
     source: string;
+    demo?: string;
     categories: string[];
     languages: string[];
     tools: string[];
@@ -50,10 +51,11 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
         )}
 
         <div className="part" id="source">
-          Check the
+          Check out the
           <a href={project.source} target="_blank">
             source code
           </a>
+          {project.demo && <span> and<a href={project.demo} target="_blank">demo</a></span>}
         </div>
       </ColorPopup>
     </div>

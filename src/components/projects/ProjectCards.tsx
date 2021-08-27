@@ -7,6 +7,7 @@ type Project = {
     flag: string;
     detail: string;
     source: string;
+    demo?: string;
     categories: string[];
     languages: string[];
     tools: string[];

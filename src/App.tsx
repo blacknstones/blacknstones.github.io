@@ -7,8 +7,8 @@ import ProjectPage from './components/pages/ProjectPage';
 import AboutPage from './components/pages/AboutPage';
 
 import './css/style.css';
-import TempAbout from './components/pages/TempAbout';
-import TempProject from './components/pages/TempProject';
+/* import TempAbout from './components/pages/TempAbout';
+import TempProject from './components/pages/TempProject'; */
 
 const App: React.FC = () => {
   return (
