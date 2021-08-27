@@ -45,14 +45,16 @@ export const ColorTab = styled.div<IStyled>`
 export const ColorFilterButton = styled.button<IStyled>`
   border: 2px solid transparent;
   &:hover {
-    color: ${(props) => props.color};
     border: 2px solid ${(props) => props.color};
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.1s;
+    transform: scale(1.1);
   }
 
   &:active {
     color: white;
     border-color: white;
+    transform: scale(1);
+
   }
 `;
  
