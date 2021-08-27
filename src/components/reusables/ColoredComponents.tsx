@@ -47,13 +47,13 @@ export const ColorFilterButton = styled.button<IStyled>`
   &:hover {
     border: 2px solid ${(props) => props.color};
     transition: ease-in-out 0.1s;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &:active {
     color: white;
     border-color: white;
-    transform: scale(1);
+    transform: scale(0.95);
 
   }
 `;
