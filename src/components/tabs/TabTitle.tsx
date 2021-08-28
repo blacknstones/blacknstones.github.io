@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ColorContext } from "../../context/ColorContext";
-import { ColorTab } from "../reusables/ColoredComponents";
+import { ColorTab } from "../color/ColoredComponents";
 
 type Props = {
   title: string;

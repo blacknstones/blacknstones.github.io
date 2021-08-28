@@ -4,18 +4,19 @@
 }
 
 
-.project-page .color-switcher {
+#color-switcher {
     font-size: 16px;
     border: none;
     width: 110px;
 }
 
-.project-page .color-switcher .color-name{
+#color-switcher .color-name{
     margin-left: 4px;
 }
 
-.project-page .color-switcher:hover {
+#color-switcher:hover {
     border: none;
+    cursor: url("../assets/cursor1.png"), auto;
 
 }
 

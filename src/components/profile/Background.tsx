@@ -1,6 +1,6 @@
 import React from 'react';
 import { ColorContext } from '../../context/ColorContext';
-import { ColorBox } from '../reusables/ColoredComponents';
+import { ColorBox } from '../color/ColoredComponents';
 import Tab from '../tabs/Tab';
 import Tabs from '../tabs/Tabs';
 import Heart from "../../assets/heart1.png";

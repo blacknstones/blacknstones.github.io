@@ -1,6 +1,6 @@
 import React from "react";
 import { ColorContext } from "../../context/ColorContext";
-import { ColorPopup } from "../reusables/ColoredComponents";
+import { ColorPopup } from "../color/ColoredComponents";
 
 interface IProject {
   project: {

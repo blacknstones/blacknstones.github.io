@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import pointer from "../../assets/cursor1.png";
 
 interface IStyled {
   color: string;

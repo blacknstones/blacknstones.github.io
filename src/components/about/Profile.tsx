@@ -1,6 +1,4 @@
 import * as React from "react";
-import { ColorContext } from "../../context/ColorContext";
-import { ColorButton } from "../reusables/ColoredComponents";
 import Tabs from "../tabs/Tabs";
 import Tab from "../tabs/Tab";
 import Journey from "../profile/Journey";
@@ -13,6 +11,7 @@ import SunflowerIcon from "../../assets/sunflower.png";
 import StarIcon from "../../assets/star.png";
 import MonsteraIcon from "../../assets/monstera.png";
 import CoffeeIcon from "../../assets/coffee.png";
+import ColorSwitcher from "../color/ColorSwitcher";
 
 const next = [
     {
@@ -33,31 +32,10 @@ const next = [
     }
   ];
 
- /*  type Props = {
-    changeColor: () => void
-  } */
-
 const Profile: React.FC = () => {
-  const {color, changeColor} = React.useContext(ColorContext);
-  const [hover, setHover] = React.useState(false);
 
   return (
-    <section className="content-container profile">
-      <div className="full-layout-container control">
-              <ColorButton
-                className="color-switcher"
-                color={color}
-                onClick={changeColor}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-              >
-                <div className="flex">
-                  <i className="fas fa-circle"></i>
-                  <p className="color-name">{hover ? color : "Switch color"}</p>
-                </div>
-              </ColorButton>
-            </div>
-      
+    <div className="profile">
       <Tabs showDefault={true} transform="active" useColorTab={true}>
         <Tab title="" icon={RobotIcon} newTitle="Who am I?">
           <div className="layout-container text">
@@ -93,7 +71,7 @@ const Profile: React.FC = () => {
             <SocialLinks/>
         </Tab>
       </Tabs>
-    </section>
+    </div>
   );
 };
 

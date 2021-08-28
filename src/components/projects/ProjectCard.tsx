@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ColorContext } from "../../context/ColorContext";
-import { ColorCard } from "../reusables/ColoredComponents";
+import { ColorCard } from "../color/ColoredComponents";
 import ProjectDetail from "./ProjectDetail";
 interface IProject {
   project: {

@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useContext } from "react";
 import { ColorContext } from "../../context/ColorContext";
-import { ColorFilterButton, ColorPrompt } from "../reusables/ColoredComponents";
+import { ColorFilterButton, ColorPrompt } from "../color/ColoredComponents";
 import FilterButton from "./FilterButton";
 import ProjectCards from "./ProjectCards";
 

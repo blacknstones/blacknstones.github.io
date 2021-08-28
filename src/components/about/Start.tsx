@@ -1,6 +1,6 @@
 import React from "react";
 import { ColorContext } from "../../context/ColorContext";
-import { ColorBox, ColorButton } from "../reusables/ColoredComponents";
+import { ColorBox, ColorButton } from "../color/ColoredComponents";
 
 type Props = {
   setShowStart: (b: boolean) => void,

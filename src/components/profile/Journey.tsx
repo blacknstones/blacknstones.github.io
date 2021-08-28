@@ -4,7 +4,7 @@ import Tab from '../tabs/Tab';
 import Tabs from '../tabs/Tabs';
 import Heart from "../../assets/heart1.png";
 import FullHeart from '../../assets/heart2.png';
-import { ColorBox } from '../reusables/ColoredComponents';
+import { ColorBox } from '../color/ColoredComponents';
 import { Link } from 'react-router-dom';
 
 const Journey: React.FC = () => {

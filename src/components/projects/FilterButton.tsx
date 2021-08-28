@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ColorContext } from "../../context/ColorContext";
-import { ColorFilterButton } from "../reusables/ColoredComponents";
+import { ColorFilterButton } from "../color/ColoredComponents";
 
 type Level = "category" | "language" | "tool";
 
@@ -24,8 +24,6 @@ const FilterButton: React.FC<Props> = ({
   const [active, setActive] = React.useState(false);
 
   const isSelected: boolean = selected ? selected.includes(option) : false;
-
-  console.log(option, isSelected);
 
   return (
     <ColorFilterButton
