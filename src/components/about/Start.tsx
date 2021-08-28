@@ -1,16 +1,15 @@
 import React from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 import { ColorBox, ColorButton } from "../reusables/ColoredComponents";
 
 type Props = {
-  changeColor: () => void,
   setShowStart: (b: boolean) => void,
   setShowGame: (b: boolean) => void,
   setShowProfile: (b: boolean) => void
 };
 
-const Start: React.FC<Props> = ({changeColor, setShowStart, setShowGame, setShowProfile}) => {
-  const color = React.useContext(ColorContext);
+const Start: React.FC<Props> = ({ setShowStart, setShowGame, setShowProfile}) => {
+  const {color, changeColor} = React.useContext(ColorContext);
 
   return (
     <section className="content-container flex" id="start">

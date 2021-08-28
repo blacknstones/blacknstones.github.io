@@ -3,12 +3,14 @@ import randomColor from "randomcolor";
 import Header from "../layout/Header";
 import Profile from "../about/Profile";
 import Setting from "../game/Setting";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 import Start from "../about/Start";
 import TempGame from "../game/TempGame";
+import { useContext } from "react";
 
 const AboutPage: React.FC = () => {
-  const initialColor = randomColor();
+  const {color, changeColor} = useContext(ColorContext);
+  /* const initialColor = randomColor();
   const [color, setColor] = useState<string>(initialColor);
   const colorRef = useRef(color);
   colorRef.current = color;
@@ -17,37 +19,32 @@ const AboutPage: React.FC = () => {
     const newColor = randomColor();
     setColor(newColor);
   };
-
-  const [showStart, setShowStart] = useState(true);
-  const [showGame, setShowGame] = useState(false);
-  const [showProfile, setShowProfile] = useState(false);
-
-  // for testing if color is logged to console
-  useEffect(() => {
-    console.log(colorRef);
-  }, [color]);
+ */
+  //const [showStart, setShowStart] = useState(true);
+  //const [showGame, setShowGame] = useState(false);
+  // const [showProfile, setShowProfile] = useState(false);
 
   return (
     <div className="about-page">
       <Header />
-      <ColorContext.Provider value={colorRef.current}>
+      {/* <ColorContext.Provider value={colorRef.current}> */}
         
         <main className="content">
 
-          {showStart && (
+{/*           {showStart && (
            <Start changeColor={changeColor} 
            setShowStart={setShowStart} 
            setShowGame={setShowGame} 
            setShowProfile={setShowProfile}/>
-          )}
+          )} */}
 
           {/* {showGame && <Setting />} */}
-          {showGame && <TempGame />}
+          {/* {showGame && <TempGame />} */}
 
-          {showProfile && <Profile />}
+          <Profile/>
         </main>
         
-      </ColorContext.Provider>
+    {/*   </ColorContext.Provider> */}
     </div>
   );
 };

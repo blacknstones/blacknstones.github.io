@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 
 type props = {
   item: {
@@ -13,7 +13,7 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
   const [fliped, setFliped] = React.useState(false);
   const [showContent, setShowContent] = React.useState(false);
   const [active, setActive] = React.useState(false);
-  const color = React.useContext(ColorContext);
+  const{ color} = React.useContext(ColorContext);
 
   const handleFlip = () => {
     setFliped(true);

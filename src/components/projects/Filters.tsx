@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import React, { useCallback, useState, useContext } from "react";
+import { ColorContext } from "../../context/ColorContext";
 import { ColorFilterButton, ColorPrompt } from "../reusables/ColoredComponents";
 import FilterButton from "./FilterButton";
 import ProjectCards from "./ProjectCards";
@@ -105,12 +105,8 @@ const filterItems = (items: Project[], filters: Filters) => {
     filteredItems.push(item);
   });
 
-  // todo: for langs and tools
-  console.log("filtered items:", filteredItems);
   return filteredItems;
 };
-
-// find filter options with given items
 
 const Filters: React.FC<IProjects> = ({ data }) => {
   const [items, setItems] = useState<Project[]>(data);
@@ -118,7 +114,7 @@ const Filters: React.FC<IProjects> = ({ data }) => {
     return initializeFilters(data);
   });
 
-  const color = React.useContext(ColorContext);
+  const {color} = useContext(ColorContext);
 
   const onAddFilter = useCallback(
     (level: Level, option: string) => {
@@ -204,11 +200,6 @@ const Filters: React.FC<IProjects> = ({ data }) => {
     },
     [items, filters]
   );
-
-/*   useEffect(() => {
-    console.log("items:", items);
-    console.log("filters:", filters);
-  }, [items, filters]); */
 
   return (
     <div className="filters">

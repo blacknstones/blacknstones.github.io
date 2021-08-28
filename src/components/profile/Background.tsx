@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColorContext } from '../reusables/ColorContext';
+import { ColorContext } from '../../context/ColorContext';
 import { ColorBox } from '../reusables/ColoredComponents';
 import Tab from '../tabs/Tab';
 import Tabs from '../tabs/Tabs';
@@ -13,7 +13,7 @@ type Props = {
 };
 
 const Background:  React.FC<Props> = ({setShowFirst, setShowSecond}) => {
-    const color = React.useContext(ColorContext);
+    const {color} = React.useContext(ColorContext);
     const ColorStyle = {
       color: color,
     };

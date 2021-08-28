@@ -32,13 +32,14 @@ export const ColorTab = styled.div<IStyled>`
   border: 4px solid transparent;
   &:hover {
     border: 4px solid ${(props) => props.color};
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.1s;
+    transform: scale(1.05);
   }
 
   &:active {
-    border: 4px solid ${(props) => props.color};
-    background-color: ${(props) => props.color};
-    transition: ease-in-out 0.2s;
+    border: 4px solid white;
+    transform: scale(0.95);
+    transition: ease-in-out 0.1s;
   }
 `;
 
@@ -67,7 +68,8 @@ border: 3px solid ${(props) => props.color};
 
 &:hover {
     background-color: ${(props) => props.color};
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.1s;
+    transform: scale(1.03);
 }
 `;
 

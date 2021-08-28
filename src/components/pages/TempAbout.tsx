@@ -5,7 +5,8 @@ import styled from "styled-components";
 import pointer from "../../assets/cursor1.png";
 import Profile from "../about/Profile";
 import Setting from "../game/Setting";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
+import { useContext } from "react";
 
 
 interface IStyled {
@@ -37,7 +38,7 @@ const StartButton = styled.button<IStyled>`
 `;
 
 const TempAbout: React.FC = () => {
-  const initialColor = randomColor();
+/*   const initialColor = randomColor();
   const [color, setColor] = useState<string>(initialColor);
   const colorRef = useRef(color);
   colorRef.current = color; 
@@ -45,20 +46,19 @@ const TempAbout: React.FC = () => {
   const changeColor: () => void = () => {
     const newColor = randomColor();
     setColor(newColor);
-  };
+  }; */
+  const {color, changeColor} = useContext(ColorContext);
 
   const [showStart, setShowStart] = useState(true);
   const [showGame, setShowGame] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
 
-useEffect(() => {
-  console.log(colorRef);
-},[color]);
+
 
   return (
     <div className="about-page">
-      <ColorContext.Provider value={colorRef.current}>
+      {/* <ColorContext.Provider value={colorRef.current}> */}
       <Header />
       <div className="content">
         {showStart && (
@@ -84,7 +84,7 @@ useEffect(() => {
 
 
       </div>
-      </ColorContext.Provider>
+      {/* </ColorContext.Provider> */}
     </div>
   );
 };

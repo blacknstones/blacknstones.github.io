@@ -3,25 +3,24 @@ import Header from "../layout/Header";
 import projectsData from "../../data/projects.json";
 import Filters from "../projects/Filters";
 import randomColor from "randomcolor";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 import { ColorButton } from "../reusables/ColoredComponents";
+import { useContext } from "react";
 
 const ProjectPage: React.FC = () => {
-  const initialColor = randomColor();
+  /* const initialColor = randomColor();
   const [color, setColor] = useState<string>(initialColor);
   const colorRef = useRef(color);
   colorRef.current = color;
+ */
 
+  const {color, changeColor} =useContext(ColorContext);
   const [hover, setHover] = useState(false);
 
-  const changeColor: () => void = () => {
-    const newColor = randomColor();
-    setColor(newColor);
-  };
   return (
     <div className="project-page">
       <Header />
-      <ColorContext.Provider value={colorRef.current}>
+
         <main className="content">
           <section className="content-container">
             <div className="full-layout-container control">
@@ -30,7 +29,7 @@ const ProjectPage: React.FC = () => {
                 color={color}
                 onClick={changeColor}
                 onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+                onMouseLeave={() => setHover(false)}
               >
                 <div className="flex">
                   <i className="fas fa-circle"></i>
@@ -41,7 +40,7 @@ const ProjectPage: React.FC = () => {
             <Filters data={projectsData} />
           </section>
         </main>
-      </ColorContext.Provider>
+
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 import { ColorPopup } from "../reusables/ColoredComponents";
 
 interface IProject {
@@ -19,7 +19,7 @@ interface IProject {
 }
 
 const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
-  const color = React.useContext(ColorContext);
+  const {color} = React.useContext(ColorContext);
   return (
     <div className="project-detail">
       <ColorPopup color={color} className="detail-content">

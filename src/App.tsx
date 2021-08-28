@@ -1,5 +1,5 @@
 // React Core
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './components/pages/HomePage';
@@ -7,13 +7,27 @@ import ProjectPage from './components/pages/ProjectPage';
 import AboutPage from './components/pages/AboutPage';
 
 import './css/style.css';
-/* import TempAbout from './components/pages/TempAbout';
-import TempProject from './components/pages/TempProject'; */
+import ColorProvider from './context/ColorContext';
+
 
 const App: React.FC = () => {
+
+ /*  const initialColor = randomColor();
+  const [color, setColor] = useState<string>(initialColor);
+  const colorRef = useRef(color);
+  colorRef.current = color;
+
+  const changeColor: () => void = () => {
+    const newColor = randomColor();
+    setColor(newColor);
+  };
+
+ */
   return (
 
     <div className="App">
+      <ColorProvider>
+      {/*  <ColorContext.Provider value={{color: colorRef.current, changeColor: changeColor}}> */}
       <Router>
         <Switch>
           <Route exact path="/">
@@ -29,6 +43,9 @@ const App: React.FC = () => {
           </Route>
         </Switch>
       </Router>
+     {/*  </ColorContext.Provider> */}
+
+      </ColorProvider>
     </div>
 
   );

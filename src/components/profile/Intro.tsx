@@ -1,5 +1,5 @@
 import React from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 
 // type Props = {
 //     setShowFirst: (b: boolean) => void,
@@ -7,7 +7,7 @@ import { ColorContext } from "../reusables/ColorContext";
 // };
 
 const Intro: React.FC = () => {
-  const color = React.useContext(ColorContext);
+  const {color }= React.useContext(ColorContext);
   const ColorStyle = {
     color: color,
   };

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 import { ColorCard } from "../reusables/ColoredComponents";
 import ProjectDetail from "./ProjectDetail";
-
 interface IProject {
   project: {
     title: string;
@@ -19,7 +18,7 @@ interface IProject {
 
 const ProjectCard: React.FC<IProject> = ({ project }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const color = React.useContext(ColorContext);
+  const {color} = React.useContext(ColorContext);
 
   return (
     <div>

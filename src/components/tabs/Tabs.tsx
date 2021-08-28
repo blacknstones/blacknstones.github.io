@@ -8,7 +8,6 @@ interface TabProps {
     newIcon?: string; // transform after click
     
 }
-
 interface ITabs {
     children: ReactElement<TabProps>[];
     showDefault: boolean; // when tabs are not clicked, show the first option 

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { ColorContext } from "../reusables/ColorContext";
+import { ColorContext } from "../../context/ColorContext";
 import { ColorTab } from "../reusables/ColoredComponents";
 
 type Props = {
@@ -25,7 +25,7 @@ const TabTitle: React.FC<Props> = ({
   active,
   useColor,
 }) => {
-  const color = React.useContext(ColorContext);
+  const {color} = React.useContext(ColorContext);
   const ActiveStyle = {
     backgroundColor: color,
     borderColor: color,

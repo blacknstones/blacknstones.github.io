@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import Card from "./Card";
 import Input from "./Input";
-import { ColorContext }  from "../reusables/ColorContext";
+import { ColorContext }  from "../../context/ColorContext";
 
 
 const Setting: React.FC = () => {
   const [opened, setOpened] = useState(false);
   const [chosen, setChosen] = useState(false);
   const [showNext, setShowNext] = useState(false);
-  const color = useContext(ColorContext);
+  const {color} = useContext(ColorContext);
 
   const style = {
     color : color,

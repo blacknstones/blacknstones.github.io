@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColorContext } from '../reusables/ColorContext';
+import { ColorContext } from '../../context/ColorContext';
 import Tab from '../tabs/Tab';
 import Tabs from '../tabs/Tabs';
 import Heart from "../../assets/heart1.png";
@@ -8,7 +8,7 @@ import { ColorBox } from '../reusables/ColoredComponents';
 import { Link } from 'react-router-dom';
 
 const Journey: React.FC = () => {
-    const color = React.useContext(ColorContext);
+    const {color} = React.useContext(ColorContext);
     const ColorStyle = {
       color: color,
     };
