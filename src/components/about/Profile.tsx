@@ -3,7 +3,7 @@ import Tabs from "../tabs/Tabs";
 import Tab from "../tabs/Tab";
 import Journey from "./Journey";
 import SocialLinks from "./SocialLinks";
-import Card from "../game/Card";
+import Card from "./Card";
 
 import RobotIcon from "../../assets/robot.png";
 import PigIcon from "../../assets/pig.png";

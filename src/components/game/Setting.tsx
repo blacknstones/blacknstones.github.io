@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Card from "./Card";
+import Card from "../about/Card";
 import Input from "./Input";
 import { ColorContext }  from "../../context/ColorContext";
 
