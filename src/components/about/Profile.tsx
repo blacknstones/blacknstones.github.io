@@ -1,7 +1,7 @@
 import * as React from "react";
 import Tabs from "../tabs/Tabs";
 import Tab from "../tabs/Tab";
-import Journey from "../profile/Journey";
+import Journey from "./Journey";
 import SocialLinks from "./SocialLinks";
 import Card from "../game/Card";
 
@@ -16,14 +16,14 @@ import ColorSwitcher from "../color/ColorSwitcher";
 const next = [
     {
       title: "Learning",
-      desc: "Keep on learning new technologies and developing professionally",
+      desc: "Keep on learning new technologies and develop professionally",
     },
     {
       title: "Creating",
-      desc: "Build interesting full-stack projects",
+      desc: "Build interesting projects on frontend & backend",
     },
     {
-      title: "Collaboration",
+      title: "Collaborating",
       desc: "Work with and be inspired by other motivated developers",
     },
     {
