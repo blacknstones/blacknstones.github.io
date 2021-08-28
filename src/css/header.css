@@ -24,10 +24,12 @@
 
 .menu-button:hover {
     cursor: url('../assets/cursor1.png'), auto; 
+    transform: scale(1.1);
+    transition: ease-in-out 0.1s;
 }
 
 .header .nav-link {
-    color: lightgray;
+    color: gray;
     font-family: 'VT323', monospace; 
     font-size: 30px;
     margin-right: 3vw;
@@ -36,8 +38,8 @@
 
 .nav-link:hover {
     color: white;
-    transition: ease-in-out 0.2s;
-    /* cursor: url('../assets/cursor1.png'), auto; */
+    transition: ease-in-out 0.1s;
+    cursor: url('../assets/cursor1.png'), auto;
 }
 
 @media (max-width: 400px) {

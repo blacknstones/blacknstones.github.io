@@ -19,6 +19,7 @@ const initialValue = {
 
 export const ColorContext = createContext<ColorProps>(initialValue);
 
+// eslint-disable-next-line
 const ColorProvider = ({children} : Props) => {
 
     const [color, setColor] = useState<string>(randomColor());

@@ -77,8 +77,9 @@
 .actions button:hover,
 .intro:hover {
     color: white;
-    cursor: pointer;
-    /* cursor: url('../assets/cursor1.png'), auto; */
+    cursor: url('../assets/cursor1.png'), auto; 
+    transform: scale(1.05);
+    transition: all ease-in-out 0.1s;
     
 }
 
