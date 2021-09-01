@@ -38,9 +38,17 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
           {project.detail}
         </p>
 
+        <div className="part" id="tools">
+          <p>Language: </p>
+          <div className="tool-items">
+            {project.languages.map(language => <p id="tool">{language}</p>)}
+          </div>
+
+        </div>
+
         {(project.tools.length !== 0) && (
           <div className="part" id="tools">
-            <p>Tools used: </p>
+            <p>Tools: </p>
             <div className="tool-items">
                  {project.tools.map((tool) => (
               <p id="tool">{tool}</p>
