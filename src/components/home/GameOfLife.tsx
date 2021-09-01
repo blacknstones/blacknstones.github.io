@@ -1,10 +1,10 @@
 /* eslint-disable prefer-const */
-import React, { useCallback, useRef, useState } from "react";
-import styled from "styled-components";
-import produce from "immer";
-import preset from "../../data/preset.json";
-import useOnClickOutside from "../reusables/useOnClickOurside";
-import controlButton from "../../assets/mobius.png";
+import React, { useCallback, useRef, useState } from 'react';
+import styled from 'styled-components';
+import produce from 'immer';
+import preset from '../../data/preset.json';
+import useOnClickOutside from '../reusables/useOnClickOurside';
+import controlButton from '../../assets/mobius.png';
 
 // type ruleOptions = "life" | "brain";
 interface ICellStyled {
@@ -19,16 +19,16 @@ const Cell = styled.div<ICellStyled>`
   height: calc(90vw / 40);
   max-width: calc(1024px / 40);
   max-height: calc(1024px / 40);
-  background: ${(props) => (props.isAlive ? "white" : "black")};
+  background: ${props => (props.isAlive ? 'white' : 'black')};
   border: 1px solid transparent;
 `;
 
-const generateGrid = (option: "empty" | "random"): number[][] => {
+const generateGrid = (option: 'empty' | 'random'): number[][] => {
   let emptyGrid: number[][] = [];
   for (let x = 0; x < rowsLength; x++) {
     emptyGrid[x] = [];
     for (let y = 0; y < colsLength; y++) {
-      emptyGrid[x][y] = option === "empty" ? 0 : Math.round(Math.random());
+      emptyGrid[x][y] = option === 'empty' ? 0 : Math.round(Math.random());
     }
   }
   return emptyGrid;
@@ -47,7 +47,6 @@ const GameOfLife: React.FC = () => {
   const runningRef = useRef(isRunning);
   runningRef.current = isRunning;
 
-
   const initialInteral = 50;
   const [interval, setInterval] = useState<number>(initialInteral);
   const intervalRef = useRef(interval);
@@ -58,9 +57,11 @@ const GameOfLife: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const clickRef = React.useRef(null);
 
+  const [showContent, setShowContent] = useState<boolean>(false);
+
   const handleClickOutside = () => {
     setMenuIsOpen(false);
-    console.log("clicked outside");
+    console.log('clicked outside');
   };
 
   useOnClickOutside(clickRef, handleClickOutside);
@@ -73,11 +74,11 @@ const GameOfLife: React.FC = () => {
     //   return newGrid;
     // });
 
-    let newGrid = produce(grid, (draftGrid) => {
+    let newGrid = produce(grid, draftGrid => {
       draftGrid[x][y] = grid[x][y] ? 0 : 1;
     });
     setGrid(newGrid);
-    console.log("clicked");
+    console.log('clicked');
     console.table(JSON.stringify(grid));
   };
 
@@ -104,16 +105,16 @@ const GameOfLife: React.FC = () => {
 
   // useCallback hook to avoid creating a new function in every re-render
   const runIteration = useCallback(() => {
-    console.log("isRunning: ", isRunning);
-    console.log("runningRef", runningRef);
-    console.log("intervalRef:", intervalRef);
+    console.log('isRunning: ', isRunning);
+    console.log('runningRef', runningRef);
+    console.log('intervalRef:', intervalRef);
     // useRef hook to grab the current isRunning state
     if (!runningRef.current) {
       return;
     }
 
-    setGrid((grid) =>
-      produce(grid, (draftGrid) => {
+    setGrid(grid =>
+      produce(grid, draftGrid => {
         for (let i = 0; i < rowsLength; i++) {
           for (let j = 0; j < colsLength; j++) {
             let neighbors = countNeighbors(grid, i, j);
@@ -132,14 +133,14 @@ const GameOfLife: React.FC = () => {
   }, [isRunning]);
 
   return (
-    <div className="game">
-      <div className="grid-wrapper">
+    <div className='game'>
+      <div className='grid-wrapper'>
         {grid.map((rows, x) => {
           return (
-            <div className="cols-wrapper" key={x}>
+            <div className='cols-wrapper' key={x}>
               {rows.map((cols, y) => (
                 <Cell
-                  className="cell"
+                  className='cell'
                   key={`${x}, ${y}`}
                   onClick={() => {
                     handleCellClick(x, y);
@@ -152,32 +153,41 @@ const GameOfLife: React.FC = () => {
         })}
       </div>
 
-      <div className="game-menu" ref={clickRef}>
+      <div className='game-menu' ref={clickRef}>
         <button
-          className="menu-button"
+          className='menu-button bounce'
           onClick={() => {
             setMenuIsOpen(!menuIsOpen);
           }}
-          onMouseEnter={() => setMenuIsOpen(true)}
-        >
+          onMouseEnter={() => setMenuIsOpen(true)}>
           <img src={controlButton} />
         </button>
 
         {menuIsOpen && (
-          <div className="toggle">
-            <a className="intro" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Game of Life</a>
-            <div className="actions">
+          <div className='toggle'>
+            {showContent && <div className='tooltip'><p>This is a simulation of the classic cellular automaton Game of Life.</p><p>Click to learn more.</p></div>}
+            <div>
+              <a
+                className='intro'
+                href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life'
+                target='_blank'
+                onMouseEnter={() => setShowContent(true)}
+                onMouseLeave={() => setShowContent(false)}>
+                Game of Life
+              </a>
+            </div>
+
+            <div className='actions'>
               <button
-                id="run-button"
+                id='run-button'
                 onClick={() => {
                   setIsRunning(!isRunning);
                   if (!isRunning) {
                     runningRef.current = true;
                     runIteration();
                   }
-                }}
-              >
-                {isRunning ? "Stop" : "Run"}
+                }}>
+                {isRunning ? 'Stop' : 'Run'}
               </button>
 
               <button
@@ -186,47 +196,43 @@ const GameOfLife: React.FC = () => {
                   setGrid(preset);
                   // eslint-disable-next-line @typescript-eslint/no-implied-eval
                   setInterval(initialInteral);
-                }}
-              >
+                }}>
                 Reset
               </button>
 
               <button
                 onClick={() => {
                   setIsRunning(false);
-                  setGrid(generateGrid("random"));
-                }}
-              >
+                  setGrid(generateGrid('random'));
+                }}>
                 Random
               </button>
 
-              <button onClick={() => setGrid(generateGrid("empty"))}>
+              <button onClick={() => setGrid(generateGrid('empty'))}>
                 Clear
               </button>
 
               <button
-                className="speed-button"
+                className='speed-button'
                 onClick={() => {
-                  setInterval((interval) => interval + 50);
+                  setInterval(interval => interval + 50);
                   console.log(interval);
-                }}
-              >
+                }}>
                 −
               </button>
 
-              <p className="speed-button">Speed</p>
+              <p className='speed-button'>Speed</p>
               <button
-                className="speed-button"
+                className='speed-button'
                 onClick={() => {
                   interval >= 100
-                    ? setInterval((interval) => interval - 50)
+                    ? setInterval(interval => interval - 50)
                     : interval >= 20
-                    ? setInterval((interval) => interval - 10)
+                    ? setInterval(interval => interval - 10)
                     : // eslint-disable-next-line @typescript-eslint/no-implied-eval
                       setInterval(10);
                   console.log(interval);
-                }}
-              >
+                }}>
                 +
               </button>
             </div>

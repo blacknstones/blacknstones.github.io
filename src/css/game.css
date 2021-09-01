@@ -33,6 +33,19 @@
     height: 62px;
 }
 
+.bounce {
+    animation: bounce 1s .5s;
+    transform: scale(0.85);
+  }
+  
+  @keyframes bounce {
+    0% { transform: scale(1.1); opacity: 1 }
+    50% { transform: scale(1.6); opacity: .7; }
+    60% { transform: scale(0.6); opacity: 1 }
+    80% { transform: scale(0.95) }
+    100% { transform: scale(0.85) }
+  }
+
 .menu-button img {
     height: 40px;
 }
@@ -47,7 +60,16 @@
     font-family: 'VT323', monospace; 
     font-size: 30px;
     padding-left: 1vw;
+}
 
+.game .tooltip {
+    background-color: black;
+    border: 2px dashed white;
+    padding: 3px 10px;
+    position: absolute;
+    bottom: 70px;
+    font-size: 25px;
+    z-index: 2;
 }
 
 .game .actions {
@@ -74,18 +96,23 @@
 }
 
 
-.actions button:hover,
-.intro:hover {
+.actions button:hover{
     color: white;
     cursor: url('../assets/cursor1.png'), auto; 
     transform: scale(1.05);
     transition: all ease-in-out 0.1s;
-    
+}
+
+.game .intro:hover {
+    color: white;
+    cursor: url('../assets/cursor1.png'), auto; 
 }
 
 /* mobile */
 @media (max-width: 400px) {
-    .actions button, .actions p, .game .intro {
+    .actions button, .actions p, 
+    .game .intro,
+    .game .tooltip{
         font-size: 20px;
     }
 
