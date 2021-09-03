@@ -1,8 +1,8 @@
 import React from "react";
-import LinkedinIcon from "../../assets/linkedin.png";
-import GithubIcon from "../../assets/github.png";
-import InstaIcon from "../../assets/insta.png";
-import EmailIcon from "../../assets/email-pink.png";
+import LinkedinIcon from "../../assets/logo/linkedin.png";
+import GithubIcon from "../../assets/logo/github.png";
+import InstaIcon from "../../assets/logo/insta.png";
+import EmailIcon from "../../assets/logo/email-pink.png";
 import LinkItem from "./LinkItem";
 
 const SocialLinks: React.FC = () => {

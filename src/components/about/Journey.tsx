@@ -2,8 +2,8 @@ import React from 'react';
 import { ColorContext } from '../../context/ColorContext';
 import Tab from '../tabs/Tab';
 import Tabs from '../tabs/Tabs';
-import Heart from "../../assets/heart1.png";
-import FullHeart from '../../assets/heart2.png';
+import Heart from "../../assets/logo/heart1.png";
+import FullHeart from '../../assets/logo/heart2.png';
 import { ColorBox } from '../color/ColoredComponents';
 import { Link } from 'react-router-dom';
 

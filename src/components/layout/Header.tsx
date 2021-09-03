@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnClickOutside from "../reusables/useOnClickOurside";
-import triangle from "../../assets/triangle.png";
+import triangle from "../../assets/logo/triangle.png";
 
 const Header: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

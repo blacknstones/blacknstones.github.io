@@ -78,11 +78,12 @@
 .projects .project-detail .detail-content {
   font-size: 23px;
   margin: auto;
-  padding: 30px;
-  width: 400px;
-  height: 400px;
+  padding: 50px 30px;
+  width: 600px;
+  height: 600px;
   line-height: 1.1;
   overflow: scroll;
+  position: relative;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -97,9 +98,19 @@
 }
 
 .projects .detail-content .close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
   text-decoration: underline;
   font-size: 22px;
-  margin-left: 300px;
+  
+}
+
+.projects .detail-content .project-img {
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+
 }
 
 .projects .detail-content #source a:hover {

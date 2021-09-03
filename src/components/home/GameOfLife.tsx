@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import produce from 'immer';
 import preset from '../../data/preset.json';
 import useOnClickOutside from '../reusables/useOnClickOurside';
-import controlButton from '../../assets/mobius.png';
+import controlButton from '../../assets/logo/mobius.png';
 
 // type ruleOptions = "life" | "brain";
 interface ICellStyled {

@@ -5,13 +5,10 @@ import Journey from "./Journey";
 import SocialLinks from "./SocialLinks";
 import Card from "./Card";
 
-import RobotIcon from "../../assets/robot.png";
-import PigIcon from "../../assets/pig.png";
-import SunflowerIcon from "../../assets/sunflower.png";
-import StarIcon from "../../assets/star.png";
-import MonsteraIcon from "../../assets/monstera.png";
-import CoffeeIcon from "../../assets/coffee.png";
-import ColorSwitcher from "../color/ColorSwitcher";
+import RobotIcon from "../../assets/logo/robot.png";
+import SunflowerIcon from "../../assets/logo/sunflower.png";
+import MonsteraIcon from "../../assets/logo/monstera.png";
+import CoffeeIcon from "../../assets/logo/coffee.png";
 
 const next = [
     {

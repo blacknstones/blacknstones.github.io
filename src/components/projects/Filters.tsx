@@ -9,6 +9,7 @@ type Project = {
   desc: string;
   flag: string;
   detail: string;
+  img: string;
   source: string;
   demo?: string;
   categories: string[];

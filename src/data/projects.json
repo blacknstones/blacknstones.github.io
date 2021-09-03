@@ -4,6 +4,7 @@
         "desc": "Personal website",
         "detail": "This is the space where I explore my potential creativity with code. Built with TypeScript and React.",
         "flag": "TypeScript & React",
+        "img":"https://i.ibb.co/b3RnfPP/mysite.gif",
         "source": "https://github.com/blacknstones/blacknstones.github.io",
         "demo": "https://zhuyanwei.com",
         "categories": [
@@ -24,6 +25,7 @@
         "desc": "Personalized meal planner",
         "detail": "A native mobile app that generates personalized meal plans based on user preferences, dietary needs and profile.",
         "flag": "React Native & GraphQL",
+        "img":"",
         "source": "https://github.com/Imaginaryverse/mealo",
         "demo": "https://www.youtube.com/watch?v=WR3piINpspk&list=PLDqoWWdtjihDcSCZpYQxAQSIKMyf661no&index=6",
         "categories": [
@@ -36,6 +38,7 @@
         ],
         "tools": [
             "React Native",
+            "Redux",
             "GraphQL",
             "Node.js",
             "Express.js",
@@ -47,8 +50,9 @@
     {
         "title": "reacTodo",
         "desc": "To-do list",
-        "detail": "React implementation of to-do list.",
+        "detail": "A React implementation of to-do list.",
         "flag": "React",
+        "img":"https://i.ibb.co/HB4WJ2H/reactodo.gif",
         "source": "https://github.com/blacknstones/reacTodo",
         "demo": "https://reactodo-2ba96.web.app/",
         "categories": [
@@ -64,10 +68,55 @@
         ]
     },
     {
+        "title": "Reacipe",
+        "desc": "A recipe search app",
+        "detail": "A recipe search app to help you find healthy and easy-to-cook recipes.",
+        "flag": "React & Node.js",
+        "img":"https://i.ibb.co/PxTqMYF/reacipe.gif",
+        "source": "https://github.com/blacknstones/reacipe",
+        "demo": "https://reacipe-app.herokuapp.com/",
+        "categories": [
+            "frontend",
+            "backend",
+            "design"
+        ],
+        "languages": [
+            "JavaScript"
+        ],
+        "tools": [
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "Heroku"
+        ]
+    },
+    {
+        "title": "Game of Life",
+        "desc": "Simulator of the classic mathematical game",
+        "detail": "An interactive simulator of the classic cellular automaton Game of Life. Built with TypeScript and React.",
+        "flag": "TypeScript & React",
+        "img":"https://i.ibb.co/4J6n93r/gol.gif",
+        "source": "https://github.com/blacknstones/game-of-life",
+        "demo": "https://zhuyanwei.com",
+        "categories": [
+            "frontend",
+            "design"
+        ],
+        
+        "languages": [
+            "JavaScript",
+            "TypeScript"
+        ],
+        "tools": [
+            "React.js"
+        ]
+    },
+    {
         "title": "Well-Bean",
         "desc": "Project organizing and collaboration tool that cares about your well-being.",
-        "flag": "Java & JavaScript",
         "detail": "A project organizing and collaboration tool that helps individuals and teams to work effectively while improve personal well-being.",
+        "flag": "Java & JavaScript",
+        "img":"",
         "source": "https://github.com/blacknstones/well-bean",
         "categories": [
             "frontend",
@@ -88,30 +137,55 @@
         ]
     },
     {
-        "title": "Game of Life",
-        "desc": "Simulator of the classic mathematical game",
-        "flag": "TypeScript & React",
-        "detail": "An interactive simulator of the classic cellular automaton Game of Life. Built with TypeScript and React.",
-        "source": "https://github.com/blacknstones/game-of-life",
-        "demo": "https://zhuyanwei.com",
+        "title": "ATodolist",
+        "desc": "command-line based todolist",
+        "detail": "A to-do-list program runs on command-line. Built with Java.",
+        "flag": "Java",
+        "img":"https://i.ibb.co/FBZvV2S/atodolist.png",
+        "source": "https://github.com/blacknstones/Atodolist",
         "categories": [
-            "frontend",
-            "design"
+            "backend"
         ],
-        
         "languages": [
-            "JavaScript",
-            "TypeScript"
+            "Java"
         ],
-        "tools": [
-            "React.js"
-        ]
+        "tools": []
     },
     {
+        "title": "Whodunit",
+        "desc": "Image prcessing program to reveal the hidden clue",
+        "detail": "A program that process an image using bitmap.",
+        "flag": "C",
+        "img":"https://i.ibb.co/B6spKXP/whodunit.gif",
+        "source": "https://github.com/blacknstones/CS50/tree/master/pset3/whodunit",
+        "categories": [
+            "backend"
+        ],
+        "languages": [
+            "C"
+        ],
+        "tools": []
+    },
+    {
+        "title": "Recover",
+        "desc": " Recover JPEGs from a memory card",
+        "detail": "A program that recovers JPEGs from a memory card by looking for patterns of bytes.",
+        "flag": "C",
+        "img":"",
+        "source": "https://github.com/blacknstones/CS50/tree/master/pset3/recover",
+        "categories": [
+            "backend"
+        ],
+        "languages": [
+            "C"
+        ],
+        "tools": []
+    },{
         "title": "TsDnd",
         "desc": "Full-stack task board app",
-        "flag": "TypeScrpt & Node.js",
         "detail": "A full-stack task board with drag and drop functionality.",
+        "flag": "TypeScrpt & Node.js",
+        "img":"",
         "source": "https://github.com/blacknstones/TsDnd",
         "categories": [
             "frontend",
@@ -127,47 +201,5 @@
             "Express.js",
             "MongoDB"
         ]
-    },
-    {
-        "title": "ATodolist",
-        "desc": "command-line based todolist",
-        "flag": "Java",
-        "detail": "A to-do-list program runs on command-line. Built with Java.",
-        "source": "https://github.com/blacknstones/Atodolist",
-        "categories": [
-            "backend"
-        ],
-        "languages": [
-            "Java"
-        ],
-        "tools": []
-    },
-    {
-        "title": "Whodunit",
-        "desc": "Image prcessing program to reveal the hidden clue",
-        "flag": "C",
-        "detail": "A program that process an image using bitmap.",
-        "source": "https://github.com/blacknstones/CS50/tree/master/pset3/whodunit",
-        "categories": [
-            "backend"
-        ],
-        "languages": [
-            "C"
-        ],
-        "tools": []
-    },
-    {
-        "title": "Recover",
-        "desc": " Recover JPEGs from a memory card",
-        "flag": "C",
-        "detail": "A program that recovers JPEGs from a memory card by looking for patterns of bytes.",
-        "source": "https://github.com/blacknstones/CS50/tree/master/pset3/recover",
-        "categories": [
-            "backend"
-        ],
-        "languages": [
-            "C"
-        ],
-        "tools": []
     }
 ]

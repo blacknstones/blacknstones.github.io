@@ -8,6 +8,7 @@ interface IProject {
     desc: string;
     flag: string;
     detail: string;
+    img: string;
     source: string;
     demo?: string;
     categories: string[];
@@ -37,11 +38,12 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
         <p className="part" id="detail">
           {project.detail}
         </p>
+        <img className="project-img" src={project.img}/>
 
         <div className="part" id="tools">
           <p>Language: </p>
           <div className="tool-items">
-            {project.languages.map(language => <p id="tool">{language}</p>)}
+            {project.languages.map((language, index) => <p id="tool" key={index}>{language}</p>)}
           </div>
 
         </div>
@@ -50,8 +52,8 @@ const ProjectDetail: React.FC<IProject> = ({ project, setIsOpen }) => {
           <div className="part" id="tools">
             <p>Tools: </p>
             <div className="tool-items">
-                 {project.tools.map((tool) => (
-              <p id="tool">{tool}</p>
+                 {project.tools.map((tool, index) => (
+              <p id="tool" key={index}>{tool}</p>
             ))}
             </div>
          
