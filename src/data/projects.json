@@ -25,7 +25,7 @@
         "desc": "Personalized meal planner",
         "detail": "A native mobile app that generates personalized meal plans based on user preferences, dietary needs and profile.",
         "flag": "React Native & GraphQL",
-        "img":"",
+        "img":"https://i.ibb.co/DPdWS0f/mealo.gif",
         "source": "https://github.com/Imaginaryverse/mealo",
         "demo": "https://www.youtube.com/watch?v=WR3piINpspk&list=PLDqoWWdtjihDcSCZpYQxAQSIKMyf661no&index=6",
         "categories": [
