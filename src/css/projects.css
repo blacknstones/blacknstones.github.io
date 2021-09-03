@@ -164,6 +164,11 @@
 
 /* breakpoint */
 @media (max-width: 600px) {
+
+  .projects .project-detail {
+    padding-top: 10vh;
+  }
+  
   .projects .project-detail .detail-content {
     font-size: 18px;
     width: 300px;
