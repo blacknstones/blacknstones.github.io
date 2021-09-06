@@ -129,7 +129,6 @@ const Filters: React.FC<IProjects> = ({ data }) => {
 
         // get filtered items
         const newItems: Project[] = filterItems(data, newFilters);
-        // console.log("newItems:", newItems);
         setItems(newItems);
 
         // update filters

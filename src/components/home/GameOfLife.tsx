@@ -61,7 +61,6 @@ const GameOfLife: React.FC = () => {
 
   const handleClickOutside = () => {
     setMenuIsOpen(false);
-    console.log('clicked outside');
   };
 
   useOnClickOutside(clickRef, handleClickOutside);
@@ -78,8 +77,6 @@ const GameOfLife: React.FC = () => {
       draftGrid[x][y] = grid[x][y] ? 0 : 1;
     });
     setGrid(newGrid);
-    console.log('clicked');
-    console.table(JSON.stringify(grid));
   };
 
   const countNeighbors = (grid: number[][], x: number, y: number): number => {
@@ -105,9 +102,6 @@ const GameOfLife: React.FC = () => {
 
   // useCallback hook to avoid creating a new function in every re-render
   const runIteration = useCallback(() => {
-    console.log('isRunning: ', isRunning);
-    console.log('runningRef', runningRef);
-    console.log('intervalRef:', intervalRef);
     // useRef hook to grab the current isRunning state
     if (!runningRef.current) {
       return;
@@ -216,7 +210,6 @@ const GameOfLife: React.FC = () => {
                 className='speed-button'
                 onClick={() => {
                   setInterval(interval => interval + 50);
-                  console.log(interval);
                 }}>
                 −
               </button>
@@ -231,7 +224,6 @@ const GameOfLife: React.FC = () => {
                     ? setInterval(interval => interval - 10)
                     : // eslint-disable-next-line @typescript-eslint/no-implied-eval
                       setInterval(10);
-                  console.log(interval);
                 }}>
                 +
               </button>
