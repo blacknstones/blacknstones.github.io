@@ -1,8 +1,8 @@
-import * as React from "react";
-import { ColorContext } from "../../context/ColorContext";
-import { ColorFilterButton } from "../color/ColoredComponents";
+import * as React from 'react';
+import { ColorContext } from '../../context/ColorContext';
+import { ColorFilterButton } from '../color/ColoredComponents';
 
-type Level = "category" | "language" | "tool";
+type Level = 'category' | 'language' | 'tool';
 
 type Props = {
   onAddFilter: (level: Level, option: string) => void;
@@ -20,7 +20,7 @@ const FilterButton: React.FC<Props> = ({
   selected,
   children,
 }) => {
-  const {color} = React.useContext(ColorContext);
+  const { color } = React.useContext(ColorContext);
   const [active, setActive] = React.useState(false);
 
   const isSelected: boolean = selected ? selected.includes(option) : false;
@@ -28,13 +28,12 @@ const FilterButton: React.FC<Props> = ({
   return (
     <ColorFilterButton
       color={color}
-      className="button filter-button"
-      style={{ color: (active && isSelected) ? color : undefined }}
+      className='button filter-button'
+      style={{ color: active && isSelected ? color : undefined }}
       onClick={() => {
         active ? onRemoveFilter(level, option) : onAddFilter(level, option);
         setActive(!active);
-      }}
-    >
+      }}>
       {children}
     </ColorFilterButton>
   );

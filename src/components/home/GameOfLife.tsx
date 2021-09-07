@@ -159,7 +159,15 @@ const GameOfLife: React.FC = () => {
 
         {menuIsOpen && (
           <div className='toggle'>
-            {showContent && <div className='tooltip'><p>This is a simulation of the classic cellular automaton Game of Life.</p><p>Click to learn more.</p></div>}
+            {showContent && (
+              <div className='tooltip'>
+                <p>
+                  This is a simulation of the classic cellular automaton Game of
+                  Life.
+                </p>
+                <p>Click to learn more.</p>
+              </div>
+            )}
             <div>
               <a
                 className='intro'

@@ -1,51 +1,55 @@
-import React from "react";
-import { ColorContext } from "../../context/ColorContext";
-import { ColorBox, ColorButton } from "../color/ColoredComponents";
+import React from 'react';
+import { ColorContext } from '../../context/ColorContext';
+import { ColorBox, ColorButton } from '../color/ColoredComponents';
 
 type Props = {
-  setShowStart: (b: boolean) => void,
-  setShowGame: (b: boolean) => void,
-  setShowProfile: (b: boolean) => void
+  setShowStart: (b: boolean) => void;
+  setShowGame: (b: boolean) => void;
+  setShowProfile: (b: boolean) => void;
 };
 
-const Start: React.FC<Props> = ({ setShowStart, setShowGame, setShowProfile}) => {
-  const {color, changeColor} = React.useContext(ColorContext);
+const Start: React.FC<Props> = ({
+  setShowStart,
+  setShowGame,
+  setShowProfile,
+}) => {
+  const { color, changeColor } = React.useContext(ColorContext);
 
   return (
-    <section className="content-container flex" id="start">
-      <div className="layout-container text">
+    <section className='content-container flex' id='start'>
+      <div className='layout-container text'>
         <p>Hi, this is Zhu.</p>
-        <ColorBox className="color-switcher" color={color} onClick={changeColor}>
+        <ColorBox
+          className='color-switcher'
+          color={color}
+          onClick={changeColor}>
           Let's play a game and get to know each other?
         </ColorBox>
       </div>
 
-      <div className="layout-container buttons">
+      <div className='layout-container buttons'>
         <ColorButton
-          className="button"
+          className='button'
           color={color}
           onClick={() => {
             setShowStart(false);
             setShowGame(true);
-          }}
-        >
-          start{">>"}
+          }}>
+          start{'>>'}
         </ColorButton>
 
         <ColorButton
-          className="button"
+          className='button'
           color={color}
           onClick={() => {
             setShowStart(false);
             setShowProfile(true);
-          }}
-        >
-          skip{">>"}
+          }}>
+          skip{'>>'}
         </ColorButton>
       </div>
     </section>
   );
 };
-
 
 export default Start;

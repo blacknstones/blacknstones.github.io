@@ -1,8 +1,8 @@
-import React, { useCallback, useState, useContext } from "react";
-import { ColorContext } from "../../context/ColorContext";
-import { ColorFilterButton, ColorPrompt } from "../color/ColoredComponents";
-import FilterButton from "./FilterButton";
-import ProjectCards from "./ProjectCards";
+import React, { useCallback, useState, useContext } from 'react';
+import { ColorContext } from '../../context/ColorContext';
+import { ColorFilterButton, ColorPrompt } from '../color/ColoredComponents';
+import FilterButton from './FilterButton';
+import ProjectCards from './ProjectCards';
 
 type Project = {
   title: string;
@@ -17,7 +17,7 @@ type Project = {
   tools: string[];
 };
 
-type Level = "category" | "language" | "tool";
+type Level = 'category' | 'language' | 'tool';
 
 interface IProjects {
   data: Project[];
@@ -40,9 +40,9 @@ interface Filters {
 
 const findLangOptions = (items: Project[]) => {
   const newLangs: string[] = [];
-  items.forEach((item) => {
-    item.languages.forEach((lang) => {
-      if (!newLangs.some((option) => option === lang)) {
+  items.forEach(item => {
+    item.languages.forEach(lang => {
+      if (!newLangs.some(option => option === lang)) {
         newLangs.push(lang);
       }
     });
@@ -52,9 +52,9 @@ const findLangOptions = (items: Project[]) => {
 
 const findToolOptions = (items: Project[]) => {
   const newTools: string[] = [];
-  items.forEach((item) => {
-    item.tools.forEach((tool) => {
-      if (!newTools.some((option) => option === tool)) {
+  items.forEach(item => {
+    item.tools.forEach(tool => {
+      if (!newTools.some(option => option === tool)) {
         newTools.push(tool);
       }
     });
@@ -67,7 +67,7 @@ const initializeFilters = (items: Project[]) => {
   const filters: Filters = {
     categories: {
       selected: [],
-      options: ["frontend", "backend", "design"],
+      options: ['frontend', 'backend', 'design'],
     },
     languages: {
       selected: [],
@@ -90,16 +90,16 @@ const filterItems = (items: Project[], filters: Filters) => {
 
   const filteredItems: Project[] = [];
 
-  items.forEach((item) => {
-    if (!cats.every((cat) => item.categories.includes(cat))) {
+  items.forEach(item => {
+    if (!cats.every(cat => item.categories.includes(cat))) {
       return;
     }
 
-    if (!langs.every((lang) => item.languages.includes(lang))) {
+    if (!langs.every(lang => item.languages.includes(lang))) {
       return;
     }
 
-    if (!tools.every((tool) => item.tools.includes(tool))) {
+    if (!tools.every(tool => item.tools.includes(tool))) {
       return;
     }
 
@@ -115,13 +115,13 @@ const Filters: React.FC<IProjects> = ({ data }) => {
     return initializeFilters(data);
   });
 
-  const {color} = useContext(ColorContext);
+  const { color } = useContext(ColorContext);
 
   const onAddFilter = useCallback(
     (level: Level, option: string) => {
       const newFilters: Filters = Object.assign({}, filters);
 
-      if (level === "category") {
+      if (level === 'category') {
         // add selected category, reset lang and tool
         newFilters.categories.selected.push(option);
         newFilters.languages.selected = [];
@@ -137,7 +137,7 @@ const Filters: React.FC<IProjects> = ({ data }) => {
         setFilters(newFilters);
       }
 
-      if (level === "language") {
+      if (level === 'language') {
         newFilters.languages.selected.push(option);
         newFilters.tools.selected = [];
 
@@ -148,7 +148,7 @@ const Filters: React.FC<IProjects> = ({ data }) => {
         setFilters(newFilters);
       }
 
-      if (level === "tool") {
+      if (level === 'tool') {
         newFilters.tools.selected.push(option);
         const newItems: Project[] = filterItems(data, newFilters);
         setItems(newItems);
@@ -160,10 +160,10 @@ const Filters: React.FC<IProjects> = ({ data }) => {
   const onRemoveFilter = useCallback(
     (level: Level, option: string) => {
       const newFilters: Filters = Object.assign({}, filters);
-      if (level === "category") {
+      if (level === 'category') {
         // remove selected category
         const newCats = newFilters.categories.selected.filter(
-          (el) => el != option
+          el => el != option
         );
         newFilters.categories.selected = newCats;
 
@@ -178,9 +178,9 @@ const Filters: React.FC<IProjects> = ({ data }) => {
         setFilters(newFilters);
       }
 
-      if (level === "language") {
+      if (level === 'language') {
         const newLangs = newFilters.languages.selected.filter(
-          (el) => el != option
+          el => el != option
         );
         newFilters.languages.selected = newLangs;
 
@@ -190,8 +190,8 @@ const Filters: React.FC<IProjects> = ({ data }) => {
         newFilters.tools.options = findToolOptions(newItems);
       }
 
-      if (level === "tool") {
-        const newTools = newFilters.tools.selected.filter((el) => el != option);
+      if (level === 'tool') {
+        const newTools = newFilters.tools.selected.filter(el => el != option);
         newFilters.tools.selected = newTools;
 
         const newItems: Project[] = filterItems(data, newFilters);
@@ -202,74 +202,77 @@ const Filters: React.FC<IProjects> = ({ data }) => {
   );
 
   return (
-    <div className="filters">
-      <div className="filter-control full-layout-container">
-          <div className="button-group">
-          <ColorPrompt color={color} className="prompt">Display by</ColorPrompt>
-        <ColorFilterButton
-          className="button filter-button"
-          color={color}
-          onClick={() => {
-            setItems(data);
-            setFilters(() => {
-              return initializeFilters(data);
-            });
-          }}
-        >
-          All
-        </ColorFilterButton>
-          </div>
-       
-        <div className="button-group">
-        <ColorPrompt color={color} className="prompt">Categories</ColorPrompt>
-          {filters.categories.options.map((option) => (
+    <div className='filters'>
+      <div className='filter-control full-layout-container'>
+        <div className='button-group'>
+          <ColorPrompt color={color} className='prompt'>
+            Display by
+          </ColorPrompt>
+          <ColorFilterButton
+            className='button filter-button'
+            color={color}
+            onClick={() => {
+              setItems(data);
+              setFilters(() => {
+                return initializeFilters(data);
+              });
+            }}>
+            All
+          </ColorFilterButton>
+        </div>
+
+        <div className='button-group'>
+          <ColorPrompt color={color} className='prompt'>
+            Categories
+          </ColorPrompt>
+          {filters.categories.options.map(option => (
             <FilterButton
               key={option}
               onAddFilter={onAddFilter}
               onRemoveFilter={onRemoveFilter}
-              level="category"
+              level='category'
               option={option}
-              selected={filters.categories.selected}
-            >
+              selected={filters.categories.selected}>
               {option}
             </FilterButton>
           ))}
         </div>
 
-        <div className="button-group">
-        <ColorPrompt color={color} className="prompt">Languages</ColorPrompt>
-          {filters.languages.options.map((option) => (
+        <div className='button-group'>
+          <ColorPrompt color={color} className='prompt'>
+            Languages
+          </ColorPrompt>
+          {filters.languages.options.map(option => (
             <FilterButton
               key={option}
               onAddFilter={onAddFilter}
               onRemoveFilter={onRemoveFilter}
-              level="language"
+              level='language'
               option={option}
-              selected={filters.languages.selected}
-            >
+              selected={filters.languages.selected}>
               {option}
             </FilterButton>
           ))}
         </div>
-        <div className="button-group">
-          <ColorPrompt color={color} className="prompt">Tools</ColorPrompt>
-          {filters.tools.options.sort().map((option) => (
+        <div className='button-group'>
+          <ColorPrompt color={color} className='prompt'>
+            Tools
+          </ColorPrompt>
+          {filters.tools.options.sort().map(option => (
             <FilterButton
               key={option}
               onAddFilter={onAddFilter}
               onRemoveFilter={onRemoveFilter}
-              level="tool"
+              level='tool'
               option={option}
-              selected={filters.tools.selected}
-            >
+              selected={filters.tools.selected}>
               {option}
             </FilterButton>
           ))}
         </div>
       </div>
 
-     <ProjectCards items={items}/>
-     
+      <ProjectCards items={items} />
     </div>
   );
 };

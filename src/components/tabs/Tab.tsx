@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
 interface Props {
   title: string;
   newTitle?: string;
   icon?: string;
   newIcon?: string;
-
 }
 
 // A placeholder for rendering the children

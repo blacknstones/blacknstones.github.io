@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface ILink {
   item: {
@@ -14,13 +14,12 @@ const LinkItem: React.FC<ILink> = ({ item }) => {
   return (
     <li>
       <a
-        className="social-link"
+        className='social-link'
         href={item.link}
-        target="_blank"
+        target='_blank'
         onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <img src={item.icon} className="icon" />
+        onMouseLeave={() => setHover(false)}>
+        <img src={item.icon} className='icon' />
         <p>{hover ? item.hoverTitle : item.title}</p>
       </a>
     </li>

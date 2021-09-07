@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ColorContext } from "../../context/ColorContext";
+import * as React from 'react';
+import { ColorContext } from '../../context/ColorContext';
 
 type props = {
   item: {
@@ -13,44 +13,40 @@ const Card: React.FC<props> = ({ item, showConfirm }) => {
   const [fliped, setFliped] = React.useState(false);
   const [showContent, setShowContent] = React.useState(false);
   const [active, setActive] = React.useState(false);
-  const{ color} = React.useContext(ColorContext);
+  const { color } = React.useContext(ColorContext);
 
   const handleFlip = () => {
     setFliped(true);
   };
 
-  // add folllowing to "front"
-  // onClick={() => {
-  //   showConfirm();
-  //   setActive(!active);
-  // }}
-
   return (
-    <li className="card" onClick={handleFlip}>
+    <li className='card' onClick={handleFlip}>
       {fliped ? (
-        <div className="card-name">
-            <p>{">>"}</p>
+        <div className='card-name'>
+          <p>{'>>'}</p>
           <p
-            className="front"
+            className='front'
             onMouseEnter={() => setShowContent(true)}
             onMouseLeave={() => setShowContent(false)}
             onClick={() => {
-         
               setActive(!active);
             }}
-          
-           
             style={
-              active ? { color: color, textDecoration: "underline" } : undefined
-            }
-          >
+              active ? { color: color, textDecoration: 'underline' } : undefined
+            }>
             {item.title}
           </p>
 
-          {showContent && <div className="tooltip" style={{borderColor: color, color: color}}>{item.desc}</div>}
+          {showContent && (
+            <div
+              className='tooltip'
+              style={{ borderColor: color, color: color }}>
+              {item.desc}
+            </div>
+          )}
         </div>
       ) : (
-        <p className="back">?</p>
+        <p className='back'>?</p>
       )}
     </li>
   );

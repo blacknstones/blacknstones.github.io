@@ -33,8 +33,6 @@ const AboutPage: React.FC = () => {
 
         {/* {showGame && <Setting />} */}
         {/* {showGame && <TempGame />} */}
-
-        
       </main>
     </div>
   );
