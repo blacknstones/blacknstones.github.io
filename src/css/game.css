@@ -8,8 +8,7 @@
 
 .cell:hover {
     border: 1px solid grey;
-    cursor: pointer;
-    /* cursor: url('../assets/cursor1.png'), auto; */
+    cursor: url('../assets/cursor1.png'), auto; 
 }
 .grid-wrapper {
     display: flex;
