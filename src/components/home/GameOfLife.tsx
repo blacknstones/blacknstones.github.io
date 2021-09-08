@@ -162,10 +162,11 @@ const GameOfLife: React.FC = () => {
             {showContent && (
               <div className='tooltip'>
                 <p>
-                  This is a simulation of the classic cellular automaton Game of
-                  Life.
+                  This is a simulator of the classic cellular automaton Game of
+                  Life. 
                 </p>
-                <p>Click to learn more.</p>
+                <p>Click the cells on the grid to interact, and use the options below to control.</p>
+                <p>Click 'Game of Life' to learn more.</p>
               </div>
             )}
             <div>
