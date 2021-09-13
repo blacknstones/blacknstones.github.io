@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import produce from 'immer';
 import preset from '../../data/preset.json';
@@ -54,7 +54,7 @@ const GameOfLife: React.FC = () => {
 
   //const [rule, setRule] = useState<ruleOptions>("life");
 
-  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(true);
   const clickRef = React.useRef(null);
 
   const [showContent, setShowContent] = useState<boolean>(false);
@@ -64,6 +64,13 @@ const GameOfLife: React.FC = () => {
   };
 
   useOnClickOutside(clickRef, handleClickOutside);
+
+  // open menu shortly when onload
+  useEffect(() => {
+    setTimeout(() => {
+      setMenuIsOpen(false);
+    }, 3000);
+  }, [])
 
   // use immer to mutate grid state
   const handleCellClick = (x: number, y: number) => {
