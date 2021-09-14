@@ -2,6 +2,6 @@
 
 Personal website [zhuyanwei.com](https://zhuyanwei.com/)
 
-### Tech-Stack
+### Tech stack
 - TypeScript
 - React
